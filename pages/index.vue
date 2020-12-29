@@ -31,6 +31,12 @@
 		<p>
 			> Enthusiastic to become a skilled person and contribute to the Information Technology Industry. Seeking for an opportunity to take part in your company and demonstrate all of my technical ability.
 		</p>
+		<div class="readme">
+			<center>
+			<p>README.md</p>
+			<i class="arrow down"></i>
+			</center>
+		</div>
 	</div>
 	<div class="container half-page">
 		<div class="exe skill">
@@ -86,9 +92,92 @@
 	</div>
 	<div class="container half-page">
 		<center>
+			<h1>WANTED</h1>
+		</center>
+		<!-- https://webdesign.tutsplus.com/tutorials/building-a-vertical-timeline-with-css-and-a-touch-of-javascript--cms-26528 -->
+		<section class="timeline">
+		<p>Born in Hong Kong - a beautiful city with justice and freedom</p>
+		<p>
+			<time>1998</time>
+		</p>
+		<ul>
+			<li>
+				<time>2017</time>
+				<div>
+					Code at the first time in Java, EZPZ.
+				</div>
+			</li>
+			<li>
+				<time>2018</time>
+				<div>
+					Take my first Freelance Job:
+					“Made An bot that automatically login into Facebook and send friend requests to the others everyday”
+				</div>
+			</li>
+			<li>
+				<time>2019</time>
+				<div>
+					 Submit my Final Year Project and graduated. “A web-based application provides IOT control platform to allow users to control their door lock via their smartphone”
+				</div>
+			</li>
+			<li>
+				<time>2020</time>
+				<div>
+					Work in Car8.com as an Analyst Programmer. Develop and Maintain the online vehilce trade platform by using vue.js.
+				</div>
+			</li>			
+		</ul>
+		<br>
+		<p>
+			<time>2021</time>
+		</p>
+		<p>It’s been a tough year, let’s make 2021 better</p>
+		</section>
+		
+	</div>
+	<div class="container half-page">
+		<center>
 			<h1>MY WORKS</h1><small class="pl-5">../</small>
 		</center>
-		
+		<!-- https://webdesign.tutsplus.com/tutorials/building-a-vertical-timeline-with-css-and-a-touch-of-javascript--cms-26528 -->
+		<section class="timeline">
+		<p>Born in Hong Kong - a beautiful city with justice and freedom</p>
+		<p>
+			<time>1998</time>
+		</p>
+		<ul>
+			<li>
+				<time>2017</time>
+				<div>
+					Code at the first time in Java, EZPZ.
+				</div>
+			</li>
+			<li>
+				<time>2018</time>
+				<div>
+					Take my first Freelance Job:
+					“Made An bot that automatically login into Facebook and send friend requests to the others everyday”
+				</div>
+			</li>
+			<li>
+				<time>2019</time>
+				<div>
+					 Submit my Final Year Project and graduated. “A web-based application provides IOT control platform to allow users to control their door lock via their smartphone”
+				</div>
+			</li>
+			<li>
+				<time>2020</time>
+				<div>
+					Work in Car8.com as an Analyst Programmer. Develop and Maintain the online vehilce trade platform by using vue.js.
+				</div>
+			</li>			
+		</ul>
+		<br>
+		<p>
+			<time>2021</time>
+		</p>
+		<p>It’s been a tough year, let’s make 2021 better</p>
+		</section>
 		
 	</div>
 	<span>&copy; Copyright © 2021 Ryan Kwan • UX Designer & Web Developer</span>
@@ -99,9 +188,6 @@
 <script>
 
 export default {
-	layout(app) {
-		return !!app.$apolloHelpers.getToken() ? 'auth' : 'default'
-	},
 	components: {
 	},
 	mounted() {
@@ -112,13 +198,13 @@ export default {
 
 <style>
 .full-page{
-	padding-top: 70px;
-	height: 100vh;
+	padding-top: 10vh;
+	min-height: 100vh;
 	position: relative;
 }
 .half-page{
 	padding-top: 90px;
-	height: 80vh;
+	min-height: 80vh;
 	position: relative;
 }
 .desc{
@@ -146,6 +232,16 @@ small{
 	right:12px;
 	transform: scale(1,0.7);
 }
+.readme{
+	margin: 10vh 0;
+	width:100%;
+	left: 0;
+}
+.readme i{
+	transform: scale(1,0.7);
+	transform: rotate(45deg);
+		-webkit-transform: rotate(45deg);
+}
 .arrow {
   border: solid white;
   border-width: 0 3px 3px 0;
@@ -163,12 +259,123 @@ small{
 .skill{
 	position:absolute;
 	right:12px;
-	top:0;
+	top:-30px;
 }
 .card{
 	padding: 32px 12px;
 	border: solid white;
   	border-width:1px;
 	border-radius: 8px;
+}
+time{
+	font-weight: 700;
+}
+.timeline{
+	margin-top: 100px;
+}
+.timeline p{
+	text-align: center;
+}
+.timeline ul {
+	padding:0;
+}
+.timeline ul li {
+  list-style-type: none;
+  position: relative;
+  width: 2px;
+  margin: 0 auto;
+  padding-top: 100px;
+  background: #8D8D8D;
+}
+ 
+.timeline ul li::after {
+  content: '';
+  position: absolute;
+  left: 50%;;
+  top:80px;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: inherit;
+}
+.timeline ul li time {
+  position: absolute;
+  top:70px;
+  width: 400px;
+  padding: 15px;
+}
+.timeline ul li div {
+  position: relative;
+  top:-30px;
+  width: 400px;
+  padding: 15px;
+}
+ 
+.timeline ul li div::before {
+  content: '';
+  position: absolute;
+  bottom: 7px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+.timeline ul li:nth-child(odd) time {
+  left: 35px;
+}
+.timeline ul li:nth-child(odd) div {
+  left: 100px;
+}
+ 
+.timeline ul li:nth-child(odd) div::before {
+  border-color: transparent transparent transparent transparent;
+}
+
+.timeline ul li:nth-child(even) time {
+  left: -429px;
+  text-align: right;
+}
+.timeline ul li:nth-child(even) div {
+  left: -504px;
+  text-align: right;
+}
+ 
+.timeline ul li:nth-child(even) div::before {
+  right: -15px;
+  border-width: 8px 0 8px 16px;
+  border-color: transparent transparent transparent transparent;
+}
+@media screen and (max-width: 900px) {
+  .timeline ul li div {
+    width: 250px;
+  }
+  .timeline ul li:nth-child(even) div {
+    left: -289px; /*250+45-6*/
+  }
+}
+@media screen and (max-width: 600px) {
+  .timeline p{
+	  text-align: left;
+  }
+  .timeline ul li {
+    margin-left: 20px;
+  }
+   
+  .timeline ul li div {
+    width: calc(100vw - 91px);
+  }
+  .timeline ul li:nth-child(odd) div {
+	left: 35px;
+	top:0px;
+  }
+  .timeline ul li:nth-child(even) time {
+	text-align: left;
+    left: 35px;
+  }
+  .timeline ul li:nth-child(even) div {
+	text-align: left;
+	top:0;
+    left: 35px;
+  }
 }
 </style>
