@@ -1,0 +1,12 @@
+query findUser(
+    $_id:ID!
+){
+    user(_id:$_id){
+        _id
+        name
+        number
+        created_at
+        updated_at
+        last_login
+    }
+}

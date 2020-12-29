@@ -1,0 +1,10 @@
+mutation registerUser($name:String!,$password:String!,$number:String!){
+  register(name:$name,password:$password,number:$number){
+    _id
+    name
+    password
+    number
+    created_at
+    updated_at
+  }
+}
