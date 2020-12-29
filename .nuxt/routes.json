@@ -1,23 +1,9 @@
 [
   {
-    "name": "login",
-    "path": "/login",
-    "component": "/Users/lokhongkwan/Documents/GitHub/Web-Template/pages/login.vue",
-    "chunkName": "pages/login",
-    "_name": "_42bd7281"
-  },
-  {
-    "name": "register",
-    "path": "/register",
-    "component": "/Users/lokhongkwan/Documents/GitHub/Web-Template/pages/register.vue",
-    "chunkName": "pages/register",
-    "_name": "_5a810abb"
-  },
-  {
     "name": "index",
     "path": "/",
-    "component": "/Users/lokhongkwan/Documents/GitHub/Web-Template/pages/index.vue",
+    "component": "/Users/lokhongkwan/Documents/GitHub/portfolio/pages/index.vue",
     "chunkName": "pages/index",
-    "_name": "_7915cf6a"
+    "_name": "_98ac481e"
   }
 ]

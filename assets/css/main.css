@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "thabit";
+  src: local("thabit"),
+   url('../font/thabit.ttf') format("thabit");
+}
+
+@keyframes onHoverAnimation {
+    0% {
+      background-color: #303030;  
+    }
+    50%{
+        background-color: #373737;
+    }
+    100% {
+        background-color: #303030;
+    }
+}
+
+*{
+    color: white;
+    font-family: "thabit";
+}

@@ -5,12 +5,13 @@ import NuxtError from '../layouts/error.vue'
 import NuxtLoading from './components/nuxt-loading.vue'
 import NuxtBuildIndicator from './components/nuxt-build-indicator'
 
+import '../assets/css/main.css'
+
 import '../node_modules/vuetify/dist/vuetify.css'
 
-import _2d217e9e from '../layouts/auth.vue'
 import _6f6c098b from '../layouts/default.vue'
 
-const layouts = { "_auth": sanitizeComponent(_2d217e9e),"_default": sanitizeComponent(_6f6c098b) }
+const layouts = { "_default": sanitizeComponent(_6f6c098b) }
 
 export default {
   render (h, props) {

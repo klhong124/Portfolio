@@ -4,8 +4,8 @@ require('dotenv').config()
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    titleTemplate: '%s - Web-Template',
-    title: 'Web-Template',
+    titleTemplate: '%s - portfolio',
+    title: 'Ryan Kwan',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -18,6 +18,7 @@ export default {
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
+    '~/assets/css/main.css',
   ],
 
   script: [

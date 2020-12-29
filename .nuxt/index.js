@@ -13,10 +13,10 @@ import { createStore } from './store.js'
 
 /* Plugins */
 
-import nuxt_plugin_plugin_3ff4d244 from 'nuxt_plugin_plugin_3ff4d244' // Source: ./components/plugin.js (mode: 'all')
-import nuxt_plugin_plugin_475e49d0 from 'nuxt_plugin_plugin_475e49d0' // Source: ./vuetify/plugin.js (mode: 'all')
-import nuxt_plugin_apollomodule_629b36c0 from 'nuxt_plugin_apollomodule_629b36c0' // Source: ./apollo-module.js (mode: 'all')
-import nuxt_plugin_axios_149c9ef4 from 'nuxt_plugin_axios_149c9ef4' // Source: ./axios.js (mode: 'all')
+import nuxt_plugin_plugin_63603ff7 from 'nuxt_plugin_plugin_63603ff7' // Source: ./components/plugin.js (mode: 'all')
+import nuxt_plugin_plugin_133cdf57 from 'nuxt_plugin_plugin_133cdf57' // Source: ./vuetify/plugin.js (mode: 'all')
+import nuxt_plugin_apollomodule_2f605459 from 'nuxt_plugin_apollomodule_2f605459' // Source: ./apollo-module.js (mode: 'all')
+import nuxt_plugin_axios_cabd34e6 from 'nuxt_plugin_axios_cabd34e6' // Source: ./axios.js (mode: 'all')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -69,7 +69,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"titleTemplate":"%s - Web-Template","title":"Web-Template","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"},{"rel":"stylesheet","type":"text\u002Fcss","href":"https:\u002F\u002Ffonts.googleapis.com\u002Fcss?family=Roboto:100,300,400,500,700,900&display=swap"},{"rel":"stylesheet","type":"text\u002Fcss","href":"https:\u002F\u002Fcdn.jsdelivr.net\u002Fnpm\u002F@fortawesome\u002Ffontawesome-free@latest\u002Fcss\u002Fall.min.css"}],"style":[],"script":[]},
+    head: {"titleTemplate":"%s - portfolio","title":"Web-Template","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"},{"rel":"stylesheet","type":"text\u002Fcss","href":"https:\u002F\u002Ffonts.googleapis.com\u002Fcss?family=Roboto:100,300,400,500,700,900&display=swap"},{"rel":"stylesheet","type":"text\u002Fcss","href":"https:\u002F\u002Fcdn.jsdelivr.net\u002Fnpm\u002F@fortawesome\u002Ffontawesome-free@latest\u002Fcss\u002Fall.min.css"}],"style":[],"script":[]},
 
     store,
     router,
@@ -198,20 +198,20 @@ async function createApp(ssrContext, config = {}) {
   }
   // Plugin execution
 
-  if (typeof nuxt_plugin_plugin_3ff4d244 === 'function') {
-    await nuxt_plugin_plugin_3ff4d244(app.context, inject)
+  if (typeof nuxt_plugin_plugin_63603ff7 === 'function') {
+    await nuxt_plugin_plugin_63603ff7(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_plugin_475e49d0 === 'function') {
-    await nuxt_plugin_plugin_475e49d0(app.context, inject)
+  if (typeof nuxt_plugin_plugin_133cdf57 === 'function') {
+    await nuxt_plugin_plugin_133cdf57(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_apollomodule_629b36c0 === 'function') {
-    await nuxt_plugin_apollomodule_629b36c0(app.context, inject)
+  if (typeof nuxt_plugin_apollomodule_2f605459 === 'function') {
+    await nuxt_plugin_apollomodule_2f605459(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_axios_149c9ef4 === 'function') {
-    await nuxt_plugin_axios_149c9ef4(app.context, inject)
+  if (typeof nuxt_plugin_axios_cabd34e6 === 'function') {
+    await nuxt_plugin_axios_cabd34e6(app.context, inject)
   }
 
   // Lock enablePreview in context
