@@ -49,7 +49,6 @@ export default {
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/vuetify
-    '@nuxtjs/vuetify',
     ['@nuxtjs/vuetify', { iconfont: 'mdi' }]
   ],
 
