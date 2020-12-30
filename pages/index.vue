@@ -47,13 +47,7 @@
 					</center>
 					<p>// I value thoughtful user experience, clean design structure and users impression to my work.</p>
 					<ul>
-						<li>UX Desgin</li>
-						<li>PhotoShop😎</li>
-						<li>Illustrator</li>
-						<li>Affter Effect</li>
-						<li>Davinvi Resolve😎</li>
-						<li>Figma😎</li>
-						<li>Audition</li>
+						<li v-for="(i,k) in designer" :key="k">{{i}}</li>
 					</ul>
 				</div>
 			</v-col>	
@@ -64,22 +58,7 @@
 					</center>
 					<p>// stable, secure, fast, reliable and modern. Five demands not one less in my application.</p>
 					<ul>
-						<li>Nuxt.js😎</li>
-						<li>Express.js</li>
-						<li>Vue && Vuetify</li>
-						<li>ApolloGrahpQL😎</li>
-						<li>Serverless</li>
-						<li>Python Web Scraping😎</li>
-						<li>Python OCR </li>
-						<li>Python Selenium</li>
-						<li>MongoDB</li>
-						<li>SQL</li>
-						<li>Electron.js</li>
-						<li>PWA</li>
-						<li>PHP Laravel</li>
-						<li>Stripe</li>
-						<li>Netlify😎</li>
-						<li>HTML && CSS</li>
+						<li v-for="(i,k) in developer" :key="k">{{i}}</li>
 					</ul>
 				</div>
 			</v-col>	
@@ -92,57 +71,29 @@
 		</center>
 		<!-- https://webdesign.tutsplus.com/tutorials/building-a-vertical-timeline-with-css-and-a-touch-of-javascript--cms-26528 -->
 		<section class="timeline">
-		<p data-aos="zoom-in">Born in Hong Kong - a beautiful city with justice and freedom</p>
-		<p data-aos="zoom-in">
+		<p data-aos="fade-up">Born in Hong Kong - a beautiful city with justice and freedom</p>
+		<p data-aos="fade-up">
 			<time>1998</time>
 		</p>
 		<ul>
-			<li>
-				<div data-aos="zoom-in">
-					<time>2017</time>
-					<p>
-					Code at the first time in Java, EZPZ.
-					</p>
+			<li v-for="({year,text},i) in mywork" :key=i>
+				<div :data-aos="i%2?'fade-left':'fade-right'">
+					<time>{{year}}</time>
+					<p>{{text}}</p>
 				</div>
-			</li>
-			<li>
-				<div data-aos="zoom-in">
-					<time>2018</time>
-					<p>
-					Take my first Freelance Job:
-					“Made An bot that automatically login into Facebook and send friend requests to the others everyday”
-					</p>
-				</div>
-			</li>
-			<li>
-				<div data-aos="zoom-in">
-					<time>2019</time>
-					<p>
-					 Submit my Final Year Project and graduated. “A web-based application provides IOT control platform to allow users to control their door lock via their smartphone”
-					</p>
-				</div>
-			</li>
-			<li>
-				<div data-aos="zoom-in">
-					<time>2020</time>
-					<p>
-					Work in Car8.com as an Analyst Programmer. Develop and Maintain the online vehilce trade platform by using vue.js.
-					</p>
-				</div>
-			</li>			
+			</li>		
 		</ul>
 		<br>
-		<p data-aos="zoom-in">
+		<p data-aos="fade-down">
 			<time>2021</time>
 		</p>
-		<p data-aos="zoom-in">It’s been a tough year, let’s make 2021 better</p>
+		<p data-aos="fade-down">It’s been a tough year, let’s make 2021 better</p>
 		</section>
 		
 	</div>
 	<div class="container half-page">
 		<center>
 			<h1>WANTED</h1>
-
 		</center>
 		<!-- https://webdesign.tutsplus.com/tutorials/building-a-vertical-timeline-with-css-and-a-touch-of-javascript--cms-26528 -->
 		
@@ -155,7 +106,53 @@
 
 <script>
 export default {
-
+	data:()=>{
+		return {
+			mywork:[
+				{
+					year:2017,
+					text:"Code at the first time in Java, EZPZ."
+				},{
+					year:2018,
+					text:`Take my first Freelance Job:
+					“Made An bot that automatically login into Facebook and send friend requests to the others everyday"`
+				},{
+					year:2019,
+					text:`Submit my Final Year Project and graduated. “A web-based application provides IOT control platform to allow users to control their door lock via their smartphone”`
+				},{
+					year:2020,
+					text:"Work in Car8.com as an Analyst Programmer. Develop and Maintain the online vehilce trade platform by using vue.js."
+				}
+			],
+			designer:[
+				`UX Desgin`,
+				`PhotoShop😎`,
+				`Illustrator`,
+				`Affter Effect`,
+				`Davinvi Resolve😎`,
+				`Figma😎`,
+				`Audition`,
+			],
+			developer:[
+				`Nuxt.js😎`,
+				`Express.js`,
+				`Vue && Vuetify`,
+				`ApolloGrahpQL😎`,
+				`Serverless`,
+				`Python Web Scraping😎`,
+				`Python OCR`,
+				`Python Selenium`,
+				`MongoDB`,
+				`SQL`,
+				`Electron.js`,
+				`PWA`,
+				`PHP Laravel`,
+				`Stripe`,
+				`Netlify😎`,
+				`HTML && CSS`,
+			],
+		}
+	},
 	mounted() {},
 
 	methods: {},
