@@ -35,3 +35,8 @@ p:hover,time:hover,li:hover{
     color: red;
 }
 
+.shell-wrap p:hover,.shell-wrap li:hover{
+    text-transform: unset;
+    color: unset;
+}
+

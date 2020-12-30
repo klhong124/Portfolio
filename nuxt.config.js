@@ -18,6 +18,7 @@ export default {
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
+    '@mdi/font/css/materialdesignicons.min.css',
     '~/assets/css/main.css',
     'csshake'
   ],
@@ -49,6 +50,7 @@ export default {
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
+    ['@nuxtjs/vuetify', { iconfont: 'mdi' }]
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
