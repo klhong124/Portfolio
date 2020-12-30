@@ -9,14 +9,13 @@
 </template>
 
 <script>
-import $ from 'jquery'
+import $ from 'jquery';
+
 export default {
 	data() {
 		return {
-			title: 'Nuxt Web-Template',
+			title: 'Ryan Kwan - Portfolio',
 		}
-	},
-	mounted(){
 	},
 
 }

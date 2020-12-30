@@ -14,14 +14,16 @@
 			<p>> Developer</p>
 			<p>> Ux Designer</p>
 		</div>
-		<div class="more">
+		<!-- <div class="more">
 			<i class="arrow down"></i><br>
 			<i class="arrow down"></i><br>
 			<i class="arrow down"></i>
-		</div>
+		</div> -->
 	</div>
 	<div class="container half-page">
-		<small class="pr-5">cd</small><h1>ABOUT ME</h1>
+		<div data-aos="fade-right">
+			<small class="pr-5">cd</small><h1>ABOUT ME</h1>
+		</div>
 		<p class="about_me">
 			> Hello, I’m Ryan from Hong Kong. Nice to meet you.
 		</p>
@@ -39,11 +41,11 @@
 		</div>
 	</div>
 	<div class="container half-page">
-		<div class="exe skill">
+		<div class="exe skill" data-aos="fade-left">
 			<h1>MY SKILLS</h1><small class="pl-5">ls</small>
 		</div>
 		<v-row>
-			<v-col cols="12" xs="12" sm="5" lg="4">
+			<v-col cols="12" xs="12" sm="5" lg="4" data-aos="flip-down">
 				<div class="card">
 					<center class="pb-4">
 						<b>#DESIGNER</b>
@@ -60,7 +62,7 @@
 					</ul>
 				</div>
 			</v-col>	
-			<v-col cols="12" xs="12" sm="5" lg="4">
+			<v-col cols="12" xs="12" sm="5" lg="4" data-aos="flip-down" data-aos-delay="50">
 				<div class="card">
 					<center class="pb-4">
 						<b>#DEVELOPER</b>
@@ -91,8 +93,8 @@
 		
 	</div>
 	<div class="container half-page">
-		<center>
-			<h1>WANTED</h1>
+		<center data-aos="zoom-in-down">
+			<h1 >MY WORKS</h1><small class="pl-5">../</small>
 		</center>
 		<!-- https://webdesign.tutsplus.com/tutorials/building-a-vertical-timeline-with-css-and-a-touch-of-javascript--cms-26528 -->
 		<section class="timeline">
@@ -101,26 +103,26 @@
 			<time>1998</time>
 		</p>
 		<ul>
-			<li>
+			<li data-aos="zoom-in">
 				<time>2017</time>
 				<div>
 					Code at the first time in Java, EZPZ.
 				</div>
 			</li>
-			<li>
+			<li data-aos="zoom-in">
 				<time>2018</time>
 				<div>
 					Take my first Freelance Job:
 					“Made An bot that automatically login into Facebook and send friend requests to the others everyday”
 				</div>
 			</li>
-			<li>
+			<li data-aos="zoom-in">
 				<time>2019</time>
 				<div>
 					 Submit my Final Year Project and graduated. “A web-based application provides IOT control platform to allow users to control their door lock via their smartphone”
 				</div>
 			</li>
-			<li>
+			<li data-aos="zoom-in">
 				<time>2020</time>
 				<div>
 					Work in Car8.com as an Analyst Programmer. Develop and Maintain the online vehilce trade platform by using vue.js.
@@ -137,47 +139,11 @@
 	</div>
 	<div class="container half-page">
 		<center>
-			<h1>MY WORKS</h1><small class="pl-5">../</small>
+			<h1>WANTED</h1>
+
 		</center>
 		<!-- https://webdesign.tutsplus.com/tutorials/building-a-vertical-timeline-with-css-and-a-touch-of-javascript--cms-26528 -->
-		<section class="timeline">
-		<p>Born in Hong Kong - a beautiful city with justice and freedom</p>
-		<p>
-			<time>1998</time>
-		</p>
-		<ul>
-			<li>
-				<time>2017</time>
-				<div>
-					Code at the first time in Java, EZPZ.
-				</div>
-			</li>
-			<li>
-				<time>2018</time>
-				<div>
-					Take my first Freelance Job:
-					“Made An bot that automatically login into Facebook and send friend requests to the others everyday”
-				</div>
-			</li>
-			<li>
-				<time>2019</time>
-				<div>
-					 Submit my Final Year Project and graduated. “A web-based application provides IOT control platform to allow users to control their door lock via their smartphone”
-				</div>
-			</li>
-			<li>
-				<time>2020</time>
-				<div>
-					Work in Car8.com as an Analyst Programmer. Develop and Maintain the online vehilce trade platform by using vue.js.
-				</div>
-			</li>			
-		</ul>
-		<br>
-		<p>
-			<time>2021</time>
-		</p>
-		<p>It’s been a tough year, let’s make 2021 better</p>
-		</section>
+		
 		
 	</div>
 	<span>&copy; Copyright © 2021 Ryan Kwan • UX Designer & Web Developer</span>
@@ -186,12 +152,10 @@
 </template>
 
 <script>
-
 export default {
-	components: {
-	},
-	mounted() {
-	},
+
+	mounted() {},
+
 	methods: {},
 }
 </script>
