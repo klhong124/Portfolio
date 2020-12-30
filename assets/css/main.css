@@ -19,4 +19,19 @@
 *{
     color: white;
     font-family: "thabit";
+    cursor: url('../svg/precision.svg') 40 40, auto;	
+    
 }
+button, [type=button], [type=reset], [type=submit], [role=button] {
+    cursor: unset !important;
+}
+
+.aim:hover{
+    cursor: url('../svg/precisionRed.svg') 40 40, auto !important;
+}
+
+p:hover,time:hover,li:hover{
+    text-transform: uppercase;
+    color: red;
+}
+

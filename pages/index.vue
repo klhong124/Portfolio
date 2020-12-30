@@ -2,27 +2,22 @@
 <div>
 
 	<div class="container full-page">
-		<small class="pr-5">su</small><h1>RYAN KWAN</h1>
+		<small class="pr-5">#</small><h1 class="name aim ">RYAN KWAN</h1>
 		<v-btn
-		class="exe"
+		class="exe aim shake-little"
 		color="white"
 		large
 		outlined
-		>Hire.exe</v-btn>
+		><span class="aim">Hire.exe</span></v-btn>
 		<div class="desc">
-			<p><b>the guy😎 who never miss ;</b></p>
+			<b><p>the guy😎 who never miss ;</p></b>
 			<p>> Developer</p>
 			<p>> Ux Designer</p>
 		</div>
-		<!-- <div class="more">
-			<i class="arrow down"></i><br>
-			<i class="arrow down"></i><br>
-			<i class="arrow down"></i>
-		</div> -->
 	</div>
-	<div class="container half-page">
+	<div class="container half-page ">
 		<div data-aos="fade-right">
-			<small class="pr-5">cd</small><h1>ABOUT ME</h1>
+			<small class="pr-5">cd</small><h1 class="aim">ABOUT ME</h1>
 		</div>
 		<p class="about_me">
 			> Hello, I’m Ryan from Hong Kong. Nice to meet you.
@@ -33,7 +28,7 @@
 		<p>
 			> Enthusiastic to become a skilled person and contribute to the Information Technology Industry. Seeking for an opportunity to take part in your company and demonstrate all of my technical ability.
 		</p>
-		<div class="readme">
+		<div class="readme" data-aos="zoom-in-down">
 			<center>
 			<p>README.md</p>
 			<i class="arrow down"></i>
@@ -41,12 +36,12 @@
 		</div>
 	</div>
 	<div class="container half-page">
-		<div class="exe skill" data-aos="fade-left">
-			<h1>MY SKILLS</h1><small class="pl-5">ls</small>
+		<div class="skill" data-aos="fade-left">
+			<h1 class="pr-5 aim">MY SKILLS</h1><small>ls</small>
 		</div>
 		<v-row>
 			<v-col cols="12" xs="12" sm="5" lg="4" data-aos="flip-down">
-				<div class="card">
+				<div class="card shake-little">
 					<center class="pb-4">
 						<b>#DESIGNER</b>
 					</center>
@@ -63,7 +58,7 @@
 				</div>
 			</v-col>	
 			<v-col cols="12" xs="12" sm="5" lg="4" data-aos="flip-down" data-aos-delay="50">
-				<div class="card">
+				<div class="card shake-little">
 					<center class="pb-4">
 						<b>#DEVELOPER</b>
 					</center>
@@ -88,52 +83,59 @@
 					</ul>
 				</div>
 			</v-col>	
-			<v-col></v-col>	
 		</v-row>
 		
 	</div>
 	<div class="container half-page">
 		<center data-aos="zoom-in-down">
-			<h1 >MY WORKS</h1><small class="pl-5">../</small>
+			<h1 class="aim">MY WORKS</h1><small class="pl-5">../</small>
 		</center>
 		<!-- https://webdesign.tutsplus.com/tutorials/building-a-vertical-timeline-with-css-and-a-touch-of-javascript--cms-26528 -->
 		<section class="timeline">
-		<p>Born in Hong Kong - a beautiful city with justice and freedom</p>
-		<p>
+		<p data-aos="zoom-in">Born in Hong Kong - a beautiful city with justice and freedom</p>
+		<p data-aos="zoom-in">
 			<time>1998</time>
 		</p>
 		<ul>
-			<li data-aos="zoom-in">
-				<time>2017</time>
-				<div>
+			<li>
+				<div data-aos="zoom-in">
+					<time>2017</time>
+					<p>
 					Code at the first time in Java, EZPZ.
+					</p>
 				</div>
 			</li>
-			<li data-aos="zoom-in">
-				<time>2018</time>
-				<div>
+			<li>
+				<div data-aos="zoom-in">
+					<time>2018</time>
+					<p>
 					Take my first Freelance Job:
 					“Made An bot that automatically login into Facebook and send friend requests to the others everyday”
+					</p>
 				</div>
 			</li>
-			<li data-aos="zoom-in">
-				<time>2019</time>
-				<div>
+			<li>
+				<div data-aos="zoom-in">
+					<time>2019</time>
+					<p>
 					 Submit my Final Year Project and graduated. “A web-based application provides IOT control platform to allow users to control their door lock via their smartphone”
+					</p>
 				</div>
 			</li>
-			<li data-aos="zoom-in">
-				<time>2020</time>
-				<div>
+			<li>
+				<div data-aos="zoom-in">
+					<time>2020</time>
+					<p>
 					Work in Car8.com as an Analyst Programmer. Develop and Maintain the online vehilce trade platform by using vue.js.
+					</p>
 				</div>
 			</li>			
 		</ul>
 		<br>
-		<p>
+		<p data-aos="zoom-in">
 			<time>2021</time>
 		</p>
-		<p>It’s been a tough year, let’s make 2021 better</p>
+		<p data-aos="zoom-in">It’s been a tough year, let’s make 2021 better</p>
 		</section>
 		
 	</div>
@@ -146,7 +148,7 @@
 		
 		
 	</div>
-	<span>&copy; Copyright © 2021 Ryan Kwan • UX Designer & Web Developer</span>
+	<!-- <span>&copy; Copyright © 2021 Ryan Kwan • UX Designer & Web Developer</span> -->
 </div>
 	
 </template>
@@ -175,6 +177,9 @@ export default {
 	position: absolute;
 	bottom:10vh;
 }
+.name{
+	font-size: max(8.5vw, 75px);
+}
 h1{
 	line-height: 60px;
 	font-weight: 700;
@@ -190,21 +195,15 @@ small{
 	margin-top: 12px;
 	float: right;
 }
-.more{
-	position: absolute;
-	bottom:10vh;
-	right:12px;
-	transform: scale(1,0.7);
-}
 .readme{
-	margin: 10vh 0;
+	margin: 12vh 0;
 	width:100%;
 	left: 0;
 }
 .readme i{
 	transform: scale(1,0.7);
 	transform: rotate(45deg);
-		-webkit-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
 }
 .arrow {
   border: solid white;
@@ -221,9 +220,10 @@ small{
 	margin-top: max(3vw, 25px);
 }
 .skill{
-	position:absolute;
-	right:12px;
-	top:-30px;
+	text-align: right;
+}
+.skill h1{
+	display: inline;
 }
 .card{
 	padding: 32px 12px;
@@ -240,6 +240,7 @@ time{
 .timeline p{
 	text-align: center;
 }
+
 .timeline ul {
 	padding:0;
 }
@@ -265,13 +266,13 @@ time{
 }
 .timeline ul li time {
   position: absolute;
-  top:70px;
+  top:0;
   width: 400px;
   padding: 15px;
 }
 .timeline ul li div {
   position: relative;
-  top:-30px;
+  top:-32px;
   width: 400px;
   padding: 15px;
 }
@@ -284,23 +285,29 @@ time{
   height: 0;
   border-style: solid;
 }
-.timeline ul li:nth-child(odd) time {
-  left: 35px;
-}
-.timeline ul li:nth-child(odd) div {
-  left: 100px;
-}
- 
-.timeline ul li:nth-child(odd) div::before {
-  border-color: transparent transparent transparent transparent;
+.timeline ul li:nth-child(odd) p {
+	text-align: left;
 }
 
+.timeline ul li:nth-child(odd) time {
+	left: -65px;
+}
+.timeline ul li:nth-child(odd) div {
+	left: 100px;
+}
+.timeline ul li:nth-child(odd) div::before {
+	border-color: transparent transparent transparent transparent;
+}
+
+.timeline ul li:nth-child(even) p {
+	text-align: right;
+}
 .timeline ul li:nth-child(even) time {
-  left: -429px;
+  left: 65px;
   text-align: right;
 }
 .timeline ul li:nth-child(even) div {
-  left: -504px;
+  left: -501px;
   text-align: right;
 }
  
@@ -309,15 +316,18 @@ time{
   border-width: 8px 0 8px 16px;
   border-color: transparent transparent transparent transparent;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1015px) {
   .timeline ul li div {
-    width: 250px;
+    width: 260px;
   }
   .timeline ul li:nth-child(even) div {
-    left: -289px; /*250+45-6*/
+    left: -354px; 
+  }
+  .timeline ul li:nth-child(even) time {
+	left: -82px;/*270+55-6*/
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 740px) {
   .timeline p{
 	  text-align: left;
   }
@@ -328,17 +338,26 @@ time{
   .timeline ul li div {
     width: calc(100vw - 91px);
   }
+  .timeline ul li div time{
+	top: -35px;
+  }
+  .timeline ul li div {
+	top:0;
+  }
+  .timeline ul li:nth-child(odd) time {
+    left: 0;
+  }
   .timeline ul li:nth-child(odd) div {
 	left: 35px;
-	top:0px;
   }
   .timeline ul li:nth-child(even) time {
 	text-align: left;
-    left: 35px;
+    left: 0;
+  }
+  .timeline ul li:nth-child(even) p {
+    text-align: left;
   }
   .timeline ul li:nth-child(even) div {
-	text-align: left;
-	top:0;
     left: 35px;
   }
 }
