@@ -178,7 +178,7 @@ export default {
 h1{
 	line-height: 60px;
 	font-weight: 700;
-	font-size: max(8.5vw, 60px);
+	font-size: max(8.5vw, 45px);
 	display: inline;
 }
 small{
