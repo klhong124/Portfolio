@@ -144,11 +144,13 @@
 						outlined
 						name="company"
 						label="Form"
+						value=""
 					></v-text-field>
 					<v-textarea
 						dark
 						outlined
 						name="message"
+						value=""
 						label="Message"
 					></v-textarea>
 					<v-btn outlined dark style="float: right" type="submit"
@@ -263,7 +265,7 @@ export default {
 <style>
 	.full-page {
 		margin-top: 10vh;
-		min-height: 100vh;
+		min-height: 90vh;
 		position: relative;
 	}
 	.half-page {
