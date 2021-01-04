@@ -3,7 +3,12 @@
 		<div class="container full-page">
 			<small class="pr-5">#</small>
 			<h1 class="name aim">RYAN KWAN</h1>
-			<v-btn class="exe aim shake-little" color="white" large outlined
+			<v-btn
+				class="exe aim shake-little"
+				dark
+				large
+				outlined
+				@click="moveTowanted"
 				><span class="aim">Hire.exe</span></v-btn
 			>
 			<div class="desc">
@@ -128,7 +133,7 @@
 		</div>
 		<div class="container half-page">
 			<center data-aos="flip-down">
-				<h1>WANTED</h1>
+				<h1 id="wanted">WANTED</h1>
 			</center>
 			<br />
 			<div class="card mt-5 container pa-5 mw-700">
@@ -166,16 +171,17 @@
 			<!-- https://www.ipcc.gov.hk/symposium2019/view/index.html -->
 			<!-- https://webdesign.tutsplus.com/tutorials/building-a-vertical-timeline-with-css-and-a-touch-of-javascript--cms-26528 -->
 		</div>
-		<center>
-
-		<span>&copy; Copyright © 2021 Ryan Kwan • UX Designer & Web
-			Developer</span
-		>
-		</center>
+		<div class="half-page">
+			<center style="padding-top: 25vh">
+				&copy; Copyright © 2021 Ryan Kwan • UX Designer & Web Developer
+			</center>
+		</div>
 	</div>
 </template>
 
 <script>
+import $ from 'jquery';
+
 export default {
 	data: () => {
 		return {
@@ -245,6 +251,11 @@ export default {
 				},
 			],
 		};
+	},
+	methods: {
+		moveTowanted() {
+			$("#wanted").get(0).scrollIntoView();
+		},
 	},
 };
 </script>
