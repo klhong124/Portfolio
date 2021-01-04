@@ -131,20 +131,21 @@
 				<h1>WANTED</h1>
 			</center>
 			<br />
-			<div class="card mt-5 container mw-700">
-				<p>leave a message to me:</p>
-				<form name="contact" netlify>
+			<div class="card mt-5 container pa-5 mw-700">
+				<p>Leave a message to me:</p>
+				<form name="contact" class="pb-4 pl-4 pr-4" netlify>
 					<v-text-field
 						dark
+						outlined
 						name="company"
-						label="name"
+						label="Form"
 					></v-text-field>
-					<v-text-field
+					<v-textarea
 						dark
+						outlined
 						name="message"
-						label="message"
-					></v-text-field>
-
+						label="Message"
+					></v-textarea>
 					<v-btn outlined dark style="float: right" type="submit"
 						>Send</v-btn
 					>
