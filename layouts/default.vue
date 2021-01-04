@@ -1,5 +1,5 @@
 <template>
-	<v-app >
+	<v-app dark>
 
 		<v-main id="main">
 			<nuxt />
@@ -33,8 +33,7 @@ export default {
 
 </script>
 <style>
-
 #main{   
-	background:linear-gradient(45deg, #363636, #2a2b2e);
+	background:linear-gradient(45deg, #343436, #34363d);
 }
 </style>

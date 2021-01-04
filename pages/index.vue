@@ -128,40 +128,49 @@
 		</div>
 		<div class="container half-page">
 			<center data-aos="flip-down">
-				<h1 >WANTED</h1>
+				<h1>WANTED</h1>
 			</center>
-				<div class="card mt-5">
+			<br />
+			<div class="card mt-5 container mw-700">
+				<p>leave a message to me:</p>
 				<form name="contact" netlify>
-				<p>
-					<label>Name <input type="text" name="name" /></label>
-				</p>
-				<p>
-					<label>Email <input type="email" name="email" /></label>
-				</p>
-				<p>
-					<button type="submit">Send</button>
-				</p>
-				</form>
-					<v-btn
-						v-for="(social, i) in socials"
-						:key="i"
-						class="white--text"
-						fab
-						icon
-						small
-						:href="social.href"
-					>
-						<v-icon>{{ social.icon }}</v-icon>
-					</v-btn>
-				</div>
+					<v-text-field
+						dark
+						name="company"
+						label="name"
+					></v-text-field>
+					<v-text-field
+						dark
+						name="message"
+						label="message"
+					></v-text-field>
 
-				<!-- https://www.ipcc.gov.hk/symposium2019/view/index.html -->
+					<v-btn outlined dark style="float: right" type="submit"
+						>Send</v-btn
+					>
+				</form>
+				<v-btn
+					v-for="(social, i) in socials"
+					:key="i"
+					class="white--text"
+					fab
+					icon
+					small
+					:href="social.href"
+				>
+					<v-icon>{{ social.icon }}</v-icon>
+				</v-btn>
+			</div>
+
+			<!-- https://www.ipcc.gov.hk/symposium2019/view/index.html -->
 			<!-- https://webdesign.tutsplus.com/tutorials/building-a-vertical-timeline-with-css-and-a-touch-of-javascript--cms-26528 -->
 		</div>
-		<span
-			>&copy; Copyright © 2021 Ryan Kwan • UX Designer & Web
+		<center>
+
+		<span>&copy; Copyright © 2021 Ryan Kwan • UX Designer & Web
 			Developer</span
 		>
+		</center>
 	</div>
 </template>
 
@@ -241,12 +250,12 @@ export default {
 
 <style>
 	.full-page {
-		padding-top: 10vh;
+		margin-top: 10vh;
 		min-height: 100vh;
 		position: relative;
 	}
 	.half-page {
-		padding-top: 90px;
+		margin-top: 90px;
 		min-height: 80vh;
 		position: relative;
 	}
@@ -392,6 +401,9 @@ export default {
 		right: -15px;
 		border-width: 8px 0 8px 16px;
 		border-color: transparent transparent transparent transparent;
+	}
+	.mw-700 {
+		max-width: 700px;
 	}
 	@media screen and (max-width: 1015px) {
 		.timeline ul li div {
