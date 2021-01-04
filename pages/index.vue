@@ -131,9 +131,9 @@
 				</p>
 			</section>
 		</div>
-		<div class="container half-page">
+		<div class="container half-page" id="wanted">
 			<center data-aos="flip-down">
-				<h1 id="wanted">WANTED</h1>
+				<h1>WANTED</h1>
 			</center>
 			<br />
 			<div class="card mt-5 container pa-5 mw-700">
