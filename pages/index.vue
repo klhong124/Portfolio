@@ -10,6 +10,17 @@
 				<b><p>the guy😎 who never miss ;</p></b>
 				<p>> Developer</p>
 				<p>> Ux Designer</p>
+				<v-btn
+					v-for="(social, i) in socials"
+					:key="i"
+					class="white--text aim"
+					fab
+					icon
+					small
+					:href="social.href"
+				>
+					<v-icon class="aim">{{ social.icon }}</v-icon>
+				</v-btn>
 			</div>
 		</div>
 		<div class="container half-page">
@@ -32,7 +43,7 @@
 				take part in your company and demonstrate all of my technical
 				ability.
 			</p>
-			<div class="readme" data-aos="zoom-in-down">
+			<div class="readme" data-aos="fade-down">
 				<center>
 					<p>README.md</p>
 					<i class="arrow down"></i>
@@ -116,61 +127,45 @@
 			</section>
 		</div>
 		<div class="container half-page">
-			<center>
-				<h1>WANTED</h1>
-				<div class="shell-wrap">
-					<p class="shell-top-bar">/Users/ryankwan/Documents/Hire.exe</p>
-					<ul class="shell-body">
-						<li>"#######::: ##:::: ##::::'###::::: "#':::: ##:</li>
-						<li>##.... ##:' ##:::: ##:::'## ##:::: ####::: ##:</li>
-						<li>##:::: ##: . ##:: ##:::'##:. ##::: ## ##:: ##:</li>
-						<li>########:: :. ## ##:::'##:::. ##:: ##: ##: ##:</li>
-						<li>##.. ##::: ::. ###:::: #########:: ##:. ## ##:</li>
-						<li>##::. ##:: ::: ##::::: ##.... ##:: ##:::. ###:</li>
-						<li>##:::. ##:.::: ##::::: ##:::: ##:: ##::::. "#:</li>
-							<br>
-						<li>MacBook-Pro-2:portfolio ryankwan$ npm run-script build</li>
-						<li>> portfolio@1.0.0 build /Users/lokhongkwan/Documents/GitHub/portfolio
-						<li>> nuxt-ts build</li>
-						<li><span style="color:turquoise">ℹ</span> Production build                         </li>
-						<li><span style="color:turquoise">ℹ</span> Bundling for <span style="color:yellow">server</span> and <span style="color:#0aa557">client</span> side      </li>
-						<li><span style="color:turquoise">ℹ</span> Target: <span style="color:cyan">server</span>                           </li>
-						<li><span style="color: #0aa557;">✔</span> Builder initialized                     </li>
-						<li><span style="color: #0aa557;">✔</span> Nuxt files generated      </li>
-							<br>
-						<li><span style="color: #0aa557;">✔ Client</span> </li>
-						<li>Compiled successfully in 22.91s</li>
-							<br>                         
-						<li><span style="color: darkorange;">✔ Server</span> </li>
-						<li>Compiled successfully in 6.00s</li>
-							<br>                         
-						<li>Listening: <a href="mailto:klhong124@gmail.com">klhong124@gmail.com</a> </li>
-							<br>                         
-						<li><span style="color:turquoise">ℹ</span> Preparing for employment😎</li>
-					</ul>
+			<center data-aos="flip-down">
+				<h1 >WANTED</h1>
+			</center>
+				<div class="card mt-5">
+				<form name="contact" netlify>
+				<p>
+					<label>Name <input type="text" name="name" /></label>
+				</p>
+				<p>
+					<label>Email <input type="email" name="email" /></label>
+				</p>
+				<p>
+					<button type="submit">Send</button>
+				</p>
+				</form>
+					<v-btn
+						v-for="(social, i) in socials"
+						:key="i"
+						class="white--text"
+						fab
+						icon
+						small
+						:href="social.href"
+					>
+						<v-icon>{{ social.icon }}</v-icon>
+					</v-btn>
 				</div>
 
-				<v-btn
-					v-for="(social, i) in socials"
-					:key="i"
-					class="white--text"
-					fab
-					icon
-					small
-					:href="social.href"
-				>
-                <v-icon>{{ social.icon }}</v-icon>
-              </v-btn>
-
-			</center>
+				<!-- https://www.ipcc.gov.hk/symposium2019/view/index.html -->
 			<!-- https://webdesign.tutsplus.com/tutorials/building-a-vertical-timeline-with-css-and-a-touch-of-javascript--cms-26528 -->
 		</div>
-		<span>&copy; Copyright © 2021 Ryan Kwan • UX Designer & Web Developer</span>
+		<span
+			>&copy; Copyright © 2021 Ryan Kwan • UX Designer & Web
+			Developer</span
+		>
 	</div>
 </template>
 
 <script>
-
 export default {
 	data: () => {
 		return {
@@ -215,7 +210,7 @@ export default {
 				`MongoDB`,
 				`SQL`,
 				`Electron.js`,
-				`PWA`,
+				`UBA`,
 				`PHP Laravel`,
 				`Stripe`,
 				`Netlify😎`,
@@ -223,27 +218,24 @@ export default {
 			],
 			socials: [
 				{
-					icon: 'mdi-facebook',
-					href:"https://www.facebook.com"
+					icon: "mdi-facebook",
+					href: "https://www.facebook.com",
 				},
 				{
-					icon: 'mdi-linkedin',
-					href:"www.facebook.com"
+					icon: "mdi-linkedin",
+					href: "www.facebook.com",
 				},
 				{
-					icon: 'mdi-instagram',
-					href:"www.facebook.com"
+					icon: "mdi-instagram",
+					href: "www.facebook.com",
 				},
 				{
-					icon: 'mdi-gmail',
-					href:"www.facebook.com"
+					icon: "mdi-gmail",
+					href: "www.facebook.com",
 				},
 			],
 		};
 	},
-	mounted() {},
-
-	methods: {},
 };
 </script>
 
@@ -445,90 +437,5 @@ export default {
 		.timeline ul li:nth-child(even) div {
 			left: 35px;
 		}
-	}
-	.shell-wrap {
-		width: max(60vw, 400px);
-		margin: 50px auto;
-		box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
-
-		-webkit-border-radius: 3px;
-		-moz-border-radius: 3px;
-		border-radius: 3px;
-	}
-
-	.shell-top-bar {
-		text-align: center;
-		color: #525252;
-		padding: 5px 0;
-		margin: 0;
-		text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
-		font-size: 0.85em;
-		border: 1px solid #cccccc;
-		border-bottom: none;
-
-		-webkit-border-top-left-radius: 3px;
-		-webkit-border-top-right-radius: 3px;
-		-moz-border-radius-topleft: 3px;
-		-moz-border-radius-topright: 3px;
-		border-top-left-radius: 3px;
-		border-top-right-radius: 3px;
-
-		background: #f7f7f7; /* Old browsers */
-		background: -moz-linear-gradient(
-			top,
-			#f7f7f7 0%,
-			#b8b8b8 100%
-		); /* FF3.6+ */
-		background: -webkit-gradient(
-			linear,
-			left top,
-			left bottom,
-			color-stop(0%, #f7f7f7),
-			color-stop(100%, #b8b8b8)
-		); /* Chrome,Safari4+ */
-		background: -webkit-linear-gradient(
-			top,
-			#f7f7f7 0%,
-			#b8b8b8 100%
-		); /* Chrome10+,Safari5.1+ */
-		background: -o-linear-gradient(
-			top,
-			#f7f7f7 0%,
-			#b8b8b8 100%
-		); /* Opera 11.10+ */
-		background: -ms-linear-gradient(top, #f7f7f7 0%, #b8b8b8 100%); /* IE10+ */
-		background: linear-gradient(to bottom, #f7f7f7 0%, #b8b8b8 100%); /* W3C */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#B8B8B8',GradientType=0 ); /* IE6-9 */
-	}
-
-	.shell-body {
-		margin: 0;
-		padding: 5px;
-		list-style: none;
-		background: #141414;
-		color: #45d40c;
-		font: 0.8em "Andale Mono", Consolas, "Courier New";
-		line-height: 1.6em;
-
-		-webkit-border-bottom-right-radius: 3px;
-		-webkit-border-bottom-left-radius: 3px;
-		-moz-border-radius-bottomright: 3px;
-		-moz-border-radius-bottomleft: 3px;
-		border-bottom-right-radius: 3px;
-		border-bottom-left-radius: 3px;
-	}
-
-	.shell-body li:before {
-		content: "$";
-		position: absolute;
-		left: 0;
-		top: 0;
-	}
-
-	.shell-body li {
-		word-wrap: break-word;
-		position: relative;
-		padding: 0 0 0 15px;
-		text-align: left;
 	}
 </style>
