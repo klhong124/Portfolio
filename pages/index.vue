@@ -130,6 +130,11 @@
 					It’s been a tough year, let’s make 2021 better
 				</p>
 			</section>
+			<v-row>
+				<v-col v-for="(j,i) in job" :key="i" cols="12">
+					<Job :job="j" data-aos="zoom-out"/>
+				</v-col>
+			</v-row>
 		</div>
 		<div class="container half-page" id="wanted">
 			<center data-aos="flip-down">
@@ -153,10 +158,16 @@
 						value=""
 						label="Message"
 					></v-textarea>
-					<v-btn outlined dark style="float: right" type="submit"
-						>Send</v-btn
-					>
+					<v-btn outlined dark style="float: right" type="submit">Send</v-btn>
+					<br>
 				</form>
+				
+			</div>
+
+			<!-- https://webdesign.tutsplus.com/tutorials/building-a-vertical-timeline-with-css-and-a-touch-of-javascript--cms-26528 -->
+		</div>
+		<div class="half-page">
+			<center style="padding-top: 25vh">
 				<v-btn
 					v-for="(social, i) in socials"
 					:key="i"
@@ -168,13 +179,7 @@
 				>
 					<v-icon>{{ social.icon }}</v-icon>
 				</v-btn>
-			</div>
-
-			<!-- https://www.ipcc.gov.hk/symposium2019/view/index.html -->
-			<!-- https://webdesign.tutsplus.com/tutorials/building-a-vertical-timeline-with-css-and-a-touch-of-javascript--cms-26528 -->
-		</div>
-		<div class="half-page">
-			<center style="padding-top: 25vh">
+				<br>
 				&copy; Copyright © 2021 Ryan Kwan • UX Designer & Web Developer
 			</center>
 		</div>
@@ -183,10 +188,56 @@
 
 <script>
 import $ from 'jquery';
+import Job from '~/components/Job.vue'
 
 export default {
+	components: {
+		Job,
+	},
 	data: () => {
 		return {
+			job:[
+				{
+					name: "Car8",
+					img:"car8",
+					link:"https://www.car8.com/",
+					year: 2020,
+					text: "A used-car trading platform made of Vue and Laravel.",
+					tags:[
+						"Laravel",
+						"Vue",
+						"UBA",
+						"Online Payment",
+						"Vuex",
+						"SQL",
+						"Python OCR",
+					]
+				},
+				{
+					name: "IPCC",
+					img:"ipcc",
+					link:"https://www.ipcc.gov.hk/symposium2019/view/index.html",
+					year: 2019,
+					text: "An event website made of pure HTML and CSS.",
+					tags:[
+						"HTML",
+						"CSS",
+						"Graphic Design",
+						"AOS Animation"
+					]
+				},
+				{
+					name: "Facebook Add Friends Bot",
+					img:"facebook",
+					year: 2018,
+					text: "An application that automatically login to Facebook and sends friend requests to the others. With a function to remove all friend requests as well.",
+					tags:[
+						"Java",
+						"Selenium",
+						"Web Scraping",
+					]
+				},
+			],
 			mywork: [
 				{
 					year: 2017,
@@ -230,7 +281,7 @@ export default {
 				`Electron.js`,
 				`UBA`,
 				`PHP Laravel`,
-				`Stripe`,
+				`Stripe Payment`,
 				`Netlify😎`,
 				`HTML && CSS`,
 			],
@@ -335,6 +386,7 @@ export default {
 	}
 	.timeline {
 		margin-top: 100px;
+		margin-bottom: 100px;
 	}
 	.timeline p {
 		text-align: center;

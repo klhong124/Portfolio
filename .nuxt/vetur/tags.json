@@ -1,8 +1,8 @@
 {
-  "Logo": {
-    "description": "Auto imported from components/Logo.vue"
+  "Job": {
+    "description": "Auto imported from components/Job.vue"
   },
-  "LazyLogo": {
-    "description": "Auto imported from components/Logo.vue"
+  "LazyJob": {
+    "description": "Auto imported from components/Job.vue"
   }
 }
