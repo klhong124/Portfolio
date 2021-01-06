@@ -1,17 +1,16 @@
 <template>
 	<div class="card pa-5 shake-little">
 		<v-row>
-			<v-col cols="12" sm="5">
+			<v-col cols="12" md="5">
 				<center>
-					<v-img
+					<img
 						:src="job.img"
-						width="max(50%,350px)"
 						class="img"
 						@click="imgclick(job.link)"
-					></v-img>
+					>
 				</center>
 			</v-col>
-			<v-col cols="12" sm="7">
+			<v-col cols="12" md="7">
 				<h2>{{ job.name }} ({{ job.year }})</h2>
 				<p>{{ job.text }}</p>
 				<div style="width:100%">
@@ -38,6 +37,7 @@ export default {
 <style scoped>
 	.img {
 		border-radius: 8px;
+		width:max(50%,350px);
 	}
 	.tag {
 		border: 1px white solid;
