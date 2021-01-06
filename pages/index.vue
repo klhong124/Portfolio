@@ -200,7 +200,7 @@ export default {
 			job: [
 				{
 					name: "Car8",
-					img: "car8",
+					img: "https://ryankwan.netlify.app/img/car8.png",
 					link: "https://www.car8.com/",
 					year: 2020,
 					text:
@@ -217,7 +217,7 @@ export default {
 				},
 				{
 					name: "IPCC",
-					img: "ipcc",
+					img: "https://ryankwan.netlify.app/img/ipcc.png",
 					link:
 						"https://www.ipcc.gov.hk/symposium2019/view/index.html",
 					year: 2019,
@@ -226,7 +226,7 @@ export default {
 				},
 				{
 					name: "Facebook Add Friends Bot",
-					img: "facebook",
+					img: "https://ryankwan.netlify.app/img/facebook.png",
 					year: 2018,
 					text:
 						"An application that automatically login to Facebook and sends friend requests to the others. With a function to remove all friend requests as well.",
