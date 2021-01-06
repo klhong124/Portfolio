@@ -281,21 +281,21 @@ export default {
 				`HTML && CSS`,
 			],
 			socials: [
-				{
-					icon: "mdi-facebook",
-					href: "https://www.facebook.com",
-				},
+				// {
+				// 	icon: "mdi-facebook",
+				// 	href: "https://www.facebook.com",
+				// },
 				{
 					icon: "mdi-linkedin",
-					href: "www.facebook.com",
+					href: "https://my.indeed.com/p/lokhongk-jm0z5xs",
 				},
-				{
-					icon: "mdi-instagram",
-					href: "www.facebook.com",
-				},
+				// {
+				// 	icon: "mdi-instagram",
+				// 	href: "www.facebook.com",
+				// },
 				{
 					icon: "mdi-gmail",
-					href: "www.facebook.com",
+					href: "mailto:klhong124@gmail.com",
 				},
 			],
 		};
