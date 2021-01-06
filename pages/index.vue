@@ -37,15 +37,15 @@
 				> Hello, I’m Ryan from Hong Kong. Nice to meet you.
 			</p>
 			<p>
-				> I am an intelligent and highly adaptable student currently
-				enrolled on Information Technology Degree and Multimedia Higher
-				Diploma with high grades achievement as well as related work
-				experience.
+				> I am a full-Stack developer use Nuxt.js and apolloGraphql to
+				create a modern web application. I am a quick learner and hard
+				worker with high academic achievement in an Information
+				Technology Degree and Multimedia Higher Diploma.
 			</p>
 			<p>
 				> Enthusiastic to become a skilled person and contribute to the
 				Information Technology Industry. Seeking for an opportunity to
-				take part in your company and demonstrate all of my technical
+				contribute to your company and demonstrate all of my technical
 				ability.
 			</p>
 			<div class="readme" data-aos="fade-down">
@@ -131,8 +131,8 @@
 				</p>
 			</section>
 			<v-row>
-				<v-col v-for="(j,i) in job" :key="i" cols="12">
-					<Job :job="j" data-aos="zoom-out"/>
+				<v-col v-for="(j, i) in job" :key="i" cols="12">
+					<Job :job="j" data-aos="zoom-out" />
 				</v-col>
 			</v-row>
 		</div>
@@ -158,10 +158,11 @@
 						value=""
 						label="Message"
 					></v-textarea>
-					<v-btn outlined dark style="float: right" type="submit">Send</v-btn>
-					<br>
+					<v-btn outlined dark style="float: right" type="submit"
+						>Send</v-btn
+					>
+					<br />
 				</form>
-				
 			</div>
 
 			<!-- https://webdesign.tutsplus.com/tutorials/building-a-vertical-timeline-with-css-and-a-touch-of-javascript--cms-26528 -->
@@ -179,7 +180,7 @@
 				>
 					<v-icon>{{ social.icon }}</v-icon>
 				</v-btn>
-				<br>
+				<br />
 				&copy; Copyright © 2021 Ryan Kwan • UX Designer & Web Developer
 			</center>
 		</div>
@@ -187,8 +188,8 @@
 </template>
 
 <script>
-import $ from 'jquery';
-import Job from '~/components/Job.vue'
+import $ from "jquery";
+import Job from "~/components/Job.vue";
 
 export default {
 	components: {
@@ -196,14 +197,15 @@ export default {
 	},
 	data: () => {
 		return {
-			job:[
+			job: [
 				{
 					name: "Car8",
-					img:"car8",
-					link:"https://www.car8.com/",
+					img: "car8",
+					link: "https://www.car8.com/",
 					year: 2020,
-					text: "A used-car trading platform made of Vue and Laravel.",
-					tags:[
+					text:
+						"A used-car trading platform made of Vue and Laravel.",
+					tags: [
 						"Laravel",
 						"Vue",
 						"UBA",
@@ -211,31 +213,24 @@ export default {
 						"Vuex",
 						"SQL",
 						"Python OCR",
-					]
+					],
 				},
 				{
 					name: "IPCC",
-					img:"ipcc",
-					link:"https://www.ipcc.gov.hk/symposium2019/view/index.html",
+					img: "ipcc",
+					link:
+						"https://www.ipcc.gov.hk/symposium2019/view/index.html",
 					year: 2019,
 					text: "An event website made of pure HTML and CSS.",
-					tags:[
-						"HTML",
-						"CSS",
-						"Graphic Design",
-						"AOS Animation"
-					]
+					tags: ["HTML", "CSS", "Graphic Design", "AOS Animation"],
 				},
 				{
 					name: "Facebook Add Friends Bot",
-					img:"facebook",
+					img: "facebook",
 					year: 2018,
-					text: "An application that automatically login to Facebook and sends friend requests to the others. With a function to remove all friend requests as well.",
-					tags:[
-						"Java",
-						"Selenium",
-						"Web Scraping",
-					]
+					text:
+						"An application that automatically login to Facebook and sends friend requests to the others. With a function to remove all friend requests as well.",
+					tags: ["Java", "Selenium", "Web Scraping"],
 				},
 			],
 			mywork: [
