@@ -4,7 +4,7 @@
 			<v-col cols="12" sm="5">
 				<center>
 					<v-img
-						:src="require(`~/assets/img/${job.img}.png`)"
+						:src="`/img/${job.img}.png`"
 						width="max(50%,350px)"
 						class="img"
 						@click="imgclick(job.link)"
