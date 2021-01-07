@@ -37,7 +37,7 @@
 				> Hello, I’m Ryan from Hong Kong. Nice to meet you.
 			</p>
 			<p>
-				> I am a full-Stack developer use Nuxt.js and apolloGraphql to
+				> I am a full-Stack developer using Nuxt.js and apolloGraphql to
 				create a modern web application. I am a quick learner and hard
 				worker with high academic achievement in an Information
 				Technology Degree and Multimedia Higher Diploma.
