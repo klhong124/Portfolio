@@ -297,6 +297,10 @@ export default {
 					icon: "mdi-gmail",
 					href: "mailto:klhong124@gmail.com",
 				},
+				{
+					icon: "mdi-github",
+					href: "https://github.com/klhong124",
+				},
 			],
 		};
 	},
