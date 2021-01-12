@@ -30,7 +30,8 @@ export default {
   plugins: [{
     src:"~/plugins/aos",
     ssr:false
-  }
+  },
+  { src: '~plugins/ga.js', mode: 'client' }
   ],
 
   env: {
