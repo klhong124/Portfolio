@@ -30,7 +30,7 @@ export default ({ app }) => {
   /*
    ** Set the current page
    */
-  ga('create', 'UA-129519923-1', 'auto')
+  ga('create', 'G-QQHZMF3JNR', 'auto')
   /*
    ** Every time the route changes (fired on initialization too)
    */
