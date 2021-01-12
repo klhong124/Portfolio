@@ -202,14 +202,13 @@ export default {
 					name: "Sticker Cloud Downloader",
 					img: "https://ryankwan.netlify.app/img/sc_downloader.png",
 					link: "https://sticker-cloud-downloader.netlify.app/",
-					year: 2020,
+					year: 2021,
 					text:
-						"A online web application for downloading stickers from Sticker Cloud",
+						"A web application for downloading stickers from Sticker Cloud.",
 					tags: [
 						"Nuxt",
 						"Vue",
 						"Google Analytics",
-						"Python OCR",
 						"Proxy",
 					],
 				},

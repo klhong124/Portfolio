@@ -6,12 +6,12 @@
 					<img
 						:src="job.img"
 						class="img"
-						@click="imgclick(job.link)"
+						@click="linkclick(job.link)"
 					>
 				</center>
 			</v-col>
 			<v-col cols="12" md="7">
-				<h2>{{ job.name }} ({{ job.year }})</h2>
+				<h2 @click="linkclick(job.link)">{{ job.name }} ({{ job.year }})</h2>
 				<p>{{ job.text }}</p>
 				<div style="width:100%">
 					<span v-for="(t, n) in job.tags" :key="n" class="tag">{{
@@ -27,7 +27,7 @@
 export default {
 	props: ["job"],
 	methods: {
-		imgclick(url) {
+		linkclick(url) {
             url&&window.open(url);
 		},
 	},
