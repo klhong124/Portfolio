@@ -199,6 +199,21 @@ export default {
 		return {
 			job: [
 				{
+					name: "Sticker Cloud Downloader",
+					img: "https://ryankwan.netlify.app/img/sc_downloader.png",
+					link: "https://sticker-cloud-downloader.netlify.app/",
+					year: 2020,
+					text:
+						"A online web application for downloading stickers from Sticker Cloud",
+					tags: [
+						"Nuxt",
+						"Vue",
+						"Google Analytics",
+						"Python OCR",
+						"Proxy",
+					],
+				},
+				{
 					name: "Car8",
 					img: "https://ryankwan.netlify.app/img/car8.png",
 					link: "https://www.car8.com/",
