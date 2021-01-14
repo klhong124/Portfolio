@@ -22,6 +22,7 @@
 					fab
 					icon
 					small
+					target="_blank"
 					:href="social.href"
 				>
 					<v-icon class="aim">{{ social.icon }}</v-icon>
@@ -176,6 +177,7 @@
 					fab
 					icon
 					small
+					target="_blank"
 					:href="social.href"
 				>
 					<v-icon>{{ social.icon }}</v-icon>
@@ -211,6 +213,7 @@ export default {
 						"Vue",
 						"Google Analytics",
 						"Proxy",
+						"JSzip",
 					],
 				},
 				{
@@ -316,6 +319,11 @@ export default {
 					icon: "mdi-github",
 					href: "https://github.com/klhong124",
 				},
+				{
+					icon: "mdi-whatsapp",
+					href: "https://wa.me/85269339077",
+				},
+
 			],
 		};
 	},
