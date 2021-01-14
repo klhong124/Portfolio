@@ -1,4 +1,5 @@
 import colors from 'vuetify/es5/util/colors'
+import webpack from 'webpack'
 require('dotenv').config()
 
 export default {
@@ -14,6 +15,13 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
     ]
+  },
+  ssr: false,
+
+  loadingIndicator: {
+    name: 'wandering-cubes',
+    color: '#32DE8A',
+    background:'linear-gradient(45deg, #343436, #34363d)'
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
@@ -73,7 +81,6 @@ export default {
     },
   },
 
-
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
@@ -98,6 +105,12 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
-    
+    plugins: [
+      new webpack.ProvidePlugin({
+        // global modules
+        $: 'jquery',
+        _: 'lodash'
+      })
+    ]
   }
 }
