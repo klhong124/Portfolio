@@ -3,6 +3,15 @@ import webpack from 'webpack'
 require('dotenv').config()
 
 export default {
+  // Disable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
+  ssr: false,
+
+  loadingIndicator: {
+    name: 'wandering-cubes',
+    color: '#32DE8A',
+    background:'linear-gradient(45deg, #343436, #34363d)'
+  },
+  
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     titleTemplate: '%s - portfolio',
@@ -16,13 +25,7 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
     ]
   },
-  ssr: false,
 
-  loadingIndicator: {
-    name: 'wandering-cubes',
-    color: '#32DE8A',
-    background:'linear-gradient(45deg, #343436, #34363d)'
-  },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
