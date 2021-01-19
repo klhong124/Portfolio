@@ -259,7 +259,7 @@ export default {
 				{
 					year: 2018,
 					text: `Take my first Freelance Job:
-					“Made An bot that automatically login into Facebook and send friend requests to the others everyday"`,
+					“Made a bot that automatically login into Facebook and send friend-requests everyday"`,
 				},
 				{
 					year: 2019,
@@ -268,7 +268,7 @@ export default {
 				{
 					year: 2020,
 					text:
-						"Work in Car8.com as an Analyst Programmer. Develop and Maintain the online vehilce trade platform by using vue.js.",
+						"Work in Car8.com as an Analyst Programmer. Develop and Maintain an online car trade platform by using Laravel and Vue.js.",
 				},
 			],
 			designer: [
