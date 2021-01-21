@@ -158,8 +158,8 @@
 					<v-text-field
 						dark
 						outlined
-						name="form"
-						label="Form"
+						name="from"
+						label="From"
 						value=""
 					></v-text-field>
 					<v-textarea
