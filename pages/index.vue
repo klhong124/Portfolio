@@ -35,7 +35,7 @@
 				<h1 class="aim">ABOUT ME</h1>
 			</div>
 			<p class="about_me">
-				> Hello, I’m Ryan from Hong Kong. Nice to meet you.
+				> 👋 Hello, I’m Ryan from Hong Kong. Nice to meet you.
 			</p>
 			<p>
 				> I am a full-Stack developer using Nuxt.js and apolloGraphql to
@@ -172,6 +172,7 @@
 					<v-btn outlined dark style="float: right" type="submit"
 						>Send</v-btn
 					>
+					<p class="form-msg" v-if="form_msg">😻 Form successfully submitted.</p>
 					<br />
 				</form>
 			</div>
@@ -327,6 +328,7 @@ export default {
 					href: "https://wa.me/85269339077",
 				},
 			],
+			form_msg:false,
 		};
 	},
 	mounted() {
@@ -351,7 +353,7 @@ export default {
 				method: "POST",
 				headers: { "Content-Type": "application/x-www-form-urlencoded" },
 				body: new URLSearchParams(formData).toString()
-			}).then(() => console.log('Form successfully submitted')).catch(error => alert(error))
+			}).then(() => this.form_msg = true).catch(error => alert(error))
 		}
 	},
 };
@@ -514,6 +516,10 @@ export default {
 	}
 	.mw-700 {
 		max-width: 700px;
+	}
+	.form-msg{
+		margin-left:8px;
+		color:rgb(23, 201, 100);
 	}
 	@media screen and (max-width: 1015px) {
 		.timeline ul li div {
