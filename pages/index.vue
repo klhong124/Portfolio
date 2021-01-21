@@ -144,11 +144,21 @@
 			<br />
 			<div class="card mt-5 container pa-5 mw-700">
 				<p>Leave a message to me:</p>
-				<form name="contact" class="pb-4" method="POST" netlify>
+				<form
+					name="contact"
+					class="pb-4"
+					method="POST"
+					id="form"
+					data-netlify="true"
+    				data-netlify-honeypot="bot-field"
+					@submit.prevent="handleSubmit"
+				>
+				<input type="hidden" name="form-name" value="contact" />
+
 					<v-text-field
 						dark
 						outlined
-						name="from"
+						name="form"
 						label="Form"
 						value=""
 					></v-text-field>
@@ -194,7 +204,6 @@ import $ from "jquery";
 import Job from "~/components/Job.vue";
 
 export default {
-
 	components: {
 		Job,
 	},
@@ -208,13 +217,7 @@ export default {
 					year: 2021,
 					text:
 						"A web application for downloading stickers from Sticker Cloud.",
-					tags: [
-						"Nuxt",
-						"Vue",
-						"Google Analytics",
-						"Proxy",
-						"JSzip",
-					],
+					tags: ["Nuxt", "Vue", "Google Analytics", "Proxy", "JSzip"],
 				},
 				{
 					name: "Car8",
@@ -323,7 +326,6 @@ export default {
 					icon: "mdi-whatsapp",
 					href: "https://wa.me/85269339077",
 				},
-
 			],
 		};
 	},
@@ -336,12 +338,21 @@ export default {
 			##.. ##::: ::. ###:::: #########:: ##:. ## ##:
 			##::. ##:: ::: ##::::: ##.... ##:: ##:::. ###:
 			##:::. ##:.::: ##::::: ##:::: ##:: ##::::. "#:
-		`);		
+		`);
 	},
 	methods: {
 		moveTowanted() {
-			$("#wanted").get(0).scrollIntoView();
+			$("html, body").animate({ scrollTop: ($('#wanted').offset().top)-50 }, 1000);
 		},
+		handleSubmit(){
+			let myForm = document.getElementById('form');
+  			let formData = new FormData(myForm)
+			fetch("/", {
+				method: "POST",
+				headers: { "Content-Type": "application/x-www-form-urlencoded" },
+				body: new URLSearchParams(formData).toString()
+			}).then(() => console.log('Form successfully submitted')).catch(error => alert(error))
+		}
 	},
 };
 </script>
