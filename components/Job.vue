@@ -37,7 +37,7 @@ export default {
 <style scoped>
 	.img {
 		border-radius: 8px;
-		width:max(50%,350px);
+		width:max(50%,300px);
 	}
 	.tag {
 		border: 1px white solid;

@@ -144,11 +144,11 @@
 			<br />
 			<div class="card mt-5 container pa-5 mw-700">
 				<p>Leave a message to me:</p>
-				<form name="contact" class="pb-4 pl-4 pr-4" netlify>
+				<form name="contact" class="pb-4" method="POST" netlify>
 					<v-text-field
 						dark
 						outlined
-						name="company"
+						name="from"
 						label="Form"
 						value=""
 					></v-text-field>
