@@ -150,15 +150,14 @@
 					method="POST"
 					id="form"
 					data-netlify="true"
-    				data-netlify-honeypot="bot-field"
 					@submit.prevent="handleSubmit"
 				>
-				<input type="hidden" name="form-name" value="contact" />
+					<input type="hidden" name="form-name" value="contact" />
 
 					<v-text-field
 						dark
 						outlined
-						name="from"
+						name="company"
 						label="From"
 						value=""
 					></v-text-field>
@@ -169,10 +168,17 @@
 						value=""
 						label="Message"
 					></v-textarea>
-					<v-btn outlined dark style="float: right" type="submit"
-						>Send</v-btn
+					<v-btn
+						outlined
+						dark
+						style="float: right"
+						type="submit"
+						:disabled="!!cooldown"
+						>{{ cooldown || "Send" }}</v-btn
 					>
-					<p class="form-msg" v-if="form_msg">😻 Form successfully submitted.</p>
+					<span class="form-msg" v-if="form_msg">
+						😻 Form successfully submitted.
+					</span>
 					<br />
 				</form>
 			</div>
@@ -328,7 +334,8 @@ export default {
 					href: "https://wa.me/85269339077",
 				},
 			],
-			form_msg:false,
+			form_msg: false,
+			cooldown: 0,
 		};
 	},
 	mounted() {
@@ -344,16 +351,32 @@ export default {
 	},
 	methods: {
 		moveTowanted() {
-			$("html, body").animate({ scrollTop: ($('#wanted').offset().top)-50 }, 1000);
+			$("html, body").animate(
+				{ scrollTop: $("#wanted").offset().top - 50 },
+				1000
+			);
 		},
-		handleSubmit(){
-			let myForm = document.getElementById('form');
-  			let formData = new FormData(myForm)
+		handleSubmit() {
+			let myForm = document.getElementById("form");
+			let formData = new FormData(myForm);
 			fetch("/", {
 				method: "POST",
-				headers: { "Content-Type": "application/x-www-form-urlencoded" },
-				body: new URLSearchParams(formData).toString()
-			}).then(() => this.form_msg = true).catch(error => alert(error))
+				headers: {
+					"Content-Type": "application/x-www-form-urlencoded",
+				},
+				body: new URLSearchParams(formData).toString(),
+			})
+				.then(() => (this.form_msg = true))
+				.catch((error) => alert(error));
+			this.cooldown_func(5);
+		},
+		cooldown_func(sec){
+			this.cooldown = sec;
+			if (this.cooldown>0){
+				setTimeout(()=>{this.cooldown_func(sec-1)}, 1000);
+			} else {
+				this.form_msg = false;
+			}
 		}
 	},
 };
@@ -517,9 +540,9 @@ export default {
 	.mw-700 {
 		max-width: 700px;
 	}
-	.form-msg{
-		margin-left:8px;
-		color:rgb(23, 201, 100);
+	.form-msg {
+		margin-left: 8px;
+		color: rgb(23, 201, 100);
 	}
 	@media screen and (max-width: 1015px) {
 		.timeline ul li div {

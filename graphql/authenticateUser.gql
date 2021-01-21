@@ -1,8 +1,0 @@
-mutation authenticateUser($number:String!,$password:String!){
-    login(number: $number, password: $password) {
-        token
-        user{
-            _id
-        }
-    }
-}

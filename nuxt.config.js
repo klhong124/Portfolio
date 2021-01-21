@@ -53,7 +53,6 @@ export default {
   components: true,
 
   router: {
-    // middleware: ['isAuth']
   },
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
@@ -67,22 +66,8 @@ export default {
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios',
-    '@nuxtjs/apollo',
   ],
 
-  // Axios module configuration (https://go.nuxtjs.dev/config-axios)
-  axios: {
-    baseURL: process.env.HTTP_ENDPOINT,
-  },
-
-  apollo: {
-    clientConfigs: {
-      default: {
-        httpEndpoint: process.env.HTTP_ENDPOINT,
-      }
-    },
-  },
 
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
   vuetify: {
