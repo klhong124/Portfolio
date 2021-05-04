@@ -218,6 +218,15 @@ export default {
 		return {
 			job: [
 				{
+					name: "Gymism Club",
+					img: "https://ryankwan.netlify.app/img/gymism.png",
+					link: "https://www.gymsim.club/",
+					year: 2021,
+					text:
+						"A web application for downloading stickers from Sticker Cloud.",
+					tags: ["Nuxt", "Vue", "Firebase", "PWA", "ApolloGrahpQL","Stripe Payment","JAMstack"],
+				},
+				{
 					name: "Sticker Cloud Downloader",
 					img: "https://ryankwan.netlify.app/img/sc_downloader.png",
 					link: "https://sticker-cloud-downloader.netlify.app/",
@@ -237,7 +246,7 @@ export default {
 						"Laravel",
 						"Vue",
 						"UBA",
-						"Online Payment",
+						"Stripe Payment",
 						"Vuex",
 						"SQL",
 						"Python OCR",
@@ -303,6 +312,7 @@ export default {
 				`SQL`,
 				`Electron.js`,
 				`UBA`,
+				`PWA`,
 				`PHP Laravel`,
 				`Stripe Payment`,
 				`Netlify😎`,
