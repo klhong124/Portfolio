@@ -220,11 +220,11 @@ export default {
 				{
 					name: "Gymism Club",
 					img: "https://ryankwan.netlify.app/img/gymism.png",
-					link: "https://www.gymsim.club/",
+					link: "https://www.gymism.club/",
 					year: 2021,
 					text:
 						"A web application for downloading stickers from Sticker Cloud.",
-					tags: ["Nuxt", "Vue", "Firebase", "PWA", "ApolloGrahpQL","Stripe Payment","JAMstack"],
+					tags: ["Nuxt", "Vue", "Firebase", "PWA", "ApolloGrahpQL","Stripe Payment","JAMstack","Cloud Run"],
 				},
 				{
 					name: "Sticker Cloud Downloader",
@@ -316,6 +316,7 @@ export default {
 				`PHP Laravel`,
 				`Stripe Payment`,
 				`Netlify😎`,
+				'Google Cloud Run',
 				`HTML && CSS`,
 			],
 			socials: [

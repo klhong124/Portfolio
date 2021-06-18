@@ -3,11 +3,12 @@
 		<v-row>
 			<v-col cols="12" md="5">
 				<center>
-					<img
+					<v-img
+						contain
 						:src="job.img"
 						class="img"
 						@click="linkclick(job.link)"
-					>
+					/>
 				</center>
 			</v-col>
 			<v-col cols="12" md="7">
@@ -28,7 +29,7 @@ export default {
 	props: ["job"],
 	methods: {
 		linkclick(url) {
-            url&&window.open(url);
+			url && window.open(url);
 		},
 	},
 };
@@ -37,15 +38,15 @@ export default {
 <style scoped>
 	.img {
 		border-radius: 8px;
-		width:max(50%,300px);
+		width: max(50%, 300px);
 	}
 	.tag {
 		border: 1px white solid;
 		border-radius: 50px;
 		padding: 4px 12px;
-        margin-right:8px;
-        margin-bottom:8px;
+		margin-right: 8px;
+		margin-bottom: 8px;
 		font-size: 12px;
-        display: inline-block;
+		display: inline-block;
 	}
 </style>
