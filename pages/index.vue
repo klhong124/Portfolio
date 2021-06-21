@@ -224,7 +224,7 @@ export default {
 					year: 2021,
 					text:
 						"A web application for downloading stickers from Sticker Cloud.",
-					tags: ["Nuxt", "Vue", "Firebase", "PWA", "ApolloGrahpQL","Stripe Payment","JAMstack","Cloud Run"],
+					tags: ["Nuxt", "Vue", "Firebase", "PWA", "ApolloGrahpQL","Stripe","JAMstack","Cloud Run"],
 				},
 				{
 					name: "Sticker Cloud Downloader",
@@ -314,8 +314,9 @@ export default {
 				`UBA`,
 				`PWA`,
 				`PHP Laravel`,
-				`Stripe Payment`,
+				`Stripe`,
 				`Netlify😎`,
+				"Firebase",
 				'Google Cloud Run',
 				`HTML && CSS`,
 			],
