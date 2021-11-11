@@ -1,4 +1,4 @@
 # Local Netlify folder
-.netlify
-.nuxt/
+.next/
 node_modules/
+.next/build-manifest.json
