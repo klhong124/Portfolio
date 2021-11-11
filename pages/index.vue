@@ -126,10 +126,10 @@
         </ul>
         <br />
         <p data-aos="fade-down">
-          <time>2021</time>
+          <time>2022</time>
         </p>
         <p data-aos="fade-down">
-          It’s been a tough year, let’s make 2021 better
+          It has been a tough year, let’s make 2022 better 🔥
         </p>
       </section>
       <v-row>
@@ -277,21 +277,26 @@ export default {
       mywork: [
         {
           year: 2017,
-          text: "Code at the first time in Java, EZPZ.",
+          text: "Coding at the first time in Java, System.out.println(EZPZ) .",
         },
         {
           year: 2018,
-          text: `Take my first Freelance Job:
-					“Made a bot that automatically login into Facebook and send friend-requests everyday"`,
+          text: `Taking my first Freelance Job:
+					“I made a bot which is managed to login into Facebook and send friend-requests everyday automatically"`,
         },
         {
           year: 2019,
-          text: `Submit my Final Year Project and graduated. “A web-based application provides IOT control platform to allow users to control their door lock via their smartphone”`,
+          text: `Submiting my Final Year Project and graduated. “A web-based application as an IOT control platform to allow users to unlock their door via their smartphone”`,
         },
         {
           year: 2020,
           text:
-            "Work in Car8.com as an Analyst Programmer. Develop and Maintain an online car trade platform by using Laravel and Vue.js.",
+            "Working in Car8.com as an Analyst Programmer. I developed an online car trade platform by using Laravel and Vue.js.",
+        },
+        {
+          year: 2021,
+          text:
+            "Founding Gymsim.Club. A sport coach matching platform built in Nuxt.js",
         },
       ],
       designer: [
@@ -323,6 +328,7 @@ export default {
         "Firebase",
         "Google Cloud Run",
         `HTML && CSS`,
+		`Ngrok`,
       ],
       socials: [
         // {

@@ -19,6 +19,9 @@ button, [type=button], [type=reset], [type=submit], [role=button] {
     cursor: url('../svg/precisionRed.svg') 40 40, auto !important;
 }
 
+p{
+    font-size: 18px;
+}
 /* p:hover,time:hover,li:hover{
     text-transform: uppercase;
     color: red;
