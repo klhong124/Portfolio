@@ -24,6 +24,18 @@ function toConvexProps(bufferGeometry) {
 
 
 
+function Mouse(props) {
+  const [ref, api] = useBox(() => ({ type: 'Static', args: [0.5, 0.5, 2] }))
+  useFrame(({ mouse: { x, y } }) => {
+    api.position.set(x * 3, y * 3, 0);
+  })
+  return (
+    <mesh ref={ref}>
+
+    </mesh>
+
+  );
+}
 function Vue(props) {
   const { size, viewport } = useThree();
   const aspect = size.width / viewport.width;
@@ -32,12 +44,12 @@ function Vue(props) {
   const [ref, api] = useConvexPolyhedron(() => ({ mass: 1, ...props, args: geo }));
   const bind = useDrag(({ xy: [x, y], first, last }) => {
     if (first) {
-      api.rotation.set(Math.random()*2.2, Math.random()*2.2, Math.random()*2.2);
       api.mass.set(0);
+      api.velocity.set(0, 0, 0);
     } else if (last) {
       api.mass.set(1);
     }
-    api.position.set((y - size.height / 2) / aspect, 1, -(x - size.width / 2) / aspect);
+    api.position.set((x - size.width / 2) / aspect, -(y - size.height / 2) / aspect, 1);
 
   }, { pointerEvents: true });
   return (
@@ -57,12 +69,12 @@ function ReactIcon(props) {
 
   const bind = useDrag(({ xy: [x, y], first, last }) => {
     if (first) {
-      api.rotation.set(Math.random()*2.2, Math.random()*2.2, Math.random()*2.2);
       api.mass.set(0);
+      api.velocity.set(0, 0, 0);
     } else if (last) {
       api.mass.set(1);
     }
-    api.position.set((y - size.height / 2) / aspect, 1, -(x - size.width / 2) / aspect);
+    api.position.set((x - size.width / 2) / aspect, -(y - size.height / 2) / aspect, 1);
 
   }, { pointerEvents: true });
   return (
@@ -81,12 +93,12 @@ function NodeJS(props) {
   const [ref, api] = useConvexPolyhedron(() => ({ mass: 1, ...props, args: geo }));
   const bind = useDrag(({ xy: [x, y], first, last }) => {
     if (first) {
-      api.rotation.set(Math.random()*2.2, Math.random()*2.2, Math.random()*2.2);
       api.mass.set(0);
+      api.velocity.set(0, 0, 0);
     } else if (last) {
       api.mass.set(1);
     }
-    api.position.set((y - size.height / 2) / aspect, 1, -(x - size.width / 2) / aspect);
+    api.position.set((x - size.width / 2) / aspect, -(y - size.height / 2) / aspect, 1);
 
   }, { pointerEvents: true });
   return (
@@ -105,12 +117,12 @@ function Figma(props) {
   const [ref, api] = useConvexPolyhedron(() => ({ mass: 1, ...props, args: geo }));
   const bind = useDrag(({ xy: [x, y], first, last }) => {
     if (first) {
-      api.rotation.set(Math.random()*2.2, Math.random()*2.2, Math.random()*2.2);
       api.mass.set(0);
+      api.velocity.set(0, 0, 0);
     } else if (last) {
       api.mass.set(1);
     }
-    api.position.set((y - size.height / 2) / aspect, 1, -(x - size.width / 2) / aspect);
+    api.position.set((x - size.width / 2) / aspect, -(y - size.height / 2) / aspect, 1);
 
   }, { pointerEvents: true });
   return (
@@ -133,12 +145,12 @@ function Miro(props) {
   const [ref, api] = useConvexPolyhedron(() => ({ mass: 1, ...props, args: geo }));
   const bind = useDrag(({ xy: [x, y], first, last }) => {
     if (first) {
-      api.rotation.set(Math.random()*2.2, Math.random()*2.2, Math.random()*2.2);
       api.mass.set(0);
+      api.velocity.set(0, 0, 0);
     } else if (last) {
       api.mass.set(1);
     }
-    api.position.set((y - size.height / 2) / aspect, 1, -(x - size.width / 2) / aspect);
+    api.position.set((x - size.width / 2) / aspect, -(y - size.height / 2) / aspect, 1);
 
   }, { pointerEvents: true });
   return (
@@ -157,12 +169,12 @@ function MongoDB(props) {
   const [ref, api] = useConvexPolyhedron(() => ({ mass: 1, ...props, args: geo }));
   const bind = useDrag(({ xy: [x, y], first, last }) => {
     if (first) {
-      api.rotation.set(Math.random()*2.2, Math.random()*2.2, Math.random()*2.2);
       api.mass.set(0);
+      api.velocity.set(0, 0, 0);
     } else if (last) {
       api.mass.set(1);
     }
-    api.position.set((y - size.height / 2) / aspect, 1, -(x - size.width / 2) / aspect);
+    api.position.set((x - size.width / 2) / aspect, -(y - size.height / 2) / aspect, 1);
 
   }, { pointerEvents: true });
   return (
@@ -183,12 +195,12 @@ function Tailwind(props) {
   const [ref, api] = useConvexPolyhedron(() => ({ mass: 1, ...props, args: geo }));
   const bind = useDrag(({ xy: [x, y], first, last }) => {
     if (first) {
-      api.rotation.set(Math.random()*2.2, Math.random()*2.2, Math.random()*2.2);
       api.mass.set(0);
+      api.velocity.set(0, 0, 0);
     } else if (last) {
       api.mass.set(1);
     }
-    api.position.set((y - size.height / 2) / aspect, 1, -(x - size.width / 2) / aspect);
+    api.position.set((x - size.width / 2) / aspect, -(y - size.height / 2) / aspect, 1);
 
   }, { pointerEvents: true });
   return (
@@ -206,12 +218,12 @@ function Laravel(props) {
   const [ref, api] = useConvexPolyhedron(() => ({ mass: 1, ...props, args: geo }));
   const bind = useDrag(({ xy: [x, y], first, last }) => {
     if (first) {
-      api.rotation.set(Math.random()*2.2, Math.random()*2.2, Math.random()*2.2);
       api.mass.set(0);
+      api.velocity.set(0, 0, 0);
     } else if (last) {
       api.mass.set(1);
     }
-    api.position.set((y - size.height / 2) / aspect, 1, -(x - size.width / 2) / aspect);
+    api.position.set((x - size.width / 2) / aspect, -(y - size.height / 2) / aspect, 1);
 
   }, { pointerEvents: true });
   return (
@@ -224,12 +236,11 @@ function Laravel(props) {
 
 
 
-const Plane = () => {
+const Plane = (props) => {
   const [ref] = usePlane(() => ({
     type: 'Static',
     mass: 5,
-    position: [0, 0, 0],
-    rotation: [-Math.PI / 2, 0, 0],
+    ...props
   }))
   return (
     <mesh scale={200} ref={ref} receiveShadow>
@@ -250,27 +261,33 @@ function Home() {
         </Head>
 
         <div className="h-screen">
-          <Canvas shadows dpr={[1, 2]} camera={{ position: [6, 2, 0], fov: 80 }}>
+          <div className="absolute z-10 w-screen text-center">
+            <div className="text-9xl font-bold mt-[100px] text-white">RYAN KWAN</div>
+            <div className="text-5xl font-semibold mt-10 text-gray-300">Programer | UX Designer</div>
+          </div>
+          <Canvas shadows camera={{ position: [0, -5, 2.5], fov: 50 }}>
             <color attach="background" args={['#171720']} />
-            <fog attach="fog" args={['#171720', 20, 70]} />
             <ambientLight intensity={0.3} />
             <pointLight position={[2, 10, 0]} color="white" intensity={0.2} />
 
             <Suspense fallback={null}>
 
-              <Physics gravity={[0, -4, 0]}>
+              <Physics gravity={[0, 0, -10]}>
                 {/* <Debug> */}
+                <Mouse />
                 <Plane />
-                <Vue position={[2, 6, 0.1]} rotation={[Math.random()*2.2, Math.random()*2.2, Math.random()*2.2]} />
-                <NodeJS position={[1.2, 8, 0.2]} rotation={[Math.random()*2.2, Math.random()*2.2, Math.random()*2.2]} />
-                <ReactIcon position={[1.8, 10, 0.3]} rotation={[Math.random()*2.2, Math.random()*2.2, Math.random()*2.2]} />
-                <Figma position={[1.4, 12, 0.4]} rotation={[Math.random()*2.2, Math.random()*2.2, Math.random()*2.2]} />
-                <Miro position={[1.7, 14, 0.6]} rotation={[Math.random()*2.2, Math.random()*2.2, Math.random()*2.2]} />
-                <MongoDB position={[1.3, 16, 0.4]} rotation={[Math.random()*2.2, Math.random()*2.2, Math.random()*2.2]} />
-                <Tailwind position={[1.2, 18, 0.3]} rotation={[Math.random()*2.2, Math.random()*2.2, Math.random()*2.2]} />
-                <Laravel position={[1, 20, 0.1]} rotation={[Math.random()*2.2, Math.random()*2.2, Math.random()*2.2]} />
-
-
+                <Plane position={[-2, 0, 0]} rotation={[0, 1.4, 0]} />
+                <Plane position={[2, 0, 0]} rotation={[0, -1.4, 0]} />
+                <Plane position={[0, -1, 0]} rotation={[1.5, 0, 0]} />
+                <Plane position={[0, -3, 0]} rotation={[-1.5, 0, 0]} />
+                <Vue position={[-1, -2, 10]} rotation={[Math.random() * 2.2, Math.random() * 2.2, Math.random() * 2.2]} />
+                <NodeJS position={[0, -2, 10]} rotation={[Math.random() * 2.2, Math.random() * 2.2, Math.random() * 2.2]} />
+                <ReactIcon position={[1, -2, 10]} rotation={[Math.random() * 2.2, Math.random() * 2.2, Math.random() * 2.2]} />
+                <Figma position={[0, -2, 10]} rotation={[Math.random() * 2.2, Math.random() * 2.2, Math.random() * 2.2]} />
+                <Miro position={[-1, -2, 10]} rotation={[Math.random() * 2.2, Math.random() * 2.2, Math.random() * 2.2]} />
+                <MongoDB position={[0, -2, 10]} rotation={[Math.random() * 2.2, Math.random() * 2.2, Math.random() * 2.2]} />
+                <Tailwind position={[1, -2, 10]} rotation={[Math.random() * 2.2, Math.random() * 2.2, Math.random() * 2.2]} />
+                <Laravel position={[0, -2, 10]} rotation={[Math.random() * 2.2, Math.random() * 2.2, Math.random() * 2.2]} />
 
                 {/* </Debug> */}
               </Physics>
@@ -279,7 +296,6 @@ function Home() {
             {/* <OrbitControls /> */}
           </Canvas>
         </div>
-        <h1>hello</h1>
       </div>
     </div>
 
