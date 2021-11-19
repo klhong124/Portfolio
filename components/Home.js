@@ -512,7 +512,7 @@ function Home({ OnClickStarted }) {
                     <pointLight position={[2, 0, 10]} color="white" intensity={0.3} />
 
                     <Suspense fallback={null}>
-                        <Physics gravity={[0, 0, -3.5]}>
+                        <Physics gravity={[0, 0, -7.5]}>
                             {/* <Debug> */}
                             <Mouse />
                             <Plane />

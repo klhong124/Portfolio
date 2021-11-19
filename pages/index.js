@@ -22,10 +22,12 @@ const index = () => {
             return (
               <div id="fullpage-wrapper">
                 <div className="section">
-                  <Home OnClickStarted={() => fullpageApi.moveTo(2)} />
+                  
+                  <Home OnClickStarted={() => fullpageApi.moveTo(2)}/>
                 </div>
+                {/* parent */}
                 <div className="section">
-                  <About />
+                    <About/>
                 </div>
                 <div className="section">
                   <h3>Section 3</h3>
