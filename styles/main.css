@@ -19,5 +19,14 @@
         stroke-width    : 2.5px;
         stroke-linejoin : round;
     }
-
+    .parallax-effect-img {
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    background-image: url('/image/background.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    }
+      .inner-element {
+    transform: translateZ(40px) scale(0.8);
+  }
 }
