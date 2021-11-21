@@ -445,20 +445,13 @@ const Plane = (props) => {
     )
 }
 
-function Home({ OnClickStarted }) {
+const Home = ({ OnClickStarted }) => {
+
     const socials = [
-        // {
-        // 	icon: "mdi-facebook",
-        // 	href: "https://www.facebook.com",
-        // },
         {
             icon: mdiLinkedin,
             href: "https://my.indeed.com/p/lokhongk-jm0z5xs",
         },
-        // {
-        // 	icon: "mdi-instagram",
-        // 	href: "www.facebook.com",
-        // },
         {
             icon: mdiGmail,
             href: "mailto:klhong124@gmail.com",
@@ -472,20 +465,21 @@ function Home({ OnClickStarted }) {
             href: "https://wa.me/447878154432",
         }
     ]
+
     return (
         <div>
             <div className="h-screen">
                 <div className="absolute z-10 w-screen text-center" >
-                    <div className="d mt-[100px]" data-aos="fade-up">
+                    <div className="d mt-[100px]" data-aos="zoom-in-up">
                         <center>
-                            <svg viewBox="0 0 800 80" className="w-screen max-w-7xl">
-                                <text x="110" y="90%">RYAN KWAN</text>
+                            <svg viewBox="0 0 650 80" className="w-screen max-w-7xl">
+                                <text x="30" y="90%">RYAN KWAN</text>
                             </svg>
                         </center>
                     </div>
-                    <div className="lg:text-3xl md:text-2xl text-1xl font-semibold mt-6 text-gray-300" data-aos="fade-up" data-aos-delay="100">Developer | UX Designer</div>
-                    <button onClick={OnClickStarted} type="button" class="mt-10 get_started" data-aos="fade-up" data-aos-delay="200">
-                        Get Started
+                    <div className="lg:text-3xl md:text-2xl text-1xl font-semibold mt-6 text-gray-300" data-aos="zoom-in-up" data-aos-delay="100">Developer | UX Designer</div>
+                    <button onClick={OnClickStarted} type="button" class="mt-10 px-10 get_started" data-aos="zoom-in-up" data-aos-delay="200">
+                        EXPLORE
                     </button>
                     <div className="mt-8"
                     >
