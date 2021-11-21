@@ -26,7 +26,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     }
-      .inner-element {
-    transform: translateZ(40px) scale(0.8);
-  }
+    .inner-element {
+        transform: translateZ(40px) scale(0.8);
+    }
 }

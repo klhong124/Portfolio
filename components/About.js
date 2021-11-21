@@ -76,20 +76,18 @@ const about = () => {
                 <div className="about_me p-[4vh] md:p-[8vh]">
                     <svg className="w-screen max-w-7xl -rotate-3" viewBox="0 0 950 90"><text y="80">{title}</text></svg>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[1800px] mx-auto items-center">
-                    <div className="relative transition-all mx-10 ">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 max-w-[1800px] mx-auto items-center">
 
-                        <Tilt
-                            className="parallax-effect-img"
-                            trackOnWindow={true}
-                            tiltReverse={true}
-                        >
-                            <div className="inner-element">
-                                <Image src={RK_IMG} />
-                            </div>
-                        </Tilt>
-                    </div>
-                    <div className="  text-white md:mr-10 md:ml-0 mx-8 ">
+                    <Tilt
+                        className="parallax-effect-img mx-10 md:mx-32 lg:mx-16"
+                        trackOnWindow={true}
+                        tiltReverse={true}
+                    >
+                        <div className="inner-element">
+                            <Image src={RK_IMG} />
+                        </div>
+                    </Tilt>
+                    <div className="  text-white lg:mr-10 lg:ml-0 mx-8 ">
                         <h1> 👋 Hello, I’m Ryan from Hong Kong. Nice to meet you.
 
                             I have passion for making websites a more modern, usable, and reliable place.
