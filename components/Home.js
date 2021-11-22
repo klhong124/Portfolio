@@ -27,7 +27,7 @@ function toConvexProps(bufferGeometry) {
 function Mouse(props) {
     const [ref, api] = useBox(() => ({ type: 'Static', args: [0.5, 1, 2] }))
     useFrame(({ mouse: { x, y } }) => {
-        api.position.set(x * 3.5, y * 3, 0);
+        api.position.set(x * 2, y * 3, 0);
     })
     return (
         <mesh ref={ref} />
@@ -46,7 +46,7 @@ function Vue(props) {
         } else if (last) {
             api.mass.set(1000);
         }
-        api.position.set((x - size.width / 2) / aspect, -(y - size.height / 2) / aspect, 0);
+        api.position.set((x - size.width / 2) / aspect * 0.8, -(y - size.height / 2) / aspect - 0.5, 0);
 
     }, { pointerEvents: true });
     return (
@@ -71,7 +71,7 @@ function ReactIcon(props) {
         } else if (last) {
             api.mass.set(1000);
         }
-        api.position.set((x - size.width / 2) / aspect, -(y - size.height / 2) / aspect, 0);
+        api.position.set((x - size.width / 2) / aspect * 0.8, -(y - size.height / 2) / aspect - 0.5, 0);
 
     }, { pointerEvents: true });
     return (
@@ -95,7 +95,7 @@ function NodeJS(props) {
         } else if (last) {
             api.mass.set(1000);
         }
-        api.position.set((x - size.width / 2) / aspect, -(y - size.height / 2) / aspect, 0);
+        api.position.set((x - size.width / 2) / aspect * 0.8, -(y - size.height / 2) / aspect - 0.5, 0);
 
     }, { pointerEvents: true });
     return (
@@ -119,7 +119,7 @@ function Figma(props) {
         } else if (last) {
             api.mass.set(1000);
         }
-        api.position.set((x - size.width / 2) / aspect, -(y - size.height / 2) / aspect, 0);
+        api.position.set((x - size.width / 2) / aspect * 0.8, -(y - size.height / 2) / aspect - 0.5, 0);
 
     }, { pointerEvents: true });
     return (
@@ -147,7 +147,7 @@ function Miro(props) {
         } else if (last) {
             api.mass.set(1000);
         }
-        api.position.set((x - size.width / 2) / aspect, -(y - size.height / 2) / aspect, 0);
+        api.position.set((x - size.width / 2) / aspect * 0.8, -(y - size.height / 2) / aspect - 0.5, 0);
 
     }, { pointerEvents: true });
     return (
@@ -171,7 +171,7 @@ function MongoDB(props) {
         } else if (last) {
             api.mass.set(1000);
         }
-        api.position.set((x - size.width / 2) / aspect, -(y - size.height / 2) / aspect, 0);
+        api.position.set((x - size.width / 2) / aspect * 0.8, -(y - size.height / 2) / aspect - 0.5, 0);
 
     }, { pointerEvents: true });
     return (
@@ -197,7 +197,7 @@ function Tailwind(props) {
         } else if (last) {
             api.mass.set(1000);
         }
-        api.position.set((x - size.width / 2) / aspect, -(y - size.height / 2) / aspect, 0);
+        api.position.set((x - size.width / 2) / aspect * 0.8, -(y - size.height / 2) / aspect - 0.5, 0);
 
     }, { pointerEvents: true });
     return (
@@ -220,7 +220,7 @@ function Laravel(props) {
         } else if (last) {
             api.mass.set(1000);
         }
-        api.position.set((x - size.width / 2) / aspect, -(y - size.height / 2) / aspect, 0);
+        api.position.set((x - size.width / 2) / aspect * 0.8, -(y - size.height / 2) / aspect - 0.5, 0);
 
     }, { pointerEvents: true });
     return (
@@ -243,7 +243,7 @@ function Photoshop(props) {
         } else if (last) {
             api.mass.set(1000);
         }
-        api.position.set((x - size.width / 2) / aspect, -(y - size.height / 2) / aspect, 0);
+        api.position.set((x - size.width / 2) / aspect * 0.8, -(y - size.height / 2) / aspect - 0.5, 0);
 
     }, { pointerEvents: true });
     return (
@@ -267,7 +267,7 @@ function Illustrator(props) {
         } else if (last) {
             api.mass.set(1000);
         }
-        api.position.set((x - size.width / 2) / aspect, -(y - size.height / 2) / aspect, 0);
+        api.position.set((x - size.width / 2) / aspect * 0.8, -(y - size.height / 2) / aspect - 0.5, 0);
 
     }, { pointerEvents: true });
     return (
@@ -291,7 +291,7 @@ function Davinci(props) {
         } else if (last) {
             api.mass.set(1000);
         }
-        api.position.set((x - size.width / 2) / aspect, -(y - size.height / 2) / aspect, 0);
+        api.position.set((x - size.width / 2) / aspect * 0.8, -(y - size.height / 2) / aspect - 0.5, 0);
 
     }, { pointerEvents: true });
     return (
@@ -318,7 +318,7 @@ function Vscode(props) {
         } else if (last) {
             api.mass.set(1000);
         }
-        api.position.set((x - size.width / 2) / aspect, -(y - size.height / 2) / aspect, 0);
+        api.position.set((x - size.width / 2) / aspect * 0.8, -(y - size.height / 2) / aspect - 0.5, 0);
 
     }, { pointerEvents: true });
     return (
@@ -345,7 +345,7 @@ function Graphql(props) {
         } else if (last) {
             api.mass.set(1000);
         }
-        api.position.set((x - size.width / 2) / aspect, -(y - size.height / 2) / aspect, 0);
+        api.position.set((x - size.width / 2) / aspect * 0.8, -(y - size.height / 2) / aspect - 0.5, 0);
 
     }, { pointerEvents: true });
     return (
@@ -368,7 +368,7 @@ function Python(props) {
         } else if (last) {
             api.mass.set(1000);
         }
-        api.position.set((x - size.width / 2) / aspect, -(y - size.height / 2) / aspect, 0);
+        api.position.set((x - size.width / 2) / aspect * 0.8, -(y - size.height / 2) / aspect - 0.5, 0);
 
     }, { pointerEvents: true });
     return (
@@ -392,7 +392,7 @@ function Firebase(props) {
         } else if (last) {
             api.mass.set(1000);
         }
-        api.position.set((x - size.width / 2) / aspect, -(y - size.height / 2) / aspect, 0);
+        api.position.set((x - size.width / 2) / aspect * 0.8, -(y - size.height / 2) / aspect - 0.5, 0);
 
     }, { pointerEvents: true });
     return (
@@ -418,7 +418,7 @@ function CloudRun(props) {
         } else if (last) {
             api.mass.set(1000);
         }
-        api.position.set((x - size.width / 2) / aspect, -(y - size.height / 2) / aspect, 0);
+        api.position.set((x - size.width / 2) / aspect * 0.8, -(y - size.height / 2) / aspect - 0.5, 0);
 
     }, { pointerEvents: true });
     return (
@@ -477,8 +477,8 @@ const Home = ({ OnClickStarted }) => {
                             </svg>
                         </center>
                     </div>
-                    <div className="lg:text-3xl md:text-2xl text-1xl font-semibold mt-6 text-gray-300" data-aos="zoom-in-up" data-aos-delay="100">Developer | UX Designer</div>
-                    <button onClick={OnClickStarted} type="button" class="mt-10 px-10 get_started" data-aos="zoom-in-up" data-aos-delay="200">
+                    <div className="lg:text-3xl md:text-2xl text-1xl font-semibold mt-6 text-gray-300" data-aos="zoom-in-up" data-aos-delay="100">Web Developer | UX Designer</div>
+                    <button onClick={OnClickStarted} type="button" class="mt-10 px-10 button" data-aos="zoom-in-up" data-aos-delay="200">
                         EXPLORE
                     </button>
                     <div className="mt-8"

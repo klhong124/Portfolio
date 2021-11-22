@@ -71,15 +71,14 @@ const about = () => {
     });
 
     return (
-        <div className="h-screen">
+        <div className="container mx-auto">
             <div>
-                <div className="about_me p-[4vh] md:p-[8vh]">
-                    <svg className="w-screen max-w-7xl -rotate-3" viewBox="0 0 950 90"><text y="80">{title}</text></svg>
+                <div className="pb-4 px-8">
+                    <svg className="w-screen max-w-3xl" viewBox="0 0 700 90"><text y="80">{title}</text></svg>
                 </div>
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 max-w-[1800px] mx-auto items-center">
-
+                <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 max-w-[1800px] mx-auto items-center mb-10">
                     <Tilt
-                        className="parallax-effect-img mx-10 md:mx-32 lg:mx-16"
+                        className="parallax-effect-img mx-10 md:mx-24 lg:mx-16 col-span-3"
                         trackOnWindow={true}
                         tiltReverse={true}
                     >
@@ -87,16 +86,19 @@ const about = () => {
                             <Image src={RK_IMG} />
                         </div>
                     </Tilt>
-                    <div className="  text-white lg:mr-10 lg:ml-0 mx-8 ">
-                        <h1> 👋 Hello, I’m Ryan from Hong Kong. Nice to meet you.
+                    <div className="  text-white max-w-xl lg:ml-0 mx-8 md:mt-5 col-span-2">
+                        <h1 className="text-3xl font-bold">Greetings, I'm Ryan Kwan.</h1>
+                        <h2 className="text-gray-400 mt-1 font-medium">Web Developer | UX Designer</h2>
+                        <p className="mt-7">I was born and raised in Hong Kong 🇭🇰 , and currently living in London 🇬🇧 .  </p>
+                        <p className="mt-7">My aspiration is to deliver exceptional design solutions to address problems and meet people’s actual needs.  </p>
 
-                            I have passion for making websites a more modern, usable, and reliable place.
-
-                            I am a Fullstack developer using Nuxt.js and apolloGraphql to create a modern web application. I am a quick learner and hard worker with high academic achievement in an Information Technology Degree and Multimedia Higher Diploma.
-
-                            Enthusiastic to become a skilled person and contribute to the Information Technology Industry. Seeking for an opportunity to contribute to your company and demonstrate all of my technical ability.</h1>
+                        <p className="mt-7">I love programing - a language with superpower! It makes my playful thinking ideas comes alive.   </p>
+                        <button className="mt-7 x-10 button">
+                            SAY HELLO
+                        </button>
                     </div>
                 </div>
+
             </div>
 
         </div>

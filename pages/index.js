@@ -1,8 +1,10 @@
 import Head from 'next/head'
 import Home from '/components/Home.js'
 import About from '/components/About.js'
+import Work from '/components/Work.js'
 import ReactFullpage from '@fullpage/react-fullpage';
 import React, { useEffect } from "react";
+import $ from 'jquery';
 
 
 
@@ -10,9 +12,18 @@ const index = () => {
   const eventBus = require('js-event-bus')();
   useEffect(() => {
     eventBus.emit("loadAbout");
+
+    // fix fullpage.js bug with aos.js
+    window.addEventListener('resize', () => {
+      setTimeout(() => {
+        $('.fp-table.active .aos-init').addClass('aos-animate');
+      }, 100);
+    })
   }, []);
-  const onLeave = (origin, destination) => {
-    switch (destination.index) {
+  const onLeave = (origin, { index }) => {
+    // fix fullpage.js bug with aos.js
+    $('.section:gt(0)').eq(origin.index - 1).find('[data-aos]').removeClass('aos-animate');
+    switch (index) {
       case 1:
         eventBus.emit("loadAbout");
         break;
@@ -21,6 +32,7 @@ const index = () => {
     }
 
   }
+
   return (
     <div>
       <Head>
@@ -32,6 +44,10 @@ const index = () => {
         <ReactFullpage
           scrollOverflow={true}
           onLeave={onLeave}
+          afterLoad={() => {
+            // fix fullpage.js bug with aos.js
+            $('.fp-table.active .aos-init').addClass('aos-animate');
+          }}
           render={({ state, fullpageApi }) => {
             return (
               <div id="fullpage-wrapper">
@@ -42,11 +58,9 @@ const index = () => {
                   <About />
                 </div>
                 <div className="section">
-                  <h3>Section 3</h3>
-                  <button onClick={() => fullpageApi.moveTo(1)}>
-                    Move top
-                  </button>
+                  <Work />
                 </div>
+
               </div>
             );
           }}

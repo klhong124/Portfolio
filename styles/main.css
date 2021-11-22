@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 @layer components{
-    .get_started{
-        @apply inline-flex items-center px-8 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500;
+    .button{
+        @apply inline-flex items-center px-8 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500;
     }
-
-    .about_me{
-        /* @apply transform -rotate-90 ; */
+    .card{
+        @apply rounded-xl bg-blue-900 min-w-[350px] min-h-[500px] p-8 mr-4;
+        scroll-snap-align: start;
     }
     svg{
         font   : bold 100px Century Gothic, Arial;
@@ -29,4 +29,21 @@
     .inner-element {
         transform: translateZ(40px) scale(0.8);
     }
+    .slide-group__wrapper{
+        @apply w-full overflow-x-scroll ;
+        touch-action: auto;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+    }
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .slide-group__wrapper::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .slide-group__wrapper {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+
 }
