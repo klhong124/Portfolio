@@ -10,6 +10,10 @@ module.exports = {
     textColor: theme => ({
       ...theme('colors'),
       'background': '#171720',
+    }),
+    gradientColorStops: theme => ({
+      ...theme('colors'),
+      'background': '#171720',
     })
 
   },

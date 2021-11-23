@@ -477,7 +477,7 @@ const Home = ({ OnClickStarted }) => {
                             </svg>
                         </center>
                     </div>
-                    <div className="lg:text-3xl md:text-2xl text-1xl font-semibold mt-6 text-gray-300" data-aos="zoom-in-up" data-aos-delay="100">Web Developer | UX Designer</div>
+                    <div className="lg:text-3xl md:text-2xl text-1xl font-semibold mt-6 text-gray-300" data-aos="zoom-in-up" data-aos-delay="100">Full-Stack Developer | UX Designer</div>
                     <button onClick={OnClickStarted} type="button" class="mt-10 px-10 button" data-aos="zoom-in-up" data-aos-delay="200">
                         EXPLORE
                     </button>

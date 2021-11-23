@@ -7,8 +7,13 @@
         @apply inline-flex items-center px-8 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500;
     }
     .card{
-        @apply rounded-xl bg-blue-900 min-w-[350px] min-h-[500px] p-8 mr-4;
+        @apply rounded-xl bg-blue-900 min-w-[350px] w-[350px] min-h-[500px] mr-4 overflow-hidden;
         scroll-snap-align: start;
+        scroll-margin-left:min(155px,26vw);
+box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    }
+    .tag{
+        @apply  mr-2 mt-2 text-xs inline-flex items-center font-bold px-3 py-1 rounded-full border;
     }
     svg{
         font   : bold 100px Century Gothic, Arial;
@@ -20,20 +25,21 @@
         stroke-linejoin : round;
     }
     .parallax-effect-img {
-    transform-style: preserve-3d;
-    transform: perspective(1000px);
-    background-image: url('/image/background.png');
-    background-size: contain;
-    background-repeat: no-repeat;
+        transform-style: preserve-3d;
+        transform: perspective(1000px);
+        background-image: url('/image/background.png');
+        background-size: contain;
+        background-repeat: no-repeat;
     }
     .inner-element {
         transform: translateZ(40px) scale(0.8);
     }
     .slide-group__wrapper{
-        @apply w-full overflow-x-scroll ;
+        @apply overflow-x-scroll pl-[min(155px,26vw)];
         touch-action: auto;
         scroll-behavior: smooth;
         scroll-snap-type: x mandatory;
+
     }
     /* Hide scrollbar for Chrome, Safari and Opera */
     .slide-group__wrapper::-webkit-scrollbar {

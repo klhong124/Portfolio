@@ -1,7 +1,12 @@
 
 import React, { useRef, useState } from "react";
+import Icon from '@mdi/react'
+
+import { mdiChevronLeftBoxOutline, mdiChevronRightBoxOutline } from '@mdi/js';
+
 
 const work = () => {
+    const slide = useRef(null)
     const job = [
         {
             name: "Gymism Club",
@@ -67,35 +72,54 @@ const work = () => {
     return (
         <div>
             <div className="flex">
+                <div className="bg-gradient-to-r from-background via-background h-screen  w-[min(200px,32vw)] absolute" />
                 <div
-                    className="max-w-0 mt-10 "
+                    className="max-w-0"
                     data-aos="fade-up"
                     data-aos-duration="3000"
                 >
-                    <svg className="w-screen ml-4 mt-[600px] max-w-xl -rotate-90 origin-top-left "
+
+                    <svg className="w-screen mt-[600px] max-w-xl  -rotate-90 origin-top-left ml-4 "
                         viewBox="0 0 320 90"><text x="50%" y="90%" text-anchor="middle">WORK</text></svg>
                 </div>
 
-                <div>
-                    <div className="flex slide-group__wrapper ml-[min(150px,26vw)]">
+                <div className="w-full">
+                    <div className="flex slide-group__wrapper py-8" ref={slide}>
                         {job.map(({ name, img, link, year, desc, tags }) =>
                             <div className="card" >
-                                <h1>{name} - {year}</h1>
-                                <img src={img} onClick={() => window.open(link)} />
-                                <p>{desc}</p>
-                                {tags.map((tag) =>
-                                    <div className="tag">
-                                        {tag}
-                                    </div>
-                                )}
+                                <img src={img} onClick={() => window.open(link)}
+                                    className="w-full h-[200px] object-cover cursor-pointer" />
+                                <div className="py-4 px-10 text-white">
+
+                                    <h1 className="text-xl font-bold">{name} - {year}</h1>
+
+                                    <p className="text-gray">{desc}</p>
+                                    {tags.map((tag) =>
+                                        <span className="tag">
+                                            {tag}
+                                        </span>
+                                    )}
+                                </div>
                             </div>
                         )}
                     </div>
 
-                    <div className=" w-screen mt-10 pl-[min(150px,26vw)]">
-                        <div className="text-red-300 bg-red-50 flex justify-between w-1/2 mx-auto">
-                            <span>left</span>
-                            <span>right</span>
+                    <div className=" w-screen mt-5 pl-[min(155px,26vw)]">
+                        <div className="flex justify-between w-1/2 max-w-[800px] mx-auto">
+
+                            <button onClick={() => { slide.current.scrollLeft -= 300 }}>
+                                <Icon path={mdiChevronLeftBoxOutline}
+                                    size={3}
+                                    color="white" />
+                            </button>
+
+                            <button onClick={() => { slide.current.scrollLeft += 300 }}>
+                                <Icon path={mdiChevronRightBoxOutline}
+
+                                    size={3}
+                                    color="white" />
+                            </button>
+
 
                         </div>
                     </div>

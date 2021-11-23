@@ -88,7 +88,7 @@ const about = () => {
                     </Tilt>
                     <div className="  text-white max-w-xl lg:ml-0 mx-8 md:mt-5 col-span-2">
                         <h1 className="text-3xl font-bold">Greetings, I'm Ryan Kwan.</h1>
-                        <h2 className="text-gray-400 mt-1 font-medium">Web Developer | UX Designer</h2>
+                        <h2 className="text-gray-400 mt-1 font-medium">Full-Stack Developer | UX Designer</h2>
                         <p className="mt-7">I was born and raised in Hong Kong 🇭🇰 , and currently living in London 🇬🇧 .  </p>
                         <p className="mt-7">My aspiration is to deliver exceptional design solutions to address problems and meet people’s actual needs.  </p>
 
