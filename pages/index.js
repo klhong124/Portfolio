@@ -51,12 +51,12 @@ const index = () => {
           render={({ state, fullpageApi }) => {
             return (
               <div id="fullpage-wrapper">
-                {/* <div className="section">
+                <div className="section">
                   <Home OnClickStarted={() => fullpageApi.moveTo(2)} />
                 </div>
                 <div className="section">
                   <About />
-                </div> */}
+                </div>
                 <div className="section">
                   <Work />
                 </div>

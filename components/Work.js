@@ -1,5 +1,5 @@
 
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import Icon from '@mdi/react'
 
 import { mdiChevronLeftBoxOutline, mdiChevronRightBoxOutline } from '@mdi/js';
@@ -7,6 +7,17 @@ import { mdiChevronLeftBoxOutline, mdiChevronRightBoxOutline } from '@mdi/js';
 
 const work = () => {
     const slide = useRef(null)
+    const [hideTitle, setHideTitle] = useState(false)
+    useEffect(() => {
+        // fix fullpage.js bug with aos.js
+        slide.current.addEventListener('scroll', () => {
+            if (slide.current.scrollLeft <= 1) {
+                setHideTitle(false)
+            } else {
+                setHideTitle(true)
+            }
+        })
+    }, [])
     const job = [
         {
             name: "Gymism Club",
@@ -14,7 +25,7 @@ const work = () => {
             link: "https://www.gymism.club/",
             year: 2021,
             desc:
-                "A web application for downloading stickers from Sticker Cloud.",
+                "It is a coach matching platform. It includes information of personal fitness trainers and promotes a wide range of sports.",
             tags: [
                 "Nuxt",
                 "Vue",
@@ -71,29 +82,37 @@ const work = () => {
 
     return (
         <div>
+
             <div className="flex">
-                <div className="bg-gradient-to-r from-background via-background h-screen  w-[min(200px,32vw)] absolute" />
+                <div className={`bg-gradient-to-r from-background via-background h-screen  ${hideTitle ? ' w-[min(150px,30vw)]' : 'w-[min(220px,38vw)]'} absolute`} />
                 <div
                     className="max-w-0"
                     data-aos="fade-up"
                     data-aos-duration="3000"
                 >
 
-                    <svg className="w-screen mt-[600px] max-w-xl  -rotate-90 origin-top-left ml-4 "
+                    <svg className={`w-screen mt-[580px] ${hideTitle ? 'max-w-[300px]' : 'max-w-xl'} -rotate-90 origin-top-left ml-4 transition-all`}
                         viewBox="0 0 320 90"><text x="50%" y="90%" text-anchor="middle">WORK</text></svg>
                 </div>
 
                 <div className="w-full">
-                    <div className="flex slide-group__wrapper py-8" ref={slide}>
+                    <div className="flex slide-group__wrapper pt-[80px]" ref={slide}>
+                        <div className="card text-white flex " >
+
+                            <div className="m-auto text-center">
+                                <div className="text-2xl">"My Hello World"</div>
+                                <small>by Ryan Kwan</small>
+                            </div>
+                        </div>
                         {job.map(({ name, img, link, year, desc, tags }) =>
                             <div className="card" >
                                 <img src={img} onClick={() => window.open(link)}
-                                    className="w-full h-[200px] object-cover cursor-pointer" />
+                                    className="w-full h-[200px] object-cover cursor-pointer p-1 rounded-xl" />
                                 <div className="py-4 px-10 text-white">
 
                                     <h1 className="text-xl font-bold">{name} - {year}</h1>
 
-                                    <p className="text-gray">{desc}</p>
+                                    <p className="text-gray-200 my-2">{desc}</p>
                                     {tags.map((tag) =>
                                         <span className="tag">
                                             {tag}
@@ -104,7 +123,7 @@ const work = () => {
                         )}
                     </div>
 
-                    <div className=" w-screen mt-5 pl-[min(155px,26vw)]">
+                    <div className=" w-screen my-5 pl-[min(135px,22vw)]">
                         <div className="flex justify-between w-1/2 max-w-[800px] mx-auto">
 
                             <button onClick={() => { slide.current.scrollLeft -= 300 }}>

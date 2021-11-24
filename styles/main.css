@@ -7,11 +7,16 @@
         @apply inline-flex items-center px-8 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500;
     }
     .card{
-        @apply rounded-xl bg-blue-900 min-w-[350px] w-[350px] min-h-[500px] mr-4 overflow-hidden;
+        @apply rounded-xl bg-blue-800 min-w-[350px] w-[350px] min-h-[550px] mr-4 overflow-hidden hover:mt-[-30px] transition-all;
         scroll-snap-align: start;
-        scroll-margin-left:min(155px,26vw);
-box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-    }
+        scroll-margin-left:min(135px,22vw);
+        box-shadow: 
+                                           #fff 0px 0px 0px 2px inset,
+            #171720 10px -10px 0px -3px, #3793ff 10px -10px,
+            #171720 20px -20px 0px -3px, #4de94c 20px -20px, 
+            #171720 30px -30px 0px -3px, #fe0 30px -30px,
+            #171720 40px -40px 0px -3px, #ff8c00 40px -40px,
+            #171720 50px -50px 0px -3px, #f60000 50px -50px;    }
     .tag{
         @apply  mr-2 mt-2 text-xs inline-flex items-center font-bold px-3 py-1 rounded-full border;
     }
@@ -35,8 +40,8 @@ box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0p
         transform: translateZ(40px) scale(0.8);
     }
     .slide-group__wrapper{
-        @apply overflow-x-scroll pl-[min(155px,26vw)];
-        touch-action: auto;
+        @apply overflow-x-scroll pl-[min(135px,22vw)];
+        touch-action: pan-x;
         scroll-behavior: smooth;
         scroll-snap-type: x mandatory;
 

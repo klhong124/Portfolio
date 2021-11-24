@@ -93,8 +93,8 @@ const about = () => {
                         <p className="mt-7">My aspiration is to deliver exceptional design solutions to address problems and meet people’s actual needs.  </p>
 
                         <p className="mt-7">I love programing - a language with superpower! It makes my playful thinking ideas comes alive.   </p>
-                        <button className="mt-7 x-10 button">
-                            SAY HELLO
+                        <button className="mt-7 x-10 button" onClick={() => { window.open('https://legend-cairnsmore-8a2.notion.site/Ryan-Kwan-3c9f5c6b5719484c8c2ad72ac8d94fe7') }}>
+                            LEARN MORE
                         </button>
                     </div>
                 </div>
