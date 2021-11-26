@@ -470,15 +470,15 @@ const Home = ({ OnClickStarted }) => {
         <div>
             <div className="h-screen">
                 <div className="absolute z-10 w-screen text-center" >
-                    <div className="d mt-[100px]" data-aos="zoom-in-up">
+                    <div className="d mt-[100px] " data-aos="zoom-in-up">
                         <center>
                             <svg viewBox="0 0 650 80" className="w-screen max-w-7xl">
-                                <text x="30" y="90%">RYAN KWAN</text>
+                                <text x="30" y="95%">RYAN KWAN</text>
                             </svg>
                         </center>
                     </div>
                     <div className="lg:text-3xl md:text-2xl text-1xl font-semibold mt-6 text-gray-300" data-aos="zoom-in-up" data-aos-delay="100">Full-Stack Developer | UX Designer</div>
-                    <button onClick={OnClickStarted} type="button" class="mt-10 px-10 button" data-aos="zoom-in-up" data-aos-delay="200">
+                    <button onClick={OnClickStarted} type="button" className="mt-10 px-10 button" data-aos="zoom-in-up" data-aos-delay="200">
                         EXPLORE
                     </button>
                     <div className="mt-8"
@@ -486,6 +486,7 @@ const Home = ({ OnClickStarted }) => {
                         {
                             socials.map(({ icon, href }, i) =>
                                 <button className="mx-2"
+                                    key={i}
                                     onClick={() => window.open(href)}
                                     data-aos="flip-down"
                                     data-aos-delay={i * 300 + 1000}

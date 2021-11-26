@@ -84,28 +84,28 @@ const work = () => {
         <div>
 
             <div className="flex">
-                <div className={`bg-gradient-to-r from-background via-background h-screen  ${hideTitle ? ' w-[min(150px,30vw)]' : 'w-[min(220px,38vw)]'} absolute`} />
+                <div className={`bg-gradient-to-r from-background h-screen  ${hideTitle ? ' w-[min(100px,15vw)]' : 'w-[min(150px,25vw)]'} absolute transition-all`} />
                 <div
                     className="max-w-0"
                     data-aos="fade-up"
                     data-aos-duration="3000"
                 >
 
-                    <svg className={`w-screen mt-[580px] ${hideTitle ? 'max-w-[300px]' : 'max-w-xl'} -rotate-90 origin-top-left ml-4 transition-all`}
-                        viewBox="0 0 320 90"><text x="50%" y="90%" text-anchor="middle">WORK</text></svg>
+                    <svg className={`w-screen mt-[580px] ${hideTitle ? 'max-w-[200px]' : 'max-w-[400px]'} -rotate-90 origin-top-left transition-all sm:ml-4`}
+                        viewBox="0 0 320 90"><text x="50%" y="90%" textAnchor="middle">WORK</text></svg>
                 </div>
 
                 <div className="w-full">
                     <div className="flex slide-group__wrapper pt-[80px]" ref={slide}>
-                        <div className="card text-white flex " >
+                        <div className="page text-white flex " >
 
                             <div className="m-auto text-center">
                                 <div className="text-2xl">"My Hello World"</div>
                                 <small>by Ryan Kwan</small>
                             </div>
                         </div>
-                        {job.map(({ name, img, link, year, desc, tags }) =>
-                            <div className="card" >
+                        {job.map(({ name, img, link, year, desc, tags }, i) =>
+                            <div className="page" key={i}>
                                 <img src={img} onClick={() => window.open(link)}
                                     className="w-full h-[200px] object-cover cursor-pointer p-1 rounded-xl" />
                                 <div className="py-4 px-10 text-white">
@@ -114,7 +114,7 @@ const work = () => {
 
                                     <p className="text-gray-200 my-2">{desc}</p>
                                     {tags.map((tag) =>
-                                        <span className="tag">
+                                        <span className="tag" key={tag}>
                                             {tag}
                                         </span>
                                     )}

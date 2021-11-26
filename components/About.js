@@ -1,15 +1,12 @@
 
-import React, { useRef, useState } from "react";
+import React, { useState, forwardRef, useImperativeHandle } from "react";
 import RK_IMG from '/public/image/ryankwan.png'
 import Tilt from 'react-parallax-tilt';
-
 import Image from 'next/image'
 
 
-
-const about = () => {
+const about = forwardRef((_, ref) => {
     // title
-    const eventBus = require('js-event-bus')();
     const [title, setTitle] = useState()
     const titleEffect = (message) => {
         var m = {};
@@ -66,9 +63,16 @@ const about = () => {
         };
         m.animateIn()
     }
-    eventBus.on("loadAbout", () => {
-        titleEffect("ABOUT ME")
-    });
+    useImperativeHandle(
+        ref,
+        () => ({
+            toggleEffect() {
+                titleEffect("ABOUT US")
+            }
+        }),
+        [],
+    )
+
 
     return (
         <div className="container mx-auto">
@@ -103,7 +107,7 @@ const about = () => {
 
         </div>
     )
-}
+})
 
 export default about
 

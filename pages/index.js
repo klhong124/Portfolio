@@ -2,17 +2,16 @@ import Head from 'next/head'
 import Home from '/components/Home.js'
 import About from '/components/About.js'
 import Work from '/components/Work.js'
+import Skill from '/components/Skill.js'
 import ReactFullpage from '@fullpage/react-fullpage';
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import $ from 'jquery';
 
 
 
 const index = () => {
-  const eventBus = require('js-event-bus')();
+  const about = useRef(null)
   useEffect(() => {
-    eventBus.emit("loadAbout");
-
     // fix fullpage.js bug with aos.js
     window.addEventListener('resize', () => {
       setTimeout(() => {
@@ -25,7 +24,7 @@ const index = () => {
     $('.section:gt(0)').eq(origin.index - 1).find('[data-aos]').removeClass('aos-animate');
     switch (index) {
       case 1:
-        eventBus.emit("loadAbout");
+        about.current.toggleEffect()
         break;
       default:
         break;
@@ -55,7 +54,10 @@ const index = () => {
                   <Home OnClickStarted={() => fullpageApi.moveTo(2)} />
                 </div>
                 <div className="section">
-                  <About />
+                  <About ref={about} />
+                </div>
+                <div className="section" >
+                  <Skill />
                 </div>
                 <div className="section">
                   <Work />
