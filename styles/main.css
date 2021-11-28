@@ -47,7 +47,7 @@
   }
   .slide-group__wrapper {
     @apply overflow-x-scroll pl-[min(100px,20vw)];
-    touch-action: pan-x;
+    touch-action: auto;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
   }

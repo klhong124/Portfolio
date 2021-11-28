@@ -28,7 +28,7 @@ function MyForm() {
         console.log(state);
     }
     return (
-        <div>
+        <div className="pb-12">
 
             <div class="max-w-5xl mx-auto px-6 sm:px-6 lg:px-8 mb-12">
                 <div class="bg-white w-full shadow rounded-xl p-8 sm:p-12 ">

@@ -99,7 +99,7 @@ const about = forwardRef((_, ref) => {
 
 
     return (
-        <div className="container mx-auto">
+        <div className="container mx-auto  py-12 sm:py-0">
             <div>
                 <div className="pb-4 px-8">
                     <svg className="w-screen max-w-3xl" viewBox="0 0 700 90"><text y="80">{title}</text></svg>
@@ -115,13 +115,13 @@ const about = forwardRef((_, ref) => {
                         </div>
                     </Tilt>
                     <div className="  text-white max-w-xl lg:ml-0 mx-8 md:mt-5 col-span-2">
-                        <h1 className="text-3xl font-bold">{subtitle}</h1>
+                        <h1 className=" text-2xl sm:text-3xl font-bold">{subtitle}</h1>
                         <h2 className="text-gray-400 mt-1 font-medium">Full-Stack Developer | UX Designer</h2>
                         <p className="mt-7">I was born and raised in Hong Kong 🇭🇰 , and currently living in London 🇬🇧 .  </p>
                         <p className="mt-7">My aspiration is to deliver exceptional design solutions to address problems and meet people’s actual needs.  </p>
 
                         <p className="mt-7">I love programing - a language with superpower! It makes my playful thinking ideas comes alive.   </p>
-                        <div className="mt-7 ">
+                        <div className="mt-7">
                             <span className="relative w-auto">
                                 <button className="button" onClick={() => { window.open('https://legend-cairnsmore-8a2.notion.site/Ryan-Kwan-3c9f5c6b5719484c8c2ad72ac8d94fe7') }}>
                                     LEARN MORE

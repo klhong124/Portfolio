@@ -72,7 +72,7 @@ const work = () => {
     ]
 
     return (
-        <div className="pt-24">
+        <div className="sm:pt-24">
 
             <div className="flex">
                 <div className={`bg-gradient-to-r from-background h-screen  ${hideTitle ? ' w-[min(100px,15vw)]' : 'w-[min(150px,25vw)]'} absolute transition-all`} />

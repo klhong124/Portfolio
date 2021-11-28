@@ -64,14 +64,14 @@ const skill = () => {
         ]
     }
     return (
-        <div onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} onMouseEnter={handleMouseMove} className="cursor-none pt-10">
+        <div onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} onMouseEnter={handleMouseMove} className="cursor-none py-24 sm:mt-10">
             <div ref={circle} className="absolute circle"></div>
 
             <div ref={title} className="absolute mt-5  right-0 top-0">
                 <svg className="w-[clamp(400px,130vw,2500px)]" viewBox="0 0 800 90"><text x="50%" y="90%">SKILLS</text></svg>
             </div>
-            <div className="flex justify-center items-center my-[100px]">
-                <div className=" w-2/3 max-w-6xl h-full flex justify-center items-center gap-10 lg:flex-row flex-col" ref={cards}>
+            <div className="flex justify-center items-center md:my-[100px]">
+                <div className="mx-auto sm:mx-0 sm:w-2/3 max-w-6xl h-full flex justify-center items-center gap-10 lg:flex-row flex-col" ref={cards}>
                     {
 
                         Object.entries(skills).map(([type, skill]) => {
