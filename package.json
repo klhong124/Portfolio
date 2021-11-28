@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@formspree/react": "^2.2.4",
     "@fullpage/react-fullpage": "^0.1.19",
     "@mdi/js": "^6.5.95",
     "@mdi/react": "^1.5.0",

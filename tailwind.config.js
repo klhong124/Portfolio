@@ -14,7 +14,11 @@ module.exports = {
     gradientColorStops: theme => ({
       ...theme('colors'),
       'background': '#171720',
-    })
+    }),
+    cursor: {
+      'none': 'none',
+    },
+    
 
   },
   variants: {

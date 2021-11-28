@@ -1,4 +1,3 @@
-import * as THREE from "three";
 import React, { Suspense, useMemo } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { Physics, usePlane, useConvexPolyhedron, Debug, useBox } from "@react-three/cannon";
@@ -485,7 +484,7 @@ const Home = ({ OnClickStarted }) => {
                     >
                         {
                             socials.map(({ icon, href }, i) =>
-                                <button className="mx-2"
+                                <button className="mx-2 "
                                     key={i}
                                     onClick={() => window.open(href)}
                                     data-aos="flip-down"

@@ -38,15 +38,6 @@ const work = () => {
             ],
         },
         {
-            name: "Sticker Cloud Downloader",
-            img: "https://ryankwan.netlify.app/img/sc_downloader.png",
-            link: "https://sticker-cloud-downloader.netlify.app/",
-            year: 2021,
-            desc:
-                "A web application for downloading stickers from Sticker Cloud.",
-            tags: ["Nuxt", "Vue", "Google Analytics", "Proxy", "JSzip"],
-        },
-        {
             name: "Car8",
             img: "https://ryankwan.netlify.app/img/car8.png",
             link: "https://www.car8.com/",
@@ -81,7 +72,7 @@ const work = () => {
     ]
 
     return (
-        <div>
+        <div className="pt-24">
 
             <div className="flex">
                 <div className={`bg-gradient-to-r from-background h-screen  ${hideTitle ? ' w-[min(100px,15vw)]' : 'w-[min(150px,25vw)]'} absolute transition-all`} />

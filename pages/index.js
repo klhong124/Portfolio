@@ -3,6 +3,7 @@ import Home from '/components/Home.js'
 import About from '/components/About.js'
 import Work from '/components/Work.js'
 import Skill from '/components/Skill.js'
+import Contact from '/components/Contact.js'
 import ReactFullpage from '@fullpage/react-fullpage';
 import React, { useEffect, useRef } from "react";
 import $ from 'jquery';
@@ -61,6 +62,9 @@ const index = () => {
                 </div>
                 <div className="section">
                   <Work />
+                </div>
+                <div className="section">
+                  <Contact />
                 </div>
 
               </div>

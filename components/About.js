@@ -8,16 +8,39 @@ import Image from 'next/image'
 const about = forwardRef((_, ref) => {
     // title
     const [title, setTitle] = useState()
-    const titleEffect = (message) => {
+    const [subtitle, setSubtitle] = useState()
+    const textEffect = (init, target) => {
         var m = {};
-        m.codeletters = "!@#$%^&*()=+<>?";
+        m.codeLetters = () => {
+            switch (target) {
+                case "title":
+                    return "!@#$%^&*()=+<>?";
+                case "subtitle":
+                    return "RY@>*=/_#$";
+                default:
+                    return "!@#$%^&*()=+<>?";
+            }
+
+        };
         m.current_length = 0;
         m.fadeBuffer = false;
-        m.message = message;
+        m.message = init;
+        m.render = (text) => {
+            switch (target) {
+                case "title":
+                    setTitle(text)
+                    break;
+                case "subtitle":
+                    setSubtitle(text)
+                    break;
+                default:
+                    return;
+            }
+        }
         m.generateRandomString = function (length) {
             var random_text = '';
             while (random_text.length < length) {
-                random_text += m.codeletters.charAt(Math.floor(Math.random() * m.codeletters.length));
+                random_text += m.codeLetters().charAt(Math.floor(Math.random() * m.codeLetters().length));
             }
             return random_text;
         }
@@ -29,7 +52,7 @@ const about = forwardRef((_, ref) => {
                 }
 
                 var message = m.generateRandomString(m.current_length);
-                setTitle(message)
+                m.render(message)
                 setTimeout(m.animateIn, 20);
             } else {
                 setTimeout(m.animateFadeBuffer, 20);
@@ -51,12 +74,12 @@ const about = forwardRef((_, ref) => {
                 if (fader.c > 0) {
                     do_cycles = true;
                     fader.c--;
-                    message += m.codeletters.charAt(Math.floor(Math.random() * m.codeletters.length));
+                    message += m.codeLetters().charAt(Math.floor(Math.random() * m.codeLetters().length));
                 } else {
                     message += fader.l;
                 }
             }
-            setTitle(message)
+            m.render(message)
             if (do_cycles === true) {
                 setTimeout(m.animateFadeBuffer, 60);
             }
@@ -67,7 +90,8 @@ const about = forwardRef((_, ref) => {
         ref,
         () => ({
             toggleEffect() {
-                titleEffect("ABOUT US")
+                textEffect("ABOUT US", "title")
+                textEffect("Greetings, I'm Ryan Kwan.", "subtitle")
             }
         }),
         [],
@@ -91,15 +115,21 @@ const about = forwardRef((_, ref) => {
                         </div>
                     </Tilt>
                     <div className="  text-white max-w-xl lg:ml-0 mx-8 md:mt-5 col-span-2">
-                        <h1 className="text-3xl font-bold">Greetings, I'm Ryan Kwan.</h1>
+                        <h1 className="text-3xl font-bold">{subtitle}</h1>
                         <h2 className="text-gray-400 mt-1 font-medium">Full-Stack Developer | UX Designer</h2>
                         <p className="mt-7">I was born and raised in Hong Kong 🇭🇰 , and currently living in London 🇬🇧 .  </p>
                         <p className="mt-7">My aspiration is to deliver exceptional design solutions to address problems and meet people’s actual needs.  </p>
 
                         <p className="mt-7">I love programing - a language with superpower! It makes my playful thinking ideas comes alive.   </p>
-                        <button className="mt-7 x-10 button" onClick={() => { window.open('https://legend-cairnsmore-8a2.notion.site/Ryan-Kwan-3c9f5c6b5719484c8c2ad72ac8d94fe7') }}>
-                            LEARN MORE
-                        </button>
+                        <div className="mt-7 ">
+                            <span className="relative w-auto">
+                                <button className="button" onClick={() => { window.open('https://legend-cairnsmore-8a2.notion.site/Ryan-Kwan-3c9f5c6b5719484c8c2ad72ac8d94fe7') }}>
+                                    LEARN MORE
+                                </button>
+                                <div class="absolute top-0 right-0 -mr-1 -mt-3 w-4 h-4 rounded-full bg-green-300 animate-ping"></div>
+                                <div class="absolute top-0 right-0 -mr-1 -mt-3 w-4 h-4 rounded-full bg-green-300"></div>
+                            </span>
+                        </div>
                     </div>
                 </div>
 
