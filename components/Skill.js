@@ -15,10 +15,18 @@ const skill = () => {
 
             // title
             title.current.style.top = y * 25 + "px"
-            title.current.style.right = x * 55 + "px"
+            if (window.innerWidth > 640) {
+                title.current.style.right = x * 55 + "px"
+            } else {
+                title.current.style.right = "0px"
+            }
             // card 
             cards.current.style.marginTop = y * 10 + "px"
-            cards.current.style.marginRight = x * 15 + "px"
+            if (window.innerWidth > 640) {
+                cards.current.style.marginRight = x * 15 + "px"
+            } else {
+                cards.current.style.marginRight = "0px"
+            }
         }
 
 
@@ -67,11 +75,12 @@ const skill = () => {
         <div onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} onMouseEnter={handleMouseMove} className="cursor-none py-24 sm:mt-10">
             <div ref={circle} className="absolute circle"></div>
 
-            <div ref={title} className="absolute mt-5  right-0 top-0">
-                <svg className="w-[clamp(400px,130vw,2500px)]" viewBox="0 0 800 90"><text x="50%" y="90%">SKILLS</text></svg>
-            </div>
-            <div className="flex justify-center items-center md:my-[100px]">
-                <div className="mx-auto sm:mx-0 sm:w-2/3 max-w-6xl h-full flex justify-center items-center gap-10 lg:flex-row flex-col" ref={cards}>
+
+            <div className="flex justify-center items-center md:my-[100px] relative">
+                <div ref={title} className="absolute -mt-24 md:-mt-28 lg:-mt-36 xl:-mt-44 2xl:-mt-60 -mr-12 right-0 top-0">
+                    <svg className="w-[clamp(800px,130vw,2500px)]" viewBox="0 0 800 90"><text x="50%" y="90%">SKILLS</text></svg>
+                </div>
+                <div className="sm:w-2/3 max-w-6xl h-full flex justify-center items-center gap-10 lg:flex-row flex-col" ref={cards}>
                     {
 
                         Object.entries(skills).map(([type, skill]) => {

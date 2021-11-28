@@ -52,13 +52,14 @@ const index = () => {
             return (
               <div id="fullpage-wrapper">
                 <div className="section">
-                  <Home OnClickStarted={() => fullpageApi.moveTo(2)} />
+                  <Skill />
+                  {/* <Home OnClickStarted={() => fullpageApi.moveTo(2)} /> */}
                 </div>
                 <div className="section">
                   <About ref={about} />
                 </div>
                 <div className="section" >
-                  <Skill />
+                  {/* <Skill /> */}
                 </div>
                 <div className="section">
                   <Work />
