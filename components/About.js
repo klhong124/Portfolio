@@ -126,8 +126,8 @@ const about = forwardRef((_, ref) => {
                                 <button className="button" onClick={() => { window.open('https://legend-cairnsmore-8a2.notion.site/Ryan-Kwan-3c9f5c6b5719484c8c2ad72ac8d94fe7') }}>
                                     LEARN MORE
                                 </button>
-                                <div class="absolute top-0 right-0 -mr-1 -mt-3 w-4 h-4 rounded-full bg-green-300 animate-ping"></div>
-                                <div class="absolute top-0 right-0 -mr-1 -mt-3 w-4 h-4 rounded-full bg-green-300"></div>
+                                <div className="absolute top-0 right-0 -mr-1 -mt-3 w-4 h-4 rounded-full bg-green-300 animate-ping"></div>
+                                <div className="absolute top-0 right-0 -mr-1 -mt-3 w-4 h-4 rounded-full bg-green-300"></div>
                             </span>
                         </div>
                     </div>

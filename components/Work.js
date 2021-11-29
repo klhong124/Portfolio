@@ -75,14 +75,13 @@ const work = () => {
         <div className="sm:pt-24">
 
             <div className="flex">
-                <div className={`bg-gradient-to-r from-background h-screen  ${hideTitle ? ' w-[min(100px,15vw)]' : 'w-[min(150px,25vw)]'} absolute transition-all`} />
                 <div
                     className="max-w-0"
                     data-aos="fade-up"
-                    data-aos-duration="3000"
+                    data-aos-duration="1000"
                 >
 
-                    <svg className={`w-screen mt-[580px] ${hideTitle ? 'max-w-[200px]' : 'max-w-[400px]'} -rotate-90 origin-top-left transition-all sm:ml-4`}
+                    <svg className={`w-screen mt-[580px] ${hideTitle ? 'max-w-[200px] sm:mt-0' : 'max-w-[400px]'} -rotate-90 origin-top-left transition-all sm:ml-4`}
                         viewBox="0 0 320 90"><text x="50%" y="90%" textAnchor="middle">WORK</text></svg>
                 </div>
 

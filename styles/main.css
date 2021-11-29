@@ -7,24 +7,26 @@
     @apply text-center inline-flex items-center px-8 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500;
   }
   .card {
-    @apply w-full lg:min-h-[550px] bg-red-400 rounded-lg z-20 backdrop-filter backdrop-blur-sm bg-opacity-30 shadow-2xl text-gray-200;
+    @apply w-full lg:min-h-[550px] bg-red-500 rounded-lg z-20 backdrop-filter backdrop-blur-lg bg-opacity-30 shadow-2xl text-gray-200;
   }
   .page {
     @apply rounded-xl bg-blue-800 min-w-[300px] w-[300px] min-h-[550px] mr-4 overflow-hidden hover:mt-[-30px] transition-all;
     scroll-snap-align: start;
     scroll-margin-left: min(100px, 20vw);
-    box-shadow: #fff 0px 0px 0px 2px inset, #171720 10px -10px 0px -3px, #3793ff 10px -10px, #171720 20px -20px 0px -3px, #4de94c 20px -20px, #171720 30px -30px 0px -3px, #fe0 30px -30px, #171720 40px -40px 0px -3px, #ff8c00 40px -40px, #171720 50px -50px 0px -3px, #f60000 50px -50px;
+    box-shadow: #fff 0px 0px 0px 2px inset, #151922 10px -10px 0px -3px, #3793ff 10px -10px, #151922 20px -20px 0px -3px, #4de94c 20px -20px, #151922 30px -30px 0px -3px, #fe0 30px -30px, #151922 40px -40px 0px -3px, #ff8c00 40px -40px, #151922 50px -50px 0px -3px, #f60000 50px -50px;
   }
   .circle {
-    @apply rounded-full h-80 w-80 flex bg-yellow-400 left-0 top-0 z-30 shadow-2xl backdrop-filter backdrop-hue-rotate-180 bg-opacity-30;
-    left: -500px;
+    @apply rounded-full h-80 w-80 flex bg-yellow-400 left-0 top-0 z-30 shadow-2xl backdrop-filter backdrop-hue-rotate-180 bg-opacity-30 opacity-0 transition-opacity duration-700;
     transform: translate(-50%, -50%);
   }
   .tag {
     @apply mr-2 mt-2 text-xs inline-flex items-center font-bold px-3 py-1 rounded-full border;
   }
   .input {
-    @apply leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded-lg border-gray-200;
+    @apply leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-200 border rounded-lg border-gray-200;
+  }
+  .section {
+    @apply min-h-screen;
   }
   svg {
     font: bold 100px Century Gothic, Arial;
@@ -60,5 +62,10 @@
   .slide-group__wrapper {
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
+  }
+
+  .pattern {
+    @apply w-full bg-no-repeat bg-center bg-cover absolute h-screen;
+    aspect-ratio: 2020/540;
   }
 }

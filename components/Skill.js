@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react'
 
 const skill = () => {
-
+    const blob = useRef(null)
     const circle = useRef(null)
     const title = useRef(null)
     const cards = useRef(null)
@@ -10,6 +10,7 @@ const skill = () => {
             //circle
             circle.current.style.top = clientY + "px"
             circle.current.style.left = clientX + "px"
+            circle.current.style.opacity = 1;
             let x = ((clientX - (window.innerWidth / 2)) / window.innerWidth * 2).toFixed(2)
             let y = (((window.innerHeight / 2) - clientY) / window.innerHeight * 2).toFixed(2)
 
@@ -27,13 +28,17 @@ const skill = () => {
             } else {
                 cards.current.style.marginRight = "0px"
             }
+            // background
+            blob.current.style.left = -x + "%"
+            blob.current.style.top = -y + "%"
+
         }
 
 
     }
     const handleMouseLeave = () => {
         // hide circle
-        circle.current.style.left = "-500px"
+        circle.current.style.opacity = 0;
     }
 
     const skills = {
@@ -72,11 +77,14 @@ const skill = () => {
         ]
     }
     return (
-        <div onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} onMouseEnter={handleMouseMove} className="cursor-none py-24 sm:mt-10">
+        <div onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} onMouseEnter={handleMouseMove} className="cursor-none py-24  bg-crayola min-h-screen">
             <div ref={circle} className="absolute circle"></div>
+            {/* background */}
+            <div className="bg-blob-pattern pattern top-0" ref={blob}></div>
 
 
-            <div className="flex justify-center items-center md:my-[100px] relative">
+
+            <div className="flex justify-center items-center md:mt-[220px] mt-12 relative">
                 <div ref={title} className="absolute -mt-24 md:-mt-28 lg:-mt-36 xl:-mt-44 2xl:-mt-60 -mr-12 right-0 top-0">
                     <svg className="w-[clamp(800px,130vw,2500px)]" viewBox="0 0 800 90"><text x="50%" y="90%">SKILLS</text></svg>
                 </div>

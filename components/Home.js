@@ -1,9 +1,9 @@
-import React, { Suspense, useMemo } from "react";
+import React, { Suspense, useEffect, useMemo } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { Physics, usePlane, useConvexPolyhedron, Debug, useBox } from "@react-three/cannon";
 import { useGLTF, OrbitControls } from "@react-three/drei";
 import { useDrag } from "@use-gesture/react";
-
+import gsap from "gsap";
 import { Geometry } from "three-stdlib";
 
 import Icon from '@mdi/react'
@@ -444,8 +444,11 @@ const Plane = (props) => {
     )
 }
 
-const Home = ({ OnClickStarted }) => {
 
+const Home = ({ OnClickStarted }) => {
+    useEffect(() => {
+        gsap.from("#ryankwan", { duration: 1.2, y: '-160%', ease: "bounce", delay: 0.2 });
+    }, [])
     const socials = [
         {
             icon: mdiLinkedin,
@@ -469,7 +472,7 @@ const Home = ({ OnClickStarted }) => {
         <div>
             <div className="h-screen">
                 <div className="absolute z-10 w-screen text-center" >
-                    <div className="d mt-[100px] " data-aos="zoom-in-up">
+                    <div className="d mt-[100px] " id="ryankwan">
                         <center>
                             <svg viewBox="0 0 650 80" className="w-screen max-w-7xl">
                                 <text x="30" y="95%">RYAN KWAN</text>
