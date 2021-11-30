@@ -108,14 +108,12 @@ const about = forwardRef((_, ref) => {
         if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Windows Phone/i.test(navigator.userAgent)) {
             let x = ((clientX - (window.innerWidth / 2)) / window.innerWidth * 2).toFixed(2)
             let y = (((window.innerHeight / 2) - clientY) / window.innerHeight * 2).toFixed(2)
-            if (allowMouse) {
-                wave.current.style.left = -x * 20 - 50 + "%"
-            }
+            wave.current.style.left = -x * 20 - 50 + "%"
         }
     }
 
     return (
-        <div className=" mx-auto h-[850px]">
+        <div className=" mx-auto h-[850px]" onMouseMove={handleMouseMove}>
             {/* background */}
             <div className="pattern bg-wave-pattern w-[200%] -left-1/2 top-0 " ref={wave}></div>
 

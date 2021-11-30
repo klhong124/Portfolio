@@ -86,22 +86,23 @@ My aspiration is to deliver exceptional design solutions to address problems and
             return (
               <div id="fullpage-wrapper">
 
-                <div className="section bg-background">
+                <div className="section min-h-screen bg-background">
                   <Home OnClickStarted={() => fullpageApi.moveTo(2)} />
                 </div>
 
-                <div className="section">
+                <div className="section min-h-screen">
                   <About ref={about} />
                 </div>
 
-                <div className="section" >
+                <div className="section min-h-screen" >
                   <Skill />
                 </div>
 
-                <div className="section pattern bg-peak-pattern">
+                <div className="section min-h-screen pattern bg-peak-pattern">
                   <Work />
                 </div>
-                <div className="section bg-viridian">
+
+                <div className="section min-h-screen bg-viridian">
                   <Contact ref={contact} />
                 </div>
 
