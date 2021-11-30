@@ -1,14 +1,17 @@
 
-import React, { useState, forwardRef, useImperativeHandle } from "react";
+import React, { useState, useRef, forwardRef, useImperativeHandle, useEffect } from "react";
 import RK_IMG from '/public/image/ryankwan.png'
 import Tilt from 'react-parallax-tilt';
 import Image from 'next/image'
+import gsap from "gsap";
 
 
 const about = forwardRef((_, ref) => {
+    const wave = useRef(null)
     // title
     const [title, setTitle] = useState()
     const [subtitle, setSubtitle] = useState()
+
     const textEffect = (init, target) => {
         var m = {};
         m.codeLetters = () => {
@@ -47,7 +50,7 @@ const about = forwardRef((_, ref) => {
         m.animateIn = function () {
             if (m.current_length < m.message.length) {
                 m.current_length = m.current_length + 1;
-                if (m.current_length > m.message.length) {
+                if (m.current_length > m.message.length-5) {
                     m.current_length = m.message.length;
                 }
 
@@ -91,16 +94,32 @@ const about = forwardRef((_, ref) => {
         () => ({
             toggleEffect() {
                 textEffect("ABOUT US", "title")
-                textEffect("Greetings, I'm Ryan Kwan.", "subtitle")
+                textEffect("I'm Ryan Kwan.", "subtitle")
             }
         }),
         [],
     )
+    useEffect(() => {
+        gsap.from(wave.current, { duration: 1.3, y: '-95%', x: -'50%', ease: "in", delay: 0.2 });
 
+    }, []);
+
+    const handleMouseMove = ({ nativeEvent: { clientX, clientY } }) => {
+        if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Windows Phone/i.test(navigator.userAgent)) {
+            let x = ((clientX - (window.innerWidth / 2)) / window.innerWidth * 2).toFixed(2)
+            let y = (((window.innerHeight / 2) - clientY) / window.innerHeight * 2).toFixed(2)
+            if (allowMouse) {
+                wave.current.style.left = -x * 20 - 50 + "%"
+            }
+        }
+    }
 
     return (
-        <div className="container mx-auto  py-12 sm:py-0">
-            <div>
+        <div className=" mx-auto min-h-[850px] py-10">
+            {/* background */}
+            <div className="pattern bg-wave-pattern w-[200%] -left-1/2 top-0 " ref={wave}></div>
+
+            <div className="container absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                 <div className="pb-4 px-8">
                     <svg className="w-screen max-w-3xl" viewBox="0 0 700 90"><text y="80">{title}</text></svg>
                 </div>
@@ -115,7 +134,7 @@ const about = forwardRef((_, ref) => {
                         </div>
                     </Tilt>
                     <div className="  text-white max-w-xl lg:ml-0 mx-8 md:mt-5 col-span-2">
-                        <h1 className=" text-2xl sm:text-3xl font-bold">{subtitle}</h1>
+                        <h1 className=" text-2xl sm:text-3xl font-bold overflow-ellipsis overflow-hidden">Greetings, {subtitle}</h1>
                         <h2 className="text-gray-400 mt-1 font-medium">Full-Stack Developer | UX Designer</h2>
                         <p className="mt-7">I was born and raised in Hong Kong 🇭🇰 , and currently living in London 🇬🇧 .  </p>
                         <p className="mt-7">My aspiration is to deliver exceptional design solutions to address problems and meet people’s actual needs.  </p>

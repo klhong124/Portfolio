@@ -14,14 +14,14 @@ const contact = forwardRef((_, ref) => {
             toggleEffect() {
                 gsap.fromTo(blob.current, {
                     opacity: 0,
-                    scaleX: 3, scaleY: 3, transformOrigin: "center",
+                    scaleX: 2.7, scaleY: 2.7, transformOrigin: "center",
                 }, {
                     duration: 0.5,
                     ease: "in",
                     opacity: 1,
                     scaleX: 1,
                     scaleY: 1,
-                    delay: 0.5,
+                    delay: 0.2,
                 });
             },
             cancelEffect() {
