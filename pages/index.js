@@ -18,7 +18,7 @@ const index = () => {
   const allowMouse = false;
   useEffect(() => {
 
-    gsap.from(wave.current, { duration: 1.5, y: '-100%', x: '25%', ease: "in", delay: 0.3 });
+    gsap.from(wave.current, { duration: 1.3, y: '-95%', x: -'50%', ease: "in", delay: 0.2 });
 
     setTimeout(() => {
       allowMouse = true;
