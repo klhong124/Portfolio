@@ -57,54 +57,52 @@ const contact = forwardRef((_, ref) => {
 
     const [state, handleSubmit] = useForm("xvolprkr");
     return (
-        <div className="pb-12">
+        <div className="min-h-[880px]">
             <div className="pattern bg-blob top-0 " ref={blob}></div>
 
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                <div className="max-w-5xl mx-auto px-6 sm:px-6 lg:px-8 mb-12">
-                    <div className="bg-gray-100 w-full shadow rounded-xl p-8 sm:p-12 ">
-                        <p className="text-3xl font-bold leading-7 text-center">Contact me</p>
-                        <form onSubmit={handleSubmit} >
-                            <div className="md:flex items-center mt-12 z-10">
-                                <div className="w-full md:w-1/2 flex flex-col">
-                                    <label className="font-semibold leading-none">Name</label>
-                                    <input type="text" className=" input" name="name" />
-
-                                </div>
-                                <div className="w-full md:w-1/2 flex flex-col md:ml-6 md:mt-0 mt-4">
-                                    <label className="font-semibold leading-none">Email</label>
-                                    <input type="email" className=" input" name="email" />
-                                </div>
-                            </div>
-                            <div className="md:flex items-center mt-8">
-                                <div className="w-full flex flex-col">
-                                    <label className="font-semibold leading-none">Subject</label>
-                                    <input type="text" className=" input" name="subject" />
-                                </div>
+                <div className="bg-gray-100 w-screen max-w-3xl mb-10 shadow rounded-xl p-8 sm:p-12 ">
+                    <p className="text-3xl font-bold leading-7 text-center">Contact me</p>
+                    <form onSubmit={handleSubmit} >
+                        <div className="md:flex items-center mt-12 ">
+                            <div className="w-full md:w-1/2 flex flex-col">
+                                <label className="font-semibold leading-none">Name</label>
+                                <input type="text" className=" input" name="name" />
 
                             </div>
-                            <div>
-                                <div className="w-full flex flex-col mt-8">
-                                    <label className="font-semibold leading-none">Message</label>
-                                    <textarea type="text" className="h-40 text-base leading-none input" name="message"></textarea>
+                            <div className="w-full md:w-1/2 flex flex-col md:ml-6 md:mt-0 mt-4">
+                                <label className="font-semibold leading-none">Email</label>
+                                <input type="email" className=" input" name="email" />
+                            </div>
+                        </div>
+                        <div className="md:flex items-center mt-8">
+                            <div className="w-full flex flex-col">
+                                <label className="font-semibold leading-none">Subject</label>
+                                <input type="text" className=" input" name="subject" />
+                            </div>
+
+                        </div>
+                        <div>
+                            <div className="w-full flex flex-col mt-8">
+                                <label className="font-semibold leading-none">Message</label>
+                                <textarea type="text" className="h-40 text-base leading-none input" name="message"></textarea>
+                            </div>
+                        </div>
+                        <div className="flex items-center justify-center w-full mt-7">
+                            {state.submitting
+                                ? <div className="flex items-center justify-center ">
+                                    <div className="w-8 h-8 border-b-2 border-gray-900 rounded-full animate-spin"></div>
                                 </div>
-                            </div>
-                            <div className="flex items-center justify-center w-full mt-7">
-                                {state.submitting
-                                    ? <div className="flex items-center justify-center ">
-                                        <div className="w-8 h-8 border-b-2 border-gray-900 rounded-full animate-spin"></div>
-                                    </div>
-                                    :
-                                    (state.succeeded
-                                        ? <div className="font-semibold text-green-600"> "😻 Message sent. Please accept my deepest thanks."</div>
-                                        : <button className="button">
-                                            Send message
-                                        </button>
-                                    )
-                                }
-                            </div>
-                        </form>
-                    </div>
+                                :
+                                (state.succeeded
+                                    ? <div className="font-semibold text-green-600"> "😻 Message sent. Please accept my deepest thanks."</div>
+                                    : <button className="button">
+                                        Send message
+                                    </button>
+                                )
+                            }
+                        </div>
+                    </form>
                 </div>
 
                 <div className="text-center text-gray-200">
