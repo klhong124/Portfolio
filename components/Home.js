@@ -469,78 +469,76 @@ const Home = ({ OnClickStarted }) => {
     ]
 
     return (
-        <div>
-            <div className="h-screen">
-                <div className="absolute z-10 w-screen text-center" >
-                    <div className="d mt-[100px] " id="ryankwan">
-                        <center>
-                            <svg viewBox="0 0 650 80" className="w-screen max-w-7xl">
-                                <text x="30" y="95%">RYAN KWAN</text>
-                            </svg>
-                        </center>
-                    </div>
-                    <div className="lg:text-3xl md:text-2xl text-1xl font-semibold mt-6 text-gray-300" data-aos="zoom-in-up" data-aos-delay="100">Full-Stack Developer | UX Designer</div>
-                    <button onClick={OnClickStarted} type="button" className="mt-10 px-10 button" data-aos="zoom-in-up" data-aos-delay="200">
-                        EXPLORE
-                    </button>
-                    <div className="mt-8"
-                    >
-                        {
-                            socials.map(({ icon, href }, i) =>
-                                <button className="mx-2 "
-                                    key={i}
-                                    onClick={() => window.open(href)}
-                                    data-aos="flip-down"
-                                    data-aos-delay={i * 300 + 1000}
-                                    data-aos-duration="500"
-                                >
-                                    <Icon path={icon}
-                                        size={1}
-                                        color="white" />
-                                </button>
-                            )
-                        }
-                    </div>
-
+        <div className="min-h-screen h-screen">
+            <div className="absolute z-10 w-screen text-center" >
+                <div className="d mt-[100px] " id="ryankwan">
+                    <center>
+                        <svg viewBox="0 0 650 80" className="w-screen max-w-7xl">
+                            <text x="30" y="95%">RYAN KWAN</text>
+                        </svg>
+                    </center>
                 </div>
-                <Canvas shadows camera={{ position: [0, -5, 2.5], fov: 50 }}>
-                    <ambientLight intensity={0.3} />
-                    <pointLight position={[-2, 0, 10]} color="white" intensity={0.3} />
-                    <pointLight position={[2, 0, 10]} color="white" intensity={0.3} />
+                <div className="lg:text-3xl md:text-2xl text-1xl font-semibold mt-6 text-gray-300" data-aos="zoom-in-up" data-aos-delay="100">Full-Stack Developer | UX Designer</div>
+                <button onClick={OnClickStarted} type="button" className="mt-10 px-10 button" data-aos="zoom-in-up" data-aos-delay="200">
+                    EXPLORE
+                </button>
+                <div className="mt-8"
+                >
+                    {
+                        socials.map(({ icon, href }, i) =>
+                            <button className="mx-2 "
+                                key={i}
+                                onClick={() => window.open(href)}
+                                data-aos="flip-down"
+                                data-aos-delay={i * 300 + 1000}
+                                data-aos-duration="500"
+                            >
+                                <Icon path={icon}
+                                    size={1}
+                                    color="white" />
+                            </button>
+                        )
+                    }
+                </div>
 
-                    <Suspense fallback={null}>
-                        <Physics gravity={[0, 0, -7.5]}>
-                            {/* <Debug> */}
-                            <Mouse />
-                            <Plane />
-                            <Plane position={[-1.6, 0, 0]} rotation={[0, 1.4, 0]} />
-                            <Plane position={[1.6, 0, 0]} rotation={[0, -1.4, 0]} />
-                            <Plane position={[0, -1, 0]} rotation={[1.5, 0, 0]} />
-                            <Plane position={[0, -3, 0]} rotation={[-1.5, 0, 0]} />
-                            <Vue position={[-0.8, -2.5, 3]} rotation={[2.1, -0.6, 0.3]} />
-                            <Python position={[-1.1, -2.4, 5]} rotation={[2.1, 0.5, 0.4]} />
-                            <NodeJS position={[0.1, -2.6, 2.8]} rotation={[2, 0.3, 0]} />
-                            <ReactIcon position={[1.2, -2.5, 4]} rotation={[2, 0.1, 0]} />
-                            <Figma position={[0.6, -2.6, 3.7]} rotation={[2, -0.3, 0.3]} />
-                            <Miro position={[-0.7, -1.5, 4.3]} rotation={[2, 0.5, 0.3]} />
-                            <MongoDB position={[1.2, -1.5, 4.5]} rotation={[2, 0.3, 0]} />
-                            <Tailwind position={[0.3, -2.2, 6.7]} rotation={[2, 0, 0]} />
-                            <Laravel position={[-0.3, -2.4, 6.5]} rotation={[2, -0.2, 0.1]} />
-                            <Firebase position={[-0.4, -2.7, 4.2]} rotation={[2.3, 0.1, 0.2]} />
-                            <Photoshop position={[0.2, -2.1, 5.5]} rotation={[2.7, 0.1, 0.1]} />
-                            <Illustrator position={[1.3, -2, 5.5]} rotation={[2, -0.1, 0]} />
-                            <Vscode position={[0, -1.6, 4.1]} rotation={[2.5, 0, 0]} />
-                            <Graphql position={[-1.3, -2.7, 3.6]} rotation={[2.3, 0, 0]} />
-                            <Davinci position={[-1.23, -1.7, 4.5]} rotation={[2.5, 0, 0.3]} />
-                            <CloudRun position={[-1.3, -2, 5.2]} rotation={[2.5, 0.1, 0.3]} />
-
-                            {/* </Debug> */}
-                        </Physics>
-
-                    </Suspense>
-                    {/* <OrbitControls /> */}
-                </Canvas>
             </div>
+            <Canvas shadows camera={{ position: [0, -5, 2.5], fov: 50 }}>
+                <ambientLight intensity={0.3} />
+                <pointLight position={[-2, 0, 10]} color="white" intensity={0.3} />
+                <pointLight position={[2, 0, 10]} color="white" intensity={0.3} />
+
+                <Suspense fallback={null}>
+                    <Physics gravity={[0, 0, -7.5]}>
+                        {/* <Debug> */}
+                        <Mouse />
+                        <Plane />
+                        <Plane position={[-1.6, 0, 0]} rotation={[0, 1.4, 0]} />
+                        <Plane position={[1.6, 0, 0]} rotation={[0, -1.4, 0]} />
+                        <Plane position={[0, -1, 0]} rotation={[1.5, 0, 0]} />
+                        <Plane position={[0, -3, 0]} rotation={[-1.5, 0, 0]} />
+                        <Vue position={[-0.8, -2.5, 3]} rotation={[2.1, -0.6, 0.3]} />
+                        <Python position={[-1.1, -2.4, 5]} rotation={[2.1, 0.5, 0.4]} />
+                        <NodeJS position={[0.1, -2.6, 2.8]} rotation={[2, 0.3, 0]} />
+                        <ReactIcon position={[1.2, -2.5, 4]} rotation={[2, 0.1, 0]} />
+                        <Figma position={[0.6, -2.6, 3.7]} rotation={[2, -0.3, 0.3]} />
+                        <Miro position={[-0.7, -1.5, 4.3]} rotation={[2, 0.5, 0.3]} />
+                        <MongoDB position={[1.2, -1.5, 4.5]} rotation={[2, 0.3, 0]} />
+                        <Tailwind position={[0.3, -2.2, 6.7]} rotation={[2, 0, 0]} />
+                        <Laravel position={[-0.3, -2.4, 6.5]} rotation={[2, -0.2, 0.1]} />
+                        <Firebase position={[-0.4, -2.7, 4.2]} rotation={[2.3, 0.1, 0.2]} />
+                        <Photoshop position={[0.2, -2.1, 5.5]} rotation={[2.7, 0.1, 0.1]} />
+                        <Illustrator position={[1.3, -2, 5.5]} rotation={[2, -0.1, 0]} />
+                        <Vscode position={[0, -1.6, 4.1]} rotation={[2.5, 0, 0]} />
+                        <Graphql position={[-1.3, -2.7, 3.6]} rotation={[2.3, 0, 0]} />
+                        <Davinci position={[-1.23, -1.7, 4.5]} rotation={[2.5, 0, 0.3]} />
+                        <CloudRun position={[-1.3, -2, 5.2]} rotation={[2.5, 0.1, 0.3]} />
+
+                        {/* </Debug> */}
+                    </Physics>
+
+                </Suspense>
+                {/* <OrbitControls /> */}
+            </Canvas>
         </div>
 
     )

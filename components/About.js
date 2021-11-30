@@ -113,12 +113,12 @@ const about = forwardRef((_, ref) => {
     }
 
     return (
-        <div className=" mx-auto h-[850px]" onMouseMove={handleMouseMove}>
+        <div className="mx-auto h-[852px]" onMouseMove={handleMouseMove}>
             {/* background */}
-            <div className="pattern bg-wave-pattern w-[200%] -left-1/2 top-0 " ref={wave}></div>
+            <div className="pattern bg-wave-pattern w-[200%] -left-1/2 bottom-0 " ref={wave}></div>
 
             <div className="container absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                <div className="py-4 px-8">
+                <div className="mt-12 px-8">
                     <svg className="w-screen max-w-3xl" viewBox="0 0 700 90"><text y="80">{title}</text></svg>
                 </div>
                 <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 max-w-[1800px] mx-auto items-center mb-10">
@@ -140,7 +140,7 @@ const about = forwardRef((_, ref) => {
                         <p className="mt-7">I love programing - a language with superpower! It makes my playful thinking ideas comes alive.   </p>
                         <div className="mt-7">
                             <span className="relative w-auto">
-                                <button className="button" onClick={() => { window.open('https://legend-cairnsmore-8a2.notion.site/Ryan-Kwan-3c9f5c6b5719484c8c2ad72ac8d94fe7') }}>
+                                <button className="button mb-12" onClick={() => { window.open('https://legend-cairnsmore-8a2.notion.site/Ryan-Kwan-3c9f5c6b5719484c8c2ad72ac8d94fe7') }}>
                                     LEARN MORE
                                 </button>
                                 <div className="absolute top-0 right-0 -mr-1 -mt-3 w-4 h-4 rounded-full bg-green-300 animate-ping"></div>

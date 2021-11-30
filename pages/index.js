@@ -12,6 +12,7 @@ import $ from 'jquery';
 
 const index = () => {
   const about = useRef(null)
+  const skill = useRef(null)
   const contact = useRef(null)
   useEffect(() => {
     // fix fullpage.js bug with aos.js
@@ -29,6 +30,9 @@ const index = () => {
       case 1:
         about.current.toggleEffect()
         break;
+      case 2:
+        skill.current.toggleEffect()
+        break;
       case 4:
         contact.current.toggleEffect();
         break;
@@ -37,6 +41,9 @@ const index = () => {
     }
     // leave from
     switch (origin.index) {
+      case 2:
+        skill.current.cancelEffect()
+        break;
       case 4:
         contact.current.cancelEffect();
         break;
@@ -86,23 +93,23 @@ My aspiration is to deliver exceptional design solutions to address problems and
             return (
               <div id="fullpage-wrapper">
 
-                <div className="section min-h-screen bg-background">
+                <div className="section bg-background">
                   <Home OnClickStarted={() => fullpageApi.moveTo(2)} />
                 </div>
 
-                <div className="section min-h-screen">
+                <div className="section" >
                   <About ref={about} />
                 </div>
 
-                <div className="section min-h-screen" >
-                  <Skill />
+                <div className="section z-10" >
+                  <Skill ref={skill} />
                 </div>
 
-                <div className="section min-h-screen pattern bg-peak-pattern">
+                <div className="section">
                   <Work />
                 </div>
 
-                <div className="section min-h-screen bg-viridian">
+                <div className="section bg-viridian">
                   <Contact ref={contact} />
                 </div>
 

@@ -72,9 +72,10 @@ const work = () => {
     ]
 
     return (
-        <div className="sm:pt-24">
+        <div className="bg-peak-pattern pattern top-0">
 
-            <div className="flex">
+
+            <div className="flex mt-24 ">
                 <div
                     className="max-w-0"
                     data-aos="fade-up"
@@ -135,6 +136,8 @@ const work = () => {
                 </div>
 
             </div>
+
+
 
         </div>
     )
