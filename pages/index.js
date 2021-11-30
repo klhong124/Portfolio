@@ -62,13 +62,32 @@ const index = () => {
   }
 
 
+  const meta = {
+    title: "Ryan Kwan - Portfolio",
+    description: `Full-Stack Developer | UX Designer -
+My aspiration is to deliver exceptional design solutions to address problems and meet people’s actual needs.`,
+    image: "/image/meta.png"
+  }
+
 
 
   return (
     <div>
       <Head>
-        <title>Ryan Kwan - Portfolio</title>
+        <title>{meta.title}</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="title" content="Greetings, I'm Ryan Kwan." />
+        <meta name="description" content={meta.description} />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={meta.title} />
+        <meta property="og:description" content={meta.description} />
+        <meta property="og:image" content={meta.image} />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:title" content={meta.title} />
+        <meta property="twitter:description" content={meta.description} />
+        <meta property="twitter:image" content={meta.image} />
       </Head>
 
       <div className="dark bg-crayola" onMouseMove={handleMouseMove}>

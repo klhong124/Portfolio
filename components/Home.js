@@ -518,7 +518,7 @@ const Home = ({ OnClickStarted }) => {
                             <Plane position={[0, -1, 0]} rotation={[1.5, 0, 0]} />
                             <Plane position={[0, -3, 0]} rotation={[-1.5, 0, 0]} />
                             <Vue position={[-0.8, -2.5, 3]} rotation={[2.1, -0.6, 0.3]} />
-                            <Python position={[-1.2, -2.5, 5]} rotation={[2.1, 0.1, 0.4]} />
+                            <Python position={[-1.1, -2.4, 5]} rotation={[2.1, 0.5, 0.4]} />
                             <NodeJS position={[0.1, -2.6, 2.8]} rotation={[2, 0.3, 0]} />
                             <ReactIcon position={[1.2, -2.5, 4]} rotation={[2, 0.1, 0]} />
                             <Figma position={[0.6, -2.6, 3.7]} rotation={[2, -0.3, 0.3]} />
@@ -527,7 +527,7 @@ const Home = ({ OnClickStarted }) => {
                             <Tailwind position={[0.3, -2.2, 6.7]} rotation={[2, 0, 0]} />
                             <Laravel position={[-0.3, -2.4, 6.5]} rotation={[2, -0.2, 0.1]} />
                             <Firebase position={[-0.4, -2.7, 4.2]} rotation={[2.3, 0.1, 0.2]} />
-                            <Photoshop position={[0.3, -2.2, 6.2]} rotation={[2.7, 0.1, 0.1]} />
+                            <Photoshop position={[0.2, -2.1, 5.5]} rotation={[2.7, 0.1, 0.1]} />
                             <Illustrator position={[1.3, -2, 5.5]} rotation={[2, -0.1, 0]} />
                             <Vscode position={[0, -1.6, 4.1]} rotation={[2.5, 0, 0]} />
                             <Graphql position={[-1.3, -2.7, 3.6]} rotation={[2.3, 0, 0]} />
