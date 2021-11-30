@@ -14,7 +14,7 @@ const contact = forwardRef((_, ref) => {
             toggleEffect() {
                 gsap.fromTo(blob.current, {
                     opacity: 0,
-                    scaleX: 2.7, scaleY: 2.7, transformOrigin: "center",
+                    scaleX: 2.7, scaleY: 2.5, transformOrigin: "center",
                 }, {
                     duration: 0.5,
                     ease: "in",

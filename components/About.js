@@ -115,12 +115,12 @@ const about = forwardRef((_, ref) => {
     }
 
     return (
-        <div className=" mx-auto min-h-[850px] py-10">
+        <div className=" mx-auto h-[850px]">
             {/* background */}
             <div className="pattern bg-wave-pattern w-[200%] -left-1/2 top-0 " ref={wave}></div>
 
             <div className="container absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                <div className="pb-4 px-8">
+                <div className="py-4 px-8">
                     <svg className="w-screen max-w-3xl" viewBox="0 0 700 90"><text y="80">{title}</text></svg>
                 </div>
                 <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 max-w-[1800px] mx-auto items-center mb-10">
