@@ -84,7 +84,7 @@ const work = () => {
                         data-aos-duration="1000"
                     >
 
-                        <svg className={`w-screen mt-[580px] ${hideTitle ? 'max-w-[200px] sm:-mt-12' : 'max-w-[400px] -rotate-90'}  origin-top-left transition-all sm:ml-4`}
+                        <svg className={`w-screen mt-[580px] ${hideTitle ? 'max-w-[200px] sm:-mt-10 sm:rotate-0' : 'max-w-[400px] '} -rotate-90 origin-top-left transition-all sm:ml-4`}
                             viewBox="0 0 320 90"><text x="50%" y="90%" textAnchor="middle">WORK</text></svg>
                     </div>
 
