@@ -72,74 +72,77 @@ const work = () => {
     ]
 
     return (
-        <div className="bg-peak-pattern pattern top-0">
+        <div className="h-[802px]">
+            {/* background */}
+            <div className="pattern bg-peak-pattern top-0 h-full"></div>
 
+            <div className="relative">
+                <div className="flex">
+                    <div
+                        className="max-w-0"
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                    >
 
-            <div className="flex mt-24 ">
-                <div
-                    className="max-w-0"
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
-                >
+                        <svg className={`w-screen mt-[580px] ${hideTitle ? 'max-w-[200px] sm:-mt-12' : 'max-w-[400px] -rotate-90'}  origin-top-left transition-all sm:ml-4`}
+                            viewBox="0 0 320 90"><text x="50%" y="90%" textAnchor="middle">WORK</text></svg>
+                    </div>
 
-                    <svg className={`w-screen mt-[580px] ${hideTitle ? 'max-w-[200px] sm:mt-0' : 'max-w-[400px]'} -rotate-90 origin-top-left transition-all sm:ml-4`}
-                        viewBox="0 0 320 90"><text x="50%" y="90%" textAnchor="middle">WORK</text></svg>
-                </div>
+                    <div className="w-full">
+                        <div className="flex slide-group__wrapper pt-[80px]" ref={slide}>
+                            <div className="page text-white flex " >
 
-                <div className="w-full">
-                    <div className="flex slide-group__wrapper pt-[80px]" ref={slide}>
-                        <div className="page text-white flex " >
-
-                            <div className="m-auto text-center">
-                                <div className="text-2xl">"My Hello World"</div>
-                                <small>by Ryan Kwan</small>
-                            </div>
-                        </div>
-                        {job.map(({ name, img, link, year, desc, tags }, i) =>
-                            <div className="page" key={i}>
-                                <img src={img} onClick={() => window.open(link)}
-                                    className="w-full h-[200px] object-cover cursor-pointer p-1 rounded-xl" />
-                                <div className="py-4 px-10 text-white">
-
-                                    <h1 className="text-xl font-bold">{name} - {year}</h1>
-
-                                    <p className="text-gray-200 my-2">{desc}</p>
-                                    {tags.map((tag) =>
-                                        <span className="tag" key={tag}>
-                                            {tag}
-                                        </span>
-                                    )}
+                                <div className="m-auto text-center">
+                                    <div className="text-2xl">"My Hello World"</div>
+                                    <small>by Ryan Kwan</small>
                                 </div>
                             </div>
-                        )}
-                    </div>
+                            {job.map(({ name, img, link, year, desc, tags }, i) =>
+                                <div className="page" key={i}>
+                                    <img src={img} onClick={() => window.open(link)}
+                                        className="w-full h-[200px] object-cover cursor-pointer p-1 rounded-xl" />
+                                    <div className="py-4 px-10 text-white">
 
-                    <div className=" w-screen my-5 pl-[min(135px,22vw)]">
-                        <div className="flex justify-between w-1/2 max-w-[800px] mx-auto">
+                                        <h1 className="text-xl font-bold">{name} - {year}</h1>
 
-                            <button onClick={() => { slide.current.scrollLeft -= 300 }}>
-                                <Icon path={mdiChevronLeftBoxOutline}
-                                    size={3}
-                                    color="white" />
-                            </button>
+                                        <p className="text-gray-200 my-2">{desc}</p>
+                                        {tags.map((tag) =>
+                                            <span className="tag" key={tag}>
+                                                {tag}
+                                            </span>
+                                        )}
+                                    </div>
+                                </div>
+                            )}
+                        </div>
 
-                            <button onClick={() => { slide.current.scrollLeft += 300 }}>
-                                <Icon path={mdiChevronRightBoxOutline}
+                        <div className=" w-screen my-5 pl-[min(135px,22vw)]">
+                            <div className="flex justify-between w-1/2 max-w-[800px] mx-auto">
 
-                                    size={3}
-                                    color="white" />
-                            </button>
+                                <button onClick={() => { slide.current.scrollLeft -= 300 }}>
+                                    <Icon path={mdiChevronLeftBoxOutline}
+                                        size={3}
+                                        color="white" />
+                                </button>
+
+                                <button onClick={() => { slide.current.scrollLeft += 300 }}>
+                                    <Icon path={mdiChevronRightBoxOutline}
+
+                                        size={3}
+                                        color="white" />
+                                </button>
 
 
+                            </div>
                         </div>
                     </div>
-                </div>
 
+                </div>
             </div>
 
 
 
-        </div>
+        </div >
     )
 }
 

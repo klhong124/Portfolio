@@ -58,7 +58,7 @@ const contact = forwardRef((_, ref) => {
     const [state, handleSubmit] = useForm("xvolprkr");
     return (
         <div className="min-h-[880px]">
-            <div className="pattern bg-blob top-0 " ref={blob}></div>
+            <div className="pattern bg-blob top-0 h-full " ref={blob}></div>
 
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                 <div className="bg-gray-100 w-screen max-w-3xl mb-10 shadow rounded-xl p-8 sm:p-12 ">

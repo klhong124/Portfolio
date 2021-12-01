@@ -136,7 +136,7 @@ const skill = forwardRef((_, ref) => {
 
             </div >
             {/* background */}
-            <div className="bg-blob-pattern pattern top-0 transform scale-110 opacity-0" ref={blob}></div>
+            <div className="bg-blob-pattern pattern top-0 transform scale-110 opacity-0 h-full" ref={blob}></div>
 
         </div >
 

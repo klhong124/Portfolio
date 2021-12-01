@@ -115,7 +115,7 @@ const about = forwardRef((_, ref) => {
     return (
         <div className="mx-auto h-[852px]" onMouseMove={handleMouseMove}>
             {/* background */}
-            <div className="pattern bg-wave-pattern w-[200%] -left-1/2 bottom-0 " ref={wave}></div>
+            <div className="pattern bg-wave-pattern w-[200%] -left-1/2 bottom-0 h-full" ref={wave}></div>
 
             <div className="container absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                 <div className="mt-12 px-8">

@@ -84,6 +84,8 @@ My aspiration is to deliver exceptional design solutions to address problems and
         <ReactFullpage
           scrollOverflow={true}
           onLeave={onLeave}
+          sectionsColor={[null, "#1c363a"]}
+
           afterLoad={() => {
             // fix fullpage.js bug with aos.js
             $('.fp-table.active .aos-init').addClass('aos-animate');
