@@ -33,7 +33,6 @@ const work = () => {
                 "PWA",
                 "ApolloGrahpQL",
                 "Stripe",
-                "JAMstack",
                 "Cloud Run",
             ],
         },
