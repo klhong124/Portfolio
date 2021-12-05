@@ -80,6 +80,7 @@ My aspiration is to deliver exceptional design solutions to address problems and
         <meta property="twitter:image" content={meta.image} />
       </Head>
 
+
       <div className="dark bg-crayola">
         <ReactFullpage
           scrollOverflow={true}
