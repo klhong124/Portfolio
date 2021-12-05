@@ -452,7 +452,7 @@ const Home = ({ OnClickStarted }) => {
     const socials = [
         {
             icon: mdiLinkedin,
-            href: "https://my.indeed.com/p/lokhongk-jm0z5xs",
+            href: "https://www.linkedin.com/in/hkryankwan/",
         },
         {
             icon: mdiGmail,
