@@ -25,7 +25,7 @@ const work = () => {
             link: "https://www.gymism.club/",
             year: 2021,
             desc:
-                "It is a coach matching platform. It includes information of personal fitness trainers and promotes a wide range of sports.",
+                "It is a coach matching platform. It includes information about personal fitness trainers and promotes a wide range of sports.",
             tags: [
                 "Nuxt",
                 "Vue",
