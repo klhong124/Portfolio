@@ -5,7 +5,7 @@ const dictionary = {
     "wried": "weird"
 }
 
-const index = () => {
+const correction = () => {
     const [text, setText] = useState("")
     const onChange = (input) => {
         let text = input
@@ -25,5 +25,5 @@ const index = () => {
     )
 }
 
-export default index
+export default correction
 
