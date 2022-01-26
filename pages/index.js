@@ -4,8 +4,11 @@ import About from '/components/About.js'
 import Work from '/components/Work.js'
 import Skill from '/components/Skill.js'
 import Contact from '/components/Contact.js'
+import Pixi from '/components/Pixi.js'
+// import dynamic from "next/dynamic";
 import ReactFullpage from '@fullpage/react-fullpage';
 import React, { useEffect, useRef } from "react";
+
 import $ from 'jquery';
 
 
@@ -30,10 +33,10 @@ const index = () => {
       case 1:
         about.current.toggleEffect()
         break;
-      case 2:
+      case 3:
         skill.current.toggleEffect()
         break;
-      case 4:
+      case 5:
         contact.current.toggleEffect();
         break;
       default:
@@ -41,10 +44,10 @@ const index = () => {
     }
     // leave from
     switch (origin.index) {
-      case 2:
+      case 3:
         skill.current.cancelEffect()
         break;
-      case 4:
+      case 5:
         contact.current.cancelEffect();
         break;
     }
@@ -95,13 +98,16 @@ My aspiration is to deliver exceptional design solutions to address problems and
           render={({ state, fullpageApi }) => {
             return (
               <div id="fullpage-wrapper">
-
                 <div className="section bg-background">
                   <Home OnClickStarted={() => fullpageApi.moveTo(2)} />
                 </div>
 
                 <div className="section" >
                   <About ref={about} />
+                </div>
+
+                <div className="section z-10" >
+                  <Pixi />
                 </div>
 
                 <div className="section z-10" >
