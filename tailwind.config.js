@@ -21,6 +21,8 @@ module.exports = {
         'wave-pattern': "url('/svg/stacked-waves-haikei.svg')",
         'blob-pattern': "url('/svg/blob-scatter-haikei.svg')",
         'peak-pattern': "url('/svg/stacked-peaks-haikei.svg')",
+        'polygon-pattern': "url('/svg/polygon-scatter-haikei.svg')",
+
         'blob': "url('/svg/blob-haikei.svg')",
       }
     }

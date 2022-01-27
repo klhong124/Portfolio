@@ -33,6 +33,9 @@ const index = () => {
       case 1:
         about.current.toggleEffect()
         break;
+      case 2:
+        // window.spinTheWheel()
+        break;
       case 3:
         skill.current.toggleEffect()
         break;

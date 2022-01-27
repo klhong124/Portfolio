@@ -5,13 +5,21 @@ import $ from 'jquery';
 const pixi = () => {
 
     return (
-        <>
+        <div onClick={() => { window.spinTheWheel() }}>
+
             <Script
                 src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.1.3/pixi.min.js"
                 onLoad={() => {
                     let width = window.innerWidth;
                     let height = window.innerHeight;
-                    let width_ref = width * 0.3 > 450 ? 450 : width * 0.3
+                    let width_ref = 450;
+                    if (width * 0.3 > 450) {
+                        width_ref = 450;
+                    } else if (width * 0.3 < 150) {
+                        width_ref = 200;
+                    } else {
+                        width_ref = width * 0.3
+                    }
                     // Create the application helper and add its render target to the page
                     let app = new PIXI.Application({ width: width, height: height, transparent: true });
                     document.getElementById('pixi').appendChild(app.view);
@@ -19,8 +27,8 @@ const pixi = () => {
                     // set up wheel
                     let wheel = new PIXI.Container();
                     app.stage.addChild(wheel);
-                    wheel.position.x = width > 2000 ? 550 : 50;
-                    wheel.position.y = height / 2;
+                    wheel.position.x = width > 1700 ? 550 : 50;
+                    wheel.position.y = width * 0.3 < 150 ? height - 250 : height / 2;
                     // set up wheel.board
                     wheel.board = PIXI.Sprite.from('/image/pixi/wheel.png');
                     wheel.board.anchor.set(0.5);
@@ -35,7 +43,7 @@ const pixi = () => {
                     wheel.addChild(wheel.pin);
                     wheel.pin.y = -(width_ref) * 1.15
                     wheel.pin.rotation = -0.1
-
+                    wheel.spined = false
                     wheel.board.interactive = true
 
                     // wheel.board.on('mousemove', wheelFollow);
@@ -43,14 +51,16 @@ const pixi = () => {
                     // wheel.board.on('mouseover', () => {
                     //     mouseInWheel = true
                     // });
-                    let spinning = false;
-                    wheel.board.on('mouseover', async () => {
-                        if (!spinning) {
-                            spinning = true;
+                    wheel.spinning = false;
+                    wheel.board.on('mouseover', () => { window.spinTheWheel() });
+                    window.spinTheWheel = async function () {
+                        wheel.spined = true
+                        if (!wheel.spinning) {
+                            wheel.spinning = true;
                             $('#answer').fadeOut()
-                            let frame = 200 + Math.round(Math.random() * 420)
+                            let frame = 400 + Math.round(Math.random() * 420)
                             let initial_frame = frame
-                            let spinning_velocity = 1 / 8
+                            let spinning_velocity = 1 / 5
                             while (frame > 100) {
                                 let ease = easeOutQuart((initial_frame - frame) / initial_frame)
                                 let to_spin = ease * spinning_velocity
@@ -59,20 +69,22 @@ const pixi = () => {
                                 if (section > 0.7) {
                                     wheel.pin.rotation = -(Math.sin(section - 0.7)) * 2.1
                                 } else {
-                                    wheel.pin.rotation = ease > 0.8 ? Math.random() * -ease : -0.1
+                                    if (frame < 300) {
+                                        wheel.pin.rotation = ease > 0.8 ? Math.random() * -ease : -0.1
+                                    }
                                 }
                                 await sleep(12);
-                                showResult(Math.floor(((wheel.board.rotation % (2 * Math.PI)) / (2 * Math.PI / 8)) - 0.2))
+                                showResult(Math.floor(((wheel.board.rotation % (2 * Math.PI)) / (2 * Math.PI / 8)) - 0.18))
 
                                 frame--;
 
                             }
-                            spinning = false;
-                            showAnswer(Math.floor(((wheel.board.rotation % (2 * Math.PI)) / (2 * Math.PI / 8)) - 0.2))
+                            wheel.spinning = false;
+                            showAnswer(Math.floor(((wheel.board.rotation % (2 * Math.PI)) / (2 * Math.PI / 8)) - 0.18))
 
                         }
 
-                    });
+                    }
 
 
 
@@ -99,9 +111,9 @@ const pixi = () => {
                             // 6
                             "One thing I cannot live without is….",
                             // 7
-                            "The TV show you binge over and over again",
+                            "Can you speak any other languages?",
                             // 8
-                            "The TV show you binge over and over again",
+                            "What was your favourite subject in school",
 
                         ]
                         $('#number').text(n + 1)
@@ -121,11 +133,11 @@ const pixi = () => {
                             // 5
                             "Brooklyn Nine-Nine. I binge-watch it.",
                             // 6
-                            "6",
+                            "Life without music is…well, dull and boring.",
                             // 7
-                            "7",
+                            "I can speak Cantonese.",
                             // 8
-                            "8"
+                            "Math is Fun. It helps me a lot when it comes to programing."
                         ]
                         $('#answer').text(fun_fact_answer[n])
                         $('#answer').fadeIn()
@@ -133,10 +145,19 @@ const pixi = () => {
                     }
 
 
+                    let spinning_velocity = 1 / 140
+                    app.ticker.add((delta) => {
+                        if (!wheel.spined) {
+                            wheel.board.rotation = wheel.board.rotation + spinning_velocity;
+                            let section = (((wheel.board.rotation % (2 * Math.PI)) % (2 * Math.PI / 8)) + 0.825) % 1
+                            if (section > 0.7) {
+                                wheel.pin.rotation = -(Math.sin(section - 0.7)) * 2.1
+                            } else {
+                                wheel.pin.rotation = 0
+                            }
 
-                    // app.ticker.add((delta) => {
-
-                    // })
+                        }
+                    })
 
 
                 }}
@@ -144,22 +165,22 @@ const pixi = () => {
 
             <div className="container relative mx-auto">
 
-                <svg className="max-w-3xl absolute right-10 top-10" viewBox="0 0 600 90"><text x="600" y="80" textAnchor="end">FUN FACT</text></svg>
-                <div id="number" className="font-mono right-10  top-[250px] sm:top-[80px] absolute sm:text-[800px] text-[400px] opacity-10"></div>
-                <div className="absolute right-10 top-[250px] max-w-3xl text-white  text-right" >
+                <svg className="max-w-4xl absolute right-10 top-10" viewBox="0 0 1000 90"><text x="1000" y="80" textAnchor="end">SPIN THE WHEEL</text></svg>
+                <div id="number" className="font-mono sm:right-10 right-0  top-[100px] absolute sm:text-[500px] md:text-[700px] text-[400px] opacity-10">?</div>
+                <div className="absolute sm:right-10 right-5 sm:top-[250px] top-[150px] max-w-3xl w-screen text-white  text-right" >
 
-                    <div id="fun_fact" className="text-4xl">
-                        SPIN THE WHEEL
+                    <div id="fun_fact" className="text-xl sm:text-4xl sm:max-w-2xl max-w-sm">
+                        Get a fun fact about me
                     </div>
                     <br />
 
-                    <p id="answer" className="hidden max-w-2xl">ANS</p>
+                    <p id="answer" className="hidden sm:max-w-2xl max-w-sm">ANS</p>
                 </div>
             </div>
             <div id="pixi"></div>
 
 
-        </>
+        </div>
     );
 };
 
