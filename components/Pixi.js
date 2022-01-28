@@ -125,7 +125,7 @@ const pixi = () => {
                             // 1
                             "I adore cats🐱",
                             // 2
-                            "2. What is your dream job?",
+                            "I would love to start my own company.",
                             // 3
                             "Building a user-friendly, state-of-the-art, modern website is truly a passion of mine. I love creating playful content and delivering remarkable user experiences to people.",
                             // 4
