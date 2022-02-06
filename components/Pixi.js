@@ -113,7 +113,7 @@ const pixi = () => {
                             // 7
                             "Can you speak any other languages?",
                             // 8
-                            "What was your favourite subject in school",
+                            "What was your favourite tech stack?",
 
                         ]
                         $('#number').text(n + 1)
@@ -137,7 +137,7 @@ const pixi = () => {
                             // 7
                             "I can speak Cantonese.",
                             // 8
-                            "Math is Fun. It helps me a lot when it comes to programing."
+                            "NEXT.js + Firebase + ApolloGraphql + TailwindCSS "
                         ]
                         $('#answer').text(fun_fact_answer[n])
                         $('#answer').fadeIn()
