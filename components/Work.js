@@ -1,6 +1,7 @@
 
 import React, { useRef, useState, useEffect } from "react";
 import Icon from '@mdi/react'
+import CDP_IMAGE from '/public/image/cdp.png'
 
 import { mdiChevronLeftBoxOutline, mdiChevronRightBoxOutline } from '@mdi/js';
 
@@ -20,9 +21,34 @@ const work = () => {
     }, [])
     const job = [
         {
+            name: "Kubrick Group",
+            img: CDP_IMAGE,
+            link: "https://cdpfrontend.prod.kubrickgroup.cloud/",
+            year: 2022,
+            desc:
+                "KubrickGroup is a digital marketing and design agency. They specialise in helping organisations grow through their strategic marketing and creative designs..",
+            tags: [
+                "Nuxt",
+                "Vue",
+                "Next",
+                "Storybooks",
+                "Programming",
+                "JavaScript",
+                "Graphic Design",
+                "Vue.js",
+                "Nuxt.js",
+                "Next.js",
+                "React.js",
+                "Apollo GraphQL",
+                "Figma",
+                "GreenSock Animation Platform (GSAP)",
+                "Tailwind CSS",
+            ],
+        },
+        {
             name: "Gymism Club",
             img: "https://ryankwan.netlify.app/img/gymism.png",
-            link: "https://www.gymism.club/",
+            link: "https://beta.gymism.club/",
             year: 2021,
             desc:
                 "It is a coach matching platform. It includes information about personal fitness trainers and promotes a wide range of sports.",
