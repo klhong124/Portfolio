@@ -1,6 +1,6 @@
 import { useForm } from '@formspree/react';
 import Icon from '@mdi/react'
-import { mdiGithub, mdiWhatsapp, mdiGmail, mdiLinkedin } from '@mdi/js';
+import { mdiGithub, mdiWhatsapp, mdiGmail, mdiLinkedin, mdiPost, mdiTwitter } from '@mdi/js';
 import React, { useRef, forwardRef, useImperativeHandle } from "react";
 import gsap from "gsap";
 
@@ -39,7 +39,7 @@ const contact = forwardRef((_, ref) => {
     const socials = [
         {
             icon: mdiLinkedin,
-            href: "https://www.linkedin.com/in/hkryankwan/",
+            href: "https://www.linkedin.com/in/ryankwandev/",
         },
         {
             icon: mdiGmail,
@@ -52,6 +52,14 @@ const contact = forwardRef((_, ref) => {
         {
             icon: mdiWhatsapp,
             href: "https://wa.me/447878154432",
+        },
+        {
+            icon: mdiPost,
+            href: "https://medium.com/@ryankwandev",
+        },
+        {
+            icon: mdiTwitter,
+            href: "https://twitter.com/ryankwandev",
         }
     ]
 

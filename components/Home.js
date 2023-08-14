@@ -452,7 +452,7 @@ const Home = ({ OnClickStarted }) => {
     const socials = [
         {
             icon: mdiLinkedin,
-            href: "https://www.linkedin.com/in/hkryankwan/",
+            href: "https://www.linkedin.com/in/ryankwandev/",
         },
         {
             icon: mdiGmail,
@@ -465,6 +465,14 @@ const Home = ({ OnClickStarted }) => {
         {
             icon: mdiWhatsapp,
             href: "https://wa.me/447878154432",
+        },
+        {
+            icon: mdiPost,
+            href: "https://medium.com/@ryankwandev",
+        },
+        {
+            icon: mdiTwitter,
+            href: "https://twitter.com/ryankwandev",
         }
     ]
 

@@ -68,8 +68,13 @@ const skill = forwardRef((_, ref) => {
     const skills = {
         programing: [
             `Javascript / Node.js`,
+            `Typescript`,
             `Vue / Nuxt.js`,
+            `Pinia`,
             `React / Next.js`,
+            `Storybook`,
+            `Tailwind CSS`,
+            `Sass / Scss`,
             `ApolloGraphQL`,
             `Python`,
             `Python OCR`,
@@ -82,14 +87,14 @@ const skill = forwardRef((_, ref) => {
             `AWS / Google Cloud / Firebase`,
             `Stripe`,
             `Twilio`,
+            `Shopify`,
             `Vuetify / Tailwind CSS`,
+            `GSAP`,
             `Three.js`,
             `jQuery`,
             `EJS`,
             `Arduino`,
             `Processing`,
-
-
         ],
         design: [
             `Figma`,
