@@ -7,7 +7,7 @@ import gsap from "gsap";
 import { Geometry } from "three-stdlib";
 
 import Icon from '@mdi/react'
-import { mdiGithub, mdiWhatsapp, mdiGmail, mdiLinkedin } from '@mdi/js';
+import { mdiGithub, mdiWhatsapp, mdiGmail, mdiLinkedin, mdiPost, mdiTwitter } from '@mdi/js';
 
 
 /**
