@@ -1,7 +1,6 @@
 
 import React, { useRef, useState, useEffect } from "react";
 import Icon from '@mdi/react'
-import CDP_IMAGE from '/public/image/cdp.png'
 
 import { mdiChevronLeftBoxOutline, mdiChevronRightBoxOutline } from '@mdi/js';
 
@@ -22,7 +21,7 @@ const work = () => {
     const job = [
         {
             name: "Kubrick Group",
-            img: CDP_IMAGE,
+            img: '/image/cdp.png',
             link: "https://cdpfrontend.prod.kubrickgroup.cloud/",
             year: 2022,
             desc:
