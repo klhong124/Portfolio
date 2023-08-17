@@ -60,7 +60,7 @@ const index = () => {
 
   const meta = {
     title: "Ryan Kwan - Portfolio",
-    description: `Full-Stack Developer | UX Designer -
+    description: `Web Developer | Front-end Specialist | UX Enthusiast -
 My aspiration is to deliver exceptional design solutions to address problems and meet people’s actual needs.`,
     image: "/image/meta.png"
   }
