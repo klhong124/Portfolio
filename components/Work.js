@@ -27,16 +27,11 @@ const work = () => {
             desc:
                 "I developed and maintained a e-learning platform for Kubrick Group.",
             tags: [
-                "Nuxt",
-                "Vue",
-                "Next",
                 "Storybook",
                 "JavaScript",
                 "Design",
-                "Vue.js",
-                "Nuxt.js",
-                "Next.js",
-                "React.js",
+                "Vue / Nuxt.js",
+                "React / Next.js",
                 "Apollo GraphQL",
                 "Figma",
                 "GSAP",
