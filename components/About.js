@@ -50,7 +50,7 @@ const about = forwardRef((_, ref) => {
         m.animateIn = function () {
             if (m.current_length < m.message.length) {
                 m.current_length = m.current_length + 1;
-                if (m.current_length > m.message.length-5) {
+                if (m.current_length > m.message.length - 5) {
                     m.current_length = m.message.length;
                 }
 
@@ -92,7 +92,7 @@ const about = forwardRef((_, ref) => {
     useImperativeHandle(
         ref,
         () => ({
-            toggleEffect() {
+            toggleEffect () {
                 textEffect("ABOUT US", "title")
                 textEffect("I'm Ryan Kwan.", "subtitle")
             }
@@ -140,9 +140,16 @@ const about = forwardRef((_, ref) => {
                         <p className="mt-7">I love programming - a language with superpower! It makes my playful thinking ideas comes alive.   </p>
                         <div className="mt-7">
                             <span className="relative w-auto">
-                                <button className="button mb-12" onClick={() => { window.open('https://ryankwan.notion.site/Ryan-Kwan-3c9f5c6b5719484c8c2ad72ac8d94fe7?pvs=4') }}>
-                                    LEARN MORE
-                                </button>
+                                <div className="flex gap-12 mb-12">
+
+                                    <button className="button " onClick={() => { window.open('https://ryankwan.notion.site/Ryan-Kwan-3c9f5c6b5719484c8c2ad72ac8d94fe7?pvs=4') }}>
+                                        LEARN MORE
+                                    </button>
+                                    <button className="button">
+                                        <a href="/RyanKwan-CV2023.pdf" download="RyanKwan-cv">Download CV</a>
+                                    </button>
+                                </div>
+
                                 <div className="absolute top-0 right-0 -mr-1 -mt-3 w-4 h-4 rounded-full bg-green-300 animate-ping"></div>
                                 <div className="absolute top-0 right-0 -mr-1 -mt-3 w-4 h-4 rounded-full bg-green-300"></div>
                             </span>
