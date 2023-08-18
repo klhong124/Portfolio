@@ -78,7 +78,7 @@ const skill = forwardRef((_, ref) => {
             `Sass / Scss`,
             `ApolloGraphQL`,
             `Python`,
-            `Python OCR`,
+            `OCR`,
             `Selenium`,
             `Web Scraping`,
             `SQL`,
@@ -89,12 +89,13 @@ const skill = forwardRef((_, ref) => {
             `Stripe`,
             `Twilio`,
             `Shopify`,
-            `Vuetify / Tailwind CSS`,
             `GSAP`,
             `Three.js`,
             `jQuery`,
             `EJS`,
             `Arduino`,
+            `Cypress.js`,
+            `Jest`,
             `Processing`,
         ],
         design: [
@@ -103,7 +104,12 @@ const skill = forwardRef((_, ref) => {
             `PhotoShop`,
             `Illustrator`,
             `After Effect`,
+            `Animation`,
+            `Motion Graphics`,
             `Davinci Resolve`,
+            `Premiere Pro`,
+            `Basic 3D Modeling`,
+            `Photography`
         ]
     }
     return (
