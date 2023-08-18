@@ -148,7 +148,7 @@ const about = forwardRef((_, ref) => {
                                 <div className="absolute top-0 right-0 -mr-1 -mt-3 w-4 h-4 rounded-full bg-green-300"></div>
 
                             </span>
-                            <button className="button bg-green-800">
+                            <button className="button bg-green-800 hover:bg-green-700">
                                 <a href="/RyanKwan-CV2023.pdf" download="RyanKwan-cv">Download CV</a>
                             </button>
                         </div>
