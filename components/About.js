@@ -138,7 +138,7 @@ const about = forwardRef((_, ref) => {
                         <p className="mt-7">My aspiration is to deliver exceptional design solutions to address problems and meet people’s actual needs.  </p>
 
                         <p className="mt-7">I love programming - a language with superpower! It makes my playful thinking ideas comes alive.   </p>
-                        <div className="flex gap-12 mt-7 mb-12 w-auto">
+                        <div className="flex gap-8 mt-7 mb-12 w-auto">
                             <span className="relative">
 
                                 <button className="button " onClick={() => { window.open('https://ryankwan.notion.site/Ryan-Kwan-3c9f5c6b5719484c8c2ad72ac8d94fe7?pvs=4') }}>
@@ -148,7 +148,7 @@ const about = forwardRef((_, ref) => {
                                 <div className="absolute top-0 right-0 -mr-1 -mt-3 w-4 h-4 rounded-full bg-green-300"></div>
 
                             </span>
-                            <button className="button">
+                            <button className="button bg-green-800">
                                 <a href="/RyanKwan-CV2023.pdf" download="RyanKwan-cv">Download CV</a>
                             </button>
                         </div>
