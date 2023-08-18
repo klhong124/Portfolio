@@ -93,7 +93,7 @@ const about = forwardRef((_, ref) => {
         ref,
         () => ({
             toggleEffect () {
-                textEffect("ABOUT US", "title")
+                textEffect("ABOUT ME", "title")
                 textEffect("I'm Ryan Kwan.", "subtitle")
             }
         }),
@@ -133,7 +133,7 @@ const about = forwardRef((_, ref) => {
                     </Tilt>
                     <div className="  text-white max-w-xl lg:ml-0 mx-8 md:mt-5 col-span-2">
                         <h1 className=" text-2xl sm:text-3xl font-bold overflow-ellipsis overflow-hidden">Greetings, {subtitle}</h1>
-                        <h2 className="text-gray-400 mt-1 font-medium">Full-Stack Developer | UX Designer</h2>
+                        <h2 className="text-gray-400 mt-1 font-medium">Web Developer | Front-end Specialist | UX Enthusiast</h2>
                         <p className="mt-7">I was born and raised in Hong Kong 🇭🇰 , and currently living in London 🇬🇧 .  </p>
                         <p className="mt-7">My aspiration is to deliver exceptional design solutions to address problems and meet people’s actual needs.  </p>
 
