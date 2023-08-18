@@ -132,7 +132,7 @@ const contact = forwardRef((_, ref) => {
                             )
                         }
                         <div >
-                            <small>Ryan Kwan • Full-Stack Developer | UX Designer</small>
+                            <small>Ryan Kwan • Web Developer | Front-end Specialist | UX Enthusiast</small>
                         </div>
                     </div>
                 </div>
